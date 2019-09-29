@@ -4,23 +4,14 @@
 
 
 # フォルダ構成
-Parent
-|
-
-| - documents　フォルダ構成についてのドキュメント
-
-|
-
-| - materials　
-
-|    | - img 	画像を入れるフォルダ
-
-|    | - snd　　音データを入れるフォルダ
-
-|
-
-| - project　　ゲームを管理するフォルダ
-
+<dl>
+  <dt>documents</dt>
+  <dd>開発においての文書</dd>
+  <dt>materials</dt>
+  <dd>素材をおく</dd>
+  <dt>projects </dt>
+  <dd>データ自体はここで管理</dd>
+</dl> 
 
 
 
