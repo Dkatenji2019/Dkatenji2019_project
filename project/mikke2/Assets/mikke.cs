@@ -39,7 +39,7 @@ public class mikke : MonoBehaviour
         }
 
         //Enqueue Looking objects 
-        for (int i = 0; i <= objects.Length; i++)
+        for (int i = 0; i <= objects.Length-1; i++)
         {
             numbers.Add(i);
         }
