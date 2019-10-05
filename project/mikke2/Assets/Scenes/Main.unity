@@ -870,6 +870,52 @@ MonoBehaviour:
   gravityFallYThreshold: 1
   blinkYThreshold: 0.15
   floorHeightTolerance: 0.001
+--- !u!1 &1269018733
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1269018735}
+  - component: {fileID: 1269018734}
+  m_Layer: 0
+  m_Name: FIND_OBJECT_MANAGER
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1269018734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1269018733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7140375354d75064e98c1414bd1795f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemsList:
+  - {fileID: 11400000, guid: 90c7a89a292760840861ce43f35dcd9e, type: 2}
+  - {fileID: 11400000, guid: c3d0204baef767c428a7dc26ed288519, type: 2}
+  - {fileID: 11400000, guid: 1fc43387e9d91f04e974fd9812670d7f, type: 2}
+  - {fileID: 11400000, guid: e7bd566165d93504c8d504ba76a1013d, type: 2}
+  PathName: ./Assets/objects/scriptableobjects(sample)
+--- !u!4 &1269018735
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1269018733}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -256.7434, y: 202.7981, z: -25.904663}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1319408263
 GameObject:
   m_ObjectHideFlags: 0
@@ -885,7 +931,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1319408264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1358,7 +1404,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1494562724
 MonoBehaviour:
   m_ObjectHideFlags: 0
