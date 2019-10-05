@@ -897,10 +897,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7140375354d75064e98c1414bd1795f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemsList:
-  - {fileID: 11400000, guid: 90c7a89a292760840861ce43f35dcd9e, type: 2}
+  _itemsList:
   - {fileID: 11400000, guid: c3d0204baef767c428a7dc26ed288519, type: 2}
   - {fileID: 11400000, guid: 1fc43387e9d91f04e974fd9812670d7f, type: 2}
+  - {fileID: 11400000, guid: 90c7a89a292760840861ce43f35dcd9e, type: 2}
   - {fileID: 11400000, guid: e7bd566165d93504c8d504ba76a1013d, type: 2}
   PathName: ./Assets/objects/scriptableobjects(sample)
 --- !u!4 &1269018735

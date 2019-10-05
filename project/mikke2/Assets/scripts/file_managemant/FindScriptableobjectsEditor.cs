@@ -2,9 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using UnityEditor.SceneManagement;
+using UnityEngine.SceneManagement;
+using System.Reflection;
+using UnityEngine.Events;
 
 [CustomEditor(typeof(FindScriptableobjects))]
-public class FindScriptableobjectsEditor : Editor {
+public class FindScriptableobjectsEditor : Editor
+{
 
     public override void OnInspectorGUI()
     {
@@ -19,6 +24,18 @@ public class FindScriptableobjectsEditor : Editor {
         {
             findScriptableobjects.find_scriptableobjects_in_folda();
         }
+
+        EditorApplication.playmodeStateChanged += () =>
+        {
+            findScriptableobjects.find_scriptableobjects_in_folda();
+        };
+
+        EditorSceneManager.sceneOpened += OnOpened;
+    }
+    private static void OnOpened(Scene scene, OpenSceneMode mode)
+    {
+        FindScriptableobjects findScriptableobjects = new FindScriptableobjects();
+        findScriptableobjects.find_scriptableobjects_in_folda();
     }
 
 }

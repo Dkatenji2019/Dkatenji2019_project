@@ -29,10 +29,12 @@ public class FindScriptableobjects : MonoBehaviour
 
     public void find_scriptableobjects_in_folda()
     {
+
         DirectoryInfo dir = new DirectoryInfo(PathName);
         FileInfo[] info = dir.GetFiles("*.asset");
 
-        if(info.Length == 0)
+
+        if (info.Length == 0)
         {
             return;
         }
@@ -48,6 +50,8 @@ public class FindScriptableobjects : MonoBehaviour
             var element = AssetDatabase.LoadAssetAtPath<ScriptableObject>(Path.Combine("Assets/objects/scriptableobjects(sample)", f.Name));
             _itemsList.Add(element);
             //Debug.Log(f.Name);
+
         }
     }
+
 }
