@@ -29,8 +29,8 @@ public class mikke : MonoBehaviour
 
             int ransu = numbers[index];
 
-            float x = Random.Range(-25.0f, 25.0f);
-            float z = Random.Range(-25.0f, 25.0f);
+            float x = Random.Range(-5.0f, 5.0f);
+            float z = Random.Range(-5.0f, 5.0f);
             Instantiate(objects[ransu], new Vector3(x, 5, z), transform.rotation);
 
             Obje.Enqueue(objects[ransu]);

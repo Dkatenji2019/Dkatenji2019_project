@@ -19,8 +19,8 @@ public class replace : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("object"))
         {
-            float x = Random.Range(-25.0f, 25.0f);
-            float z = Random.Range(-25.0f, 25.0f);
+            float x = Random.Range(-5.0f, 5.0f);
+            float z = Random.Range(-5.0f, 5.0f);
             transform.position = new Vector3(x, 5, z);
         }
 
