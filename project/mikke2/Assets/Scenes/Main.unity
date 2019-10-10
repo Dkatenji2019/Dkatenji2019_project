@@ -236,6 +236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _head: {fileID: 1714437136}
+  <camera>k__BackingField: {fileID: 0}
   _ears: {fileID: 1541603539}
   wireframe: 0
 --- !u!124 &108208593
@@ -377,7 +378,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 441692941}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c49b4cc203aa6414fae5c798d1d0e7d6, type: 3}
   m_Name: 
@@ -429,6 +430,7 @@ MonoBehaviour:
   verbose: 0
   createComponents: 1
   updateDynamically: 1
+  <renderModelName>k__BackingField: 
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -534,6 +536,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c63141da60241d14394f8f3b547531f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canPress: 0
 --- !u!1 &782035668
 GameObject:
   m_ObjectHideFlags: 0
@@ -654,6 +657,8 @@ MonoBehaviour:
   - {fileID: 3133088680869047123, guid: f1c566812b308d84eb82be29bd768b34, type: 2}
   - {fileID: 6408818054249716329, guid: 0bb0fda07f20c40469975cb2d256639e, type: 2}
   - {fileID: 1011380464793117131, guid: 5cafcd3d2a6c98c419f4f4ca76e5a153, type: 2}
+  FilePath: 
+  hoge: []
 --- !u!4 &862743221
 Transform:
   m_ObjectHideFlags: 0
@@ -718,6 +723,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: -1
   origin: {fileID: 0}
+  <isValid>k__BackingField: 0
 --- !u!4 &1108805662
 Transform:
   m_ObjectHideFlags: 0
@@ -780,7 +786,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blinkTransitionSpeed: 0.1
-  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  headsetCollision: {fileID: 0}
+  headsetFade: {fileID: 0}
 --- !u!114 &1185875714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -792,6 +804,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44596d094d0946345a7fc6688ba9c06c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  headset: {fileID: 0}
+  isTransitioning: 0
+  isFaded: 0
 --- !u!114 &1185875715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -806,6 +821,18 @@ MonoBehaviour:
   rewindDelay: 0.5
   pushbackDistance: 0.5
   crouchThreshold: 0.5
+  headset: {fileID: 0}
+  playArea: {fileID: 0}
+  playareaRigidbody: {fileID: 0}
+  headsetCollision: {fileID: 0}
+  lastGoodStandingPosition: {x: 0, y: 0, z: 0}
+  lastGoodHeadsetPosition: {x: 0, y: 0, z: 0}
+  highestHeadsetY: 0
+  lastPlayAreaY: 0
+  lastGoodPositionSet: 0
+  hasCollided: 0
+  isColliding: 0
+  collideTimer: 0
 --- !u!114 &1185875716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -821,6 +848,11 @@ MonoBehaviour:
   targetListPolicy: {fileID: 0}
   headsetColliding: 0
   collidingWith: {fileID: 0}
+  headset: {fileID: 0}
+  headsetColliderScript: {fileID: 0}
+  headsetColliderContainer: {fileID: 0}
+  generateCollider: 0
+  generateRigidbody: 0
 --- !u!114 &1185875717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -833,6 +865,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   usePlayerScale: 1
+  playArea: {fileID: 0}
+  startControllerScaledLocalPosition: {x: 0, y: 0, z: 0}
+  startGrabPointLocalPosition: {x: 0, y: 0, z: 0}
+  startPlayAreaWorldOffset: {x: 0, y: 0, z: 0}
+  grabbingController: {fileID: 0}
+  climbingObject: {fileID: 0}
+  climbingObjectLastRotation: {x: 0, y: 0, z: 0, w: 0}
+  bodyPhysics: {fileID: 0}
+  isClimbing: 0
+  useGrabbedObjectRotation: 0
 --- !u!114 &1185875718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -847,7 +889,7 @@ MonoBehaviour:
   operation: 0
   checkType: 3
   identifiers:
-  - 4578636c75646554656c65706f7274
+  - 343537383633366337353634363535343635366336353730366637323734
 --- !u!114 &1185875719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -864,9 +906,15 @@ MonoBehaviour:
   headsetPositionCompensation: 1
   targetListPolicy: {fileID: 1185875718}
   navMeshLimitDistance: 0
-  layersToIgnore:
-    serializedVersion: 2
-    m_Bits: 4
+  headset: {fileID: 0}
+  playArea: {fileID: 0}
+  adjustYForTerrain: 0
+  enableTeleport: 1
+  blinkPause: 0
+  fadeInTime: 0
+  maxBlinkTransitionSpeed: 1.5
+  maxBlinkDistance: 33
+  layersToIgnore: {}
 --- !u!114 &1185875720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -879,19 +927,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enableTeleport: 1
+  invalidListPolicy: {fileID: 0}
+  navMeshCheckDistance: 0
+  headsetPositionCompensation: 0
   enableBodyCollisions: 1
   ignoreGrabbedCollisions: 1
   headsetYOffset: 0.2
   movementThreshold: 0.0015
   standingHistorySamples: 5
   leanYThreshold: 0.5
-  layersToIgnore:
-    serializedVersion: 2
-    m_Bits: 4
+  layersToIgnore: {}
   fallRestriction: 0
   gravityFallYThreshold: 1
   blinkYThreshold: 0.15
   floorHeightTolerance: 0.001
+  playArea: {fileID: 0}
+  headset: {fileID: 0}
+  bodyRigidbody: {fileID: 0}
+  bodyCollider: {fileID: 0}
+  currentBodyCollisionsSetting: 0
+  currentCollidingObject: {fileID: 0}
+  currentValidFloorObject: {fileID: 0}
+  teleporter: {fileID: 0}
+  lastFrameFloorY: 0
+  hitFloorYDelta: 0
+  initialFloorDrop: 0
+  resetPhysicsAfterTeleport: 0
+  storedCurrentPhysics: 0
+  retogglePhysicsOnCanFall: 0
+  storedRetogglePhysics: 0
+  lastPlayAreaPosition: {x: 0, y: 0, z: 0}
+  currentStandingPosition: {x: 0, y: 0}
+  standingPositionHistory: []
+  playAreaHeightAdjustment: 0.009
+  isFalling: 0
+  isMoving: 0
+  isLeaning: 0
+  onGround: 1
+  preventSnapToFloor: 0
+  generateCollider: 0
+  generateRigidbody: 0
+  playAreaVelocity: {x: 0, y: 0, z: 0}
+  drawDebugGizmo: 0
 --- !u!1 &1269018733
 GameObject:
   m_ObjectHideFlags: 0
@@ -1029,18 +1106,45 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playareaCursor: {fileID: 0}
-  layersToIgnore:
-    serializedVersion: 2
-    m_Bits: 4
+  layersToIgnore: {}
   pointerOriginSmoothingSettings:
     smoothsPosition: 0
     maxAllowedPerFrameDistanceDifference: 0.003
     smoothsRotation: 0
     maxAllowedPerFrameAngleDifference: 1.5
-  validCollisionColor: {r: 0, g: 0.49803922, b: 0, a: 1}
-  invalidCollisionColor: {r: 0.8, g: 0, b: 0, a: 1}
+  validCollisionColor:
+    r: 0
+    g: 0.49803922
+    b: 0
+    a: 1
+  invalidCollisionColor:
+    r: 0.8
+    g: 0
+    b: 0
+    a: 1
   tracerVisibility: 0
   cursorVisibility: 0
+  controllingPointer: {fileID: 0}
+  defaultMaterial: {fileID: 0}
+  currentColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  invalidListPolicy: {fileID: 0}
+  navMeshCheckDistance: 0
+  headsetPositionCompensation: 0
+  objectInteractor: {fileID: 0}
+  objectInteractorAttachPoint: {fileID: 0}
+  pointerOriginTransformFollowGameObject: {fileID: 0}
+  pointerOriginTransformFollow: {fileID: 0}
+  controllerGrabScript: {fileID: 0}
+  savedAttachPoint: {fileID: 0}
+  attachedToInteractorAttachPoint: 0
+  savedBeamLength: 0
+  makeRendererVisible: []
+  tracerVisible: 0
+  cursorVisible: 0
   maximumLength: 10
   tracerDensity: 10
   cursorRadius: 0.5
@@ -1053,6 +1157,12 @@ MonoBehaviour:
   customCursor: {fileID: 0}
   validLocationObject: {fileID: 0}
   invalidLocationObject: {fileID: 0}
+  actualTracer: {fileID: 0}
+  actualContainer: {fileID: 0}
+  actualCursor: {fileID: 0}
+  actualValidLocationObject: {fileID: 0}
+  actualInvalidLocationObject: {fileID: 0}
+  fixedForwardBeamForward: {x: 0, y: 0, z: 0}
 --- !u!114 &1342616691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1065,6 +1175,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enableTeleport: 1
+  invalidListPolicy: {fileID: 0}
+  navMeshCheckDistance: 0
+  headsetPositionCompensation: 0
   pointerRenderer: {fileID: 1342616690}
   activationButton: 10
   holdButtonToActivate: 1
@@ -1075,6 +1188,14 @@ MonoBehaviour:
   grabToPointerTip: 0
   controller: {fileID: 0}
   customOrigin: {fileID: 0}
+  subscribedActivationButton: 0
+  subscribedSelectionButton: 0
+  currentSelectOnPress: 0
+  activateDelayTimer: 0
+  currentActivationState: 0
+  willDeactivate: 0
+  wasActivated: 0
+  pointerInteractableObject: {fileID: 0}
 --- !u!114 &1342616692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1090,6 +1211,14 @@ MonoBehaviour:
   grabPrecognition: 0.1
   throwMultiplier: 1
   createRigidBodyWhenNotTouching: 0
+  grabbedObject: {fileID: 0}
+  influencingGrabbedObject: 0
+  interactTouch: {fileID: 0}
+  controllerActions: {fileID: 0}
+  controllerEvents: {fileID: 0}
+  grabEnabledState: 0
+  grabPrecognitionTimer: 0
+  undroppableGrabbedObject: {fileID: 0}
 --- !u!114 &1342616693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1102,6 +1231,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   customRigidbodyObject: {fileID: 0}
+  touchedObject: {fileID: 0}
+  touchedObjectColliders: []
+  touchedObjectActiveColliders: []
+  controllerEvents: {fileID: 0}
+  controllerActions: {fileID: 0}
+  controllerCollisionDetector: {fileID: 0}
+  triggerRumble: 0
+  destroyColliderOnDisable: 0
+  triggerIsColliding: 0
+  triggerWasColliding: 0
+  touchRigidBody: {fileID: 0}
+  rigidBodyForcedActive: 0
+  defaultColliderPrefab: {fileID: 0}
+  originalGrabAlias: 0
+  originalUseAlias: 0
 --- !u!114 &1342616694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1133,6 +1277,9 @@ MonoBehaviour:
     buttonTwo: {fileID: 0}
     systemMenu: {fileID: 0}
     startMenu: {fileID: 0}
+  modelContainer: {fileID: 0}
+  controllerVisible: 1
+  controllerHighlighted: 0
 --- !u!114 &1342616695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1176,6 +1323,11 @@ MonoBehaviour:
   usePressed: 0
   uiClickPressed: 0
   menuPressed: 0
+  touchpadAxis: {x: 0, y: 0}
+  triggerAxis: {x: 0, y: 0}
+  gripAxis: {x: 0, y: 0}
+  hairTriggerDelta: 0
+  hairGripDelta: 0
 --- !u!4 &1342616696
 Transform:
   m_ObjectHideFlags: 0
@@ -1347,6 +1499,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: -1
   origin: {fileID: 0}
+  <isValid>k__BackingField: 0
 --- !u!4 &1360410291
 Transform:
   m_ObjectHideFlags: 0
@@ -1408,6 +1561,7 @@ MonoBehaviour:
   verbose: 0
   createComponents: 1
   updateDynamically: 1
+  <renderModelName>k__BackingField: 
 --- !u!1 &1494562723
 GameObject:
   m_ObjectHideFlags: 0
@@ -1444,7 +1598,11 @@ MonoBehaviour:
   drawWireframeWhenSelectedOnly: 0
   drawInGame: 1
   size: 0
-  color: {r: 0, g: 1, b: 1, a: 1}
+  color:
+    r: 0
+    g: 1
+    b: 1
+    a: 1
   vertices:
   - {x: 0.5, y: 0.01, z: -0.50000006}
   - {x: -0.5, y: 0.01, z: -0.50000006}
@@ -1511,6 +1669,24 @@ MonoBehaviour:
   right: {fileID: 1108805660}
   objects: []
   assignAllBeforeIdentified: 0
+  indices: []
+  connected:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
 --- !u!4 &1494562728
 Transform:
   m_ObjectHideFlags: 0
@@ -1560,18 +1736,45 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playareaCursor: {fileID: 0}
-  layersToIgnore:
-    serializedVersion: 2
-    m_Bits: 4
+  layersToIgnore: {}
   pointerOriginSmoothingSettings:
     smoothsPosition: 0
     maxAllowedPerFrameDistanceDifference: 0.003
     smoothsRotation: 0
     maxAllowedPerFrameAngleDifference: 1.5
-  validCollisionColor: {r: 0, g: 0.49803922, b: 0, a: 1}
-  invalidCollisionColor: {r: 0.8, g: 0, b: 0, a: 1}
+  validCollisionColor:
+    r: 0
+    g: 0.49803922
+    b: 0
+    a: 1
+  invalidCollisionColor:
+    r: 0.8
+    g: 0
+    b: 0
+    a: 1
   tracerVisibility: 0
   cursorVisibility: 0
+  controllingPointer: {fileID: 0}
+  defaultMaterial: {fileID: 0}
+  currentColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  invalidListPolicy: {fileID: 0}
+  navMeshCheckDistance: 0
+  headsetPositionCompensation: 0
+  objectInteractor: {fileID: 0}
+  objectInteractorAttachPoint: {fileID: 0}
+  pointerOriginTransformFollowGameObject: {fileID: 0}
+  pointerOriginTransformFollow: {fileID: 0}
+  controllerGrabScript: {fileID: 0}
+  savedAttachPoint: {fileID: 0}
+  attachedToInteractorAttachPoint: 0
+  savedBeamLength: 0
+  makeRendererVisible: []
+  tracerVisible: 0
+  cursorVisible: 0
   maximumLength: 10
   tracerDensity: 10
   cursorRadius: 0.5
@@ -1584,6 +1787,12 @@ MonoBehaviour:
   customCursor: {fileID: 0}
   validLocationObject: {fileID: 0}
   invalidLocationObject: {fileID: 0}
+  actualTracer: {fileID: 0}
+  actualContainer: {fileID: 0}
+  actualCursor: {fileID: 0}
+  actualValidLocationObject: {fileID: 0}
+  actualInvalidLocationObject: {fileID: 0}
+  fixedForwardBeamForward: {x: 0, y: 0, z: 0}
 --- !u!114 &1516065356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1596,6 +1805,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enableTeleport: 1
+  invalidListPolicy: {fileID: 0}
+  navMeshCheckDistance: 0
+  headsetPositionCompensation: 0
   pointerRenderer: {fileID: 1516065355}
   activationButton: 10
   holdButtonToActivate: 1
@@ -1606,6 +1818,14 @@ MonoBehaviour:
   grabToPointerTip: 0
   controller: {fileID: 0}
   customOrigin: {fileID: 0}
+  subscribedActivationButton: 0
+  subscribedSelectionButton: 0
+  currentSelectOnPress: 0
+  activateDelayTimer: 0
+  currentActivationState: 0
+  willDeactivate: 0
+  wasActivated: 0
+  pointerInteractableObject: {fileID: 0}
 --- !u!114 &1516065357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1621,6 +1841,14 @@ MonoBehaviour:
   grabPrecognition: 0.1
   throwMultiplier: 1
   createRigidBodyWhenNotTouching: 0
+  grabbedObject: {fileID: 0}
+  influencingGrabbedObject: 0
+  interactTouch: {fileID: 0}
+  controllerActions: {fileID: 0}
+  controllerEvents: {fileID: 0}
+  grabEnabledState: 0
+  grabPrecognitionTimer: 0
+  undroppableGrabbedObject: {fileID: 0}
 --- !u!114 &1516065358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1633,6 +1861,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   customRigidbodyObject: {fileID: 0}
+  touchedObject: {fileID: 0}
+  touchedObjectColliders: []
+  touchedObjectActiveColliders: []
+  controllerEvents: {fileID: 0}
+  controllerActions: {fileID: 0}
+  controllerCollisionDetector: {fileID: 0}
+  triggerRumble: 0
+  destroyColliderOnDisable: 0
+  triggerIsColliding: 0
+  triggerWasColliding: 0
+  touchRigidBody: {fileID: 0}
+  rigidBodyForcedActive: 0
+  defaultColliderPrefab: {fileID: 0}
+  originalGrabAlias: 0
+  originalUseAlias: 0
 --- !u!114 &1516065359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1664,6 +1907,9 @@ MonoBehaviour:
     buttonTwo: {fileID: 0}
     systemMenu: {fileID: 0}
     startMenu: {fileID: 0}
+  modelContainer: {fileID: 0}
+  controllerVisible: 1
+  controllerHighlighted: 0
 --- !u!114 &1516065360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1707,6 +1953,11 @@ MonoBehaviour:
   usePressed: 0
   uiClickPressed: 0
   menuPressed: 0
+  touchpadAxis: {x: 0, y: 0}
+  triggerAxis: {x: 0, y: 0}
+  gripAxis: {x: 0, y: 0}
+  hairTriggerDelta: 0
+  hairGripDelta: 0
 --- !u!4 &1516065361
 Transform:
   m_ObjectHideFlags: 0
@@ -1763,6 +2014,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vrcam: {fileID: 0}
+  usingSpeakers: 0
+  offset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!81 &1541603541
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1941,6 +2194,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: 0
   origin: {fileID: 0}
+  <isValid>k__BackingField: 0
 --- !u!20 &1714437139
 Camera:
   m_ObjectHideFlags: 0
@@ -2088,7 +2342,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: b5d2674d56d4eb94a8eca3f6ca954a7b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b5d2674d56d4eb94a8eca3f6ca954a7b, type: 3}
       propertyPath: m_LocalPosition.y

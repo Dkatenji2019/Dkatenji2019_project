@@ -1,5 +1,20 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8845968906824500705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 6408818054249716329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Delegates: []
 --- !u!114 &-1097306169326905887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,6 +77,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 6408818054249716329}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &4943634433130781289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 6408818054249716329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad9091b98848cb942a2247050df2cebc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6408818054249716329
 GameObject:
   m_ObjectHideFlags: 0
@@ -74,6 +100,8 @@ GameObject:
   - component: {fileID: 1995325735616192014}
   - component: {fileID: 3355090920560531708}
   - component: {fileID: 7156699865200867402}
+  - component: {fileID: 4943634433130781289}
+  - component: {fileID: -8845968906824500705}
   - component: {fileID: -1097306169326905887}
   m_Layer: 0
   m_Name: RedCube

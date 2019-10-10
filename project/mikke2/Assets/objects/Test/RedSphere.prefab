@@ -11,6 +11,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb238300e1b611340ad6e1f200dba597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-6365027508949635074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1011380464793117131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad9091b98848cb942a2247050df2cebc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1011380464793117131
 GameObject:
   m_ObjectHideFlags: 0
@@ -23,6 +34,8 @@ GameObject:
   - component: {fileID: 2392932421051295930}
   - component: {fileID: 6767196840664328832}
   - component: {fileID: 6308025453263983032}
+  - component: {fileID: -6365027508949635074}
+  - component: {fileID: 5900988854029771833}
   - component: {fileID: -9178428993340050304}
   m_Layer: 0
   m_Name: RedSphere
@@ -70,6 +83,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1011380464793117131}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &5900988854029771833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1011380464793117131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Delegates: []
 --- !u!54 &6308025453263983032
 Rigidbody:
   m_ObjectHideFlags: 0

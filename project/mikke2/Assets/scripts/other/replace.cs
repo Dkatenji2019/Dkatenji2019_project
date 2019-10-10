@@ -24,6 +24,6 @@ public class replace : MonoBehaviour
             transform.position = new Vector3(x, 5, z);
         }
 
-        
+
     }
 }
