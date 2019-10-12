@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2ae6964ec0abe54bb47ea4526652afa, type: 3}
   m_Name: matchbox
   m_EditorClassIdentifier: 
-  _itemName: 
+  _itemName: "\u30DE\u30C3\u30C1\u7BB1"
   _itemObject: {fileID: 1755869128330884, guid: b964e925bf6cb66468732f377f7a3784,
     type: 2}
   _onTheDesk: 0

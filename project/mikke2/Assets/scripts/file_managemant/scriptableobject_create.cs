@@ -11,7 +11,12 @@ public class scriptableobject_create : ScriptableObject
         get
         {return _itemName;}
         set
-        {_itemName = value;}
+        {
+            if (_itemName == null)
+            { _itemName = "0"; }
+            else { _itemName = value; }
+
+        }
     }
     [SerializeField] private GameObject _itemObject;
     public GameObject ItemObject

@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2ae6964ec0abe54bb47ea4526652afa, type: 3}
   m_Name: fork
   m_EditorClassIdentifier: 
-  _itemName: 
+  _itemName: "\u30D5\u30A9\u30FC\u30AF"
   _itemObject: {fileID: 1260195498447620, guid: b252e3cb796e1414eb591badf12d3b60,
     type: 2}
   _onTheDesk: 1

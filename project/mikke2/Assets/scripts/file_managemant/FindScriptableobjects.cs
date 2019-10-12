@@ -12,9 +12,9 @@ public class FindScriptableobjects : MonoBehaviour
         "3,ヒエラルキー上のFIND_OBJECT_MANAGERのインスペクタに飛び適用ボタンを押す\n\n")]
     [Header("scriptableobjects格納list")]
     [SerializeField]
-    private List<ScriptableObject> _itemsList = new List<ScriptableObject>();
+    private List<scriptableobject_create> _itemsList = new List<scriptableobject_create>();
 
-    public List<ScriptableObject> ItemsList
+    public List<scriptableobject_create> ItemsList
     {
         get { return _itemsList; }
         set { _itemsList = value; }
@@ -47,7 +47,7 @@ public class FindScriptableobjects : MonoBehaviour
 
         foreach (FileInfo f in info)
         {
-            var element = AssetDatabase.LoadAssetAtPath<ScriptableObject>(Path.Combine("Assets/objects/scriptableobjects(sample)", f.Name));
+            var element = AssetDatabase.LoadAssetAtPath<scriptableobject_create>(Path.Combine("Assets/objects/scriptableobjects(sample)", f.Name));
             _itemsList.Add(element);
             //Debug.Log(f.Name);
 
