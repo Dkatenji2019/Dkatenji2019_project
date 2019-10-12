@@ -19,7 +19,15 @@ public class sample : MonoBehaviour {
         foreach (var element in tmp_FS.ItemsList)
         {
             items_GameObjct.Add(element.ItemObject);
-            items_name.Add(element.ItemName);
+
+            if(element.ItemName.Length == 0)
+            {
+                items_name.Add("☆---名前を追加してください---☆");
+            }
+            else
+            {
+                items_name.Add(element.ItemName);
+            }
 
 
             //byte[] data = System.Text.Encoding.ASCII.GetBytes(element.ItemName);
