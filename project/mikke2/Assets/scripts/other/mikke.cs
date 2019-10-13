@@ -9,22 +9,60 @@ public class mikke : MonoBehaviour
     public GameObject[] objects;
 
     public string FilePath;
-    
 
     List<int> numbers = new List<int>();
 
     Queue<GameObject> Obje = new Queue<GameObject>();
     Queue<GameObject> Find = new Queue<GameObject>();
 
-    [SerializeField]private List<GameObject> hoge = new List<GameObject>();
+    [SerializeField] private List<GameObject> items_GameObjct = new List<GameObject>();
+    [SerializeField] private List<string> items_name = new List<string>();
 
-    private void Awake()
+    void Awake()
     {
-        //for(int i = 0; i< 5; i++)
-        //{
-        //    hoge.Add(this.GetComponent<FindScriptableobjects>().ItemsList.ItemObject);
-        //}
+
+        ///適当にスクリプトを綺麗にまとめてほしい
+        ///こちらからRIgidBodyとCollidrは勝手につけるようにした
+
+        var Find_GameObject = GameObject.Find("FIND_OBJECT_MANAGER");
+        var tmp_FS = Find_GameObject.GetComponent<FindScriptableobjects>();
+        foreach (var element in tmp_FS.ItemsList)
+        {
+            items_GameObjct.Add(element.ItemObject);
+
+            if (element.ItemName.Length == 0)
+            {
+                items_name.Add("☆---名前を追加してください---☆");
+            }
+            else
+            {
+                items_name.Add(element.ItemName);
+            }
+
+           // element.ItemObject.AddComponent<CapsuleCollider>();
+           // element.ItemObject.AddComponent<Rigidbody>();
+
+            System.Array.Resize(ref objects, objects.Length + 1);
+            objects[objects.Length - 1] = element.ItemObject;
+
+            //byte[] data = System.Text.Encoding.ASCII.GetBytes(element.ItemName);
+            //string hoge = null;
+            //for (int i = 0; i < data.Length; i++)
+            //{
+            //    Debug.Log(Convert.ToString(data[i], 16) + " - ");
+            //}
+            //Debug.Log("-------------------------------------------");
+
+        }
     }
+
+    //    private void Awake()
+    //{
+    //    //for(int i = 0; i< 5; i++)
+    //    //{
+    //    //    hoge.Add(this.GetComponent<FindScriptableobjects>().ItemsList.ItemObject);
+    //    //}
+    //}
 
     void Start()
     {
@@ -57,7 +95,7 @@ public class mikke : MonoBehaviour
         }
 
         //Enqueue Looking objects 
-        for (int i = 0; i <= objects.Length; i++)
+        for (int i = 0; i < objects.Length; i++)
         {
             numbers.Add(i);
         }
