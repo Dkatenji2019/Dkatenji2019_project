@@ -11,6 +11,7 @@ public class sample : MonoBehaviour {
 
     //このソースコードはあくまでサンプルである。
     //別のソースコードに移すことを推奨する。
+    //FIND_OBJECT_MANAGERを参考にしてくれ
 
     // Use this for initialization
     void Awake() {
@@ -20,7 +21,12 @@ public class sample : MonoBehaviour {
         {
             items_GameObjct.Add(element.ItemObject);
 
-            if(element.ItemName.Length == 0)
+            if (element.ItemObject.GetComponent<ItemInformationOnPlaying>() == null)
+            {
+                element.ItemObject.AddComponent<ItemInformationOnPlaying>().MyItemName = element.ItemName;
+            }
+
+            if (element.ItemName.Length == 0)
             {
                 items_name.Add("☆---名前を追加してください---☆");
             }

@@ -25,10 +25,10 @@ public class FindScriptableobjectsEditor : Editor
             findScriptableobjects.find_scriptableobjects_in_folda();
         }
 
-        EditorApplication.playmodeStateChanged += () =>
-        {
-            findScriptableobjects.find_scriptableobjects_in_folda();
-        };
+        //EditorApplication.playmodeStateChanged += () =>
+        //{
+        //    findScriptableobjects.find_scriptableobjects_in_folda();
+        //};
 
         EditorSceneManager.sceneOpened += OnOpened;
     }

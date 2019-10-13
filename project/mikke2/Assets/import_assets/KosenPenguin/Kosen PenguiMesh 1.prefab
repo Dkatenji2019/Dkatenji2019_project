@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4802498985995316}
   - component: {fileID: 65688668558130490}
   - component: {fileID: 54885426011899440}
+  - component: {fileID: 114876305135292846}
   m_Layer: 0
   m_Name: Kosen PenguiMesh 1
   m_TagString: Untagged
@@ -279,3 +280,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.02, y: 0.02, z: 0.02}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114876305135292846
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1121685653588350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e92b9182989de0499127f8c908e8741, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _myItemName: "\u9AD8\u5C02\u30DA\u30F3\u30B0\u30A4\u30F3"

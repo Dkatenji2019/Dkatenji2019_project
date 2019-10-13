@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2ae6964ec0abe54bb47ea4526652afa, type: 3}
   m_Name: cake
   m_EditorClassIdentifier: 
-  _itemName: 
+  _itemName: "\u30B1\u30FC\u30AD"
   _itemObject: {fileID: 1939761752338524, guid: 702af0fc8fc387f4a8c06b17fffef759,
     type: 2}
   _onTheDesk: 1

@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 23156490849763656}
   - component: {fileID: 54954962180420738}
   - component: {fileID: 65375821810336358}
+  - component: {fileID: 114202919131991396}
   m_Layer: 0
   m_Name: Vase
   m_TagString: Untagged
@@ -109,3 +110,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.34044564, y: 1.019268, z: 0.45230076}
   m_Center: {x: 0, y: 0.5050422, z: -0.049602225}
+--- !u!114 &114202919131991396
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1075730520172882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e92b9182989de0499127f8c908e8741, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _myItemName: "\u82B1\u74F6"
