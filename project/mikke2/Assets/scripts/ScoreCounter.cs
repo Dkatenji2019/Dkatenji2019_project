@@ -7,7 +7,7 @@ public class ScoreCounter : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-        AddScore();
+        addScore();
 
 	}
 	
@@ -16,7 +16,7 @@ public class ScoreCounter : MonoBehaviour {
 		
 	}
 
-    private void AddScore()
+    private void addScore()
     {
 
     }

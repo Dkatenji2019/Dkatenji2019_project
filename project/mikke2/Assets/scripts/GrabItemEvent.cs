@@ -13,4 +13,10 @@ public class GrabItemEvent : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    private void destoyItem()
+    {
+
+    }
+
 }

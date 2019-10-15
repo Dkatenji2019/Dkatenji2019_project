@@ -7,7 +7,7 @@ public class SpreadItemOnField : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-        PutItemSpread();
+        putItemSpread();
 
     }
 	
@@ -16,7 +16,7 @@ public class SpreadItemOnField : MonoBehaviour {
 		
 	}
 
-    private void PutItemSpread()
+    private void putItemSpread()
     {
 
     }

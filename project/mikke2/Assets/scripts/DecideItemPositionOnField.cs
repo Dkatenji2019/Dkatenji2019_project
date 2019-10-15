@@ -7,7 +7,7 @@ public class DecideItemPositionOnField : MonoBehaviour {
     // Use this for initialization
     void Start() {
 
-        PutItemDecided();
+        putItemDecided();
 
     }
 
@@ -16,7 +16,7 @@ public class DecideItemPositionOnField : MonoBehaviour {
 
     }
 
-    private void PutItemDecided(){
+    private void putItemDecided(){
 
         }
 }
