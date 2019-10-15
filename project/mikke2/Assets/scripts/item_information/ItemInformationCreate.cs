@@ -3,7 +3,7 @@ using UnityEditor;
 using System.Linq;
 
 [CreateAssetMenu(menuName = "アイテムを生成する！")]
-public class ItemInformation : ScriptableObject
+public class ItemInformationCreate : ScriptableObject
 {
     [SerializeField] private string _itemName;
     public string ItemName
