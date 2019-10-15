@@ -6,11 +6,18 @@ public class ScoreCounter : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+
+        AddScore();
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
 	}
+
+    private void AddScore()
+    {
+
+    }
 }

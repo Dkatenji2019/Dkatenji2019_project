@@ -13,4 +13,5 @@ public class ItemRegistrator : MonoBehaviour {
 	void Update () {
 		
 	}
+
 }
