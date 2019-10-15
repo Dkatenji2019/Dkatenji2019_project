@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemManagement
+public class ItemInformation
 {
     /// <summary>
     /// アイテムの名前
@@ -17,4 +17,11 @@ public class ItemManagement
     /// アイテムの格納順を記述
     /// </summary>
     public int ItemNumber { get; set; }
+
+    public ItemInformation(string _itemName, GameObject _itemObject, int _itemNumber)
+    {
+        this.ItemName = _itemName;
+        this.ItemObject = _itemObject;
+        this.ItemNumber = _itemNumber;
+    }
 }
