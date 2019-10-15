@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class ItemRegistrator : MonoBehaviour {
 
-    public Queue<ItemInformation> ItemInformationQ = new Queue<ItemInformation>();
+    [SerializeField]public Queue<ItemInformation> ItemInformationQ = new Queue<ItemInformation>();
 
     void Awake()
+    {
+        ItemLoadToQueue_BeforeStartGame();
+    }
+
+    private void ItemLoadToQueue_BeforeStartGame()
     {
         //Scriptableobjectsを一元管理しているクラスからの情報を格納
         var FindScriptableobject = this.GetComponent<FindScriptableobjects>();
@@ -24,6 +29,11 @@ public class ItemRegistrator : MonoBehaviour {
             }
         }
 
+        foreach(var q in ItemInformationQ)
+        {
+            Debug.Log("アイテム名:" + q.ItemName + "３Ｄオブジェクト名:" + q.ItemObject + "格納順:" + q.ItemNumber);
+        }
+
         //byte[] data = System.Text.Encoding.ASCII.GetBytes(element.ItemName);
         //string hoge = null;
         //for (int i = 0; i < data.Length; i++)
@@ -31,7 +41,6 @@ public class ItemRegistrator : MonoBehaviour {
         //    Debug.Log(Convert.ToString(data[i], 16) + " - ");
         //}
         //Debug.Log("-------------------------------------------");
-
 
     }
 
