@@ -2,15 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemManagement : MonoBehaviour {
+public class ItemManagement
+{
+    /// <summary>
+    /// アイテムの名前
+    /// </summary>
+    public string ItemName { get; set; }
+    /// <summary>
+    /// アイテムの3Dオブジェクト(prefab)データ
+    /// </summary>
+    public GameObject ItemObject { get; set; }
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    /// <summary>
+    /// アイテムの格納順を記述
+    /// </summary>
+    public int ItemNumber { get; set; }
 }
