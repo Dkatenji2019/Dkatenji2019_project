@@ -77,7 +77,7 @@ public class mikke : MonoBehaviour
             
         }
         //while (numbers.Count > 0)
-        for(int i = 0; i < 300; i ++)
+        for(int i = 0; i < 30; i ++)
         {
 
             int index = Random.Range(0, numbers.Count);
