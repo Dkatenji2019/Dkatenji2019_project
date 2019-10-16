@@ -14,7 +14,7 @@ public class UIManagement:MonoBehaviour{
 
     //デザイン案が決まり次第、以下のフィールドに対する処理を追加する
     //public Text IsMatchedWithOdai_EditOnUnity;
-    //public Image GameTimeFromStart_EditOnUnity;
+    ////public Image GameTimeFromStart_EditOnUnity;
     //public Image GrabbedTime_EditOnUnity;
 
     void awake()
