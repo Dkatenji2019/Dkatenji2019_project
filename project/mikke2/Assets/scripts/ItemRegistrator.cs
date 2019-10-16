@@ -41,6 +41,8 @@ public class ItemRegistrator : MonoBehaviour {
             }
         }
 
+        queue_shuffle();
+
         foreach(var q in _itemInformationQ)
         {
             Debug.Log("アイテム名:" + q.ItemName + "３Ｄオブジェクト名:" + q.ItemObject + "格納順:" + q.ItemNumber);
@@ -54,6 +56,10 @@ public class ItemRegistrator : MonoBehaviour {
         //}
         //Debug.Log("-------------------------------------------");
 
+    }
+    private void queue_shuffle()
+    {
+        _itemInformationQ = _itemInformationQ.;
     }
 
 }
