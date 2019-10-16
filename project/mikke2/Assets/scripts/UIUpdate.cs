@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class UIUpdate : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    public string OdaiName { get; set; }
+    public string OdaiHint { get; set; }
+    public string GrabItemName { get; set; }
+    public bool IsMatchedWithOdai { get; set; }
+    public float GameTimeFromStart { get; set; }
+    public float GrabbedTime { get; set; }
+
+    void Start () {
 		
 	}
 	
