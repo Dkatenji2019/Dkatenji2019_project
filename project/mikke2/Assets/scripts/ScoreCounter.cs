@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class ScoreCounter : MonoBehaviour {
 
+    public int ScoreValue { get; set; }
+
 	// Use this for initialization
 	void Start () {
 
+
         addScore();
+
+        //AddScore();
+
 
 	}
 	
