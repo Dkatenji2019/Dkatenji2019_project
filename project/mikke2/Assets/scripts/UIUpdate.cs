@@ -20,10 +20,10 @@ public class UIUpdate : MonoBehaviour {
     /// つかんだアイテムがお題と一致しているか
     /// </summary>
     public bool IsMatchedWithOdai { get; set; }
-    /// <summary>
-    /// ゲームの経過時間
-    /// </summary>
-    public float GameTimeFromStart { get; set; }
+    ///// <summary>
+    ///// ゲームの経過時間
+    ///// </summary>
+    //public float GameTimeFromStart { get; set; }
 
     /// <summary>
     /// アイテムを掴んでいる時間

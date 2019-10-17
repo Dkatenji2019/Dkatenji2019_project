@@ -11,7 +11,7 @@ public class TimeCounter : MonoBehaviour {
     /// <summary>
     /// 何秒でゲームが終わるか
     /// </summary>
-    private float timeOut;
+    private  float timeOut;
     [SerializeField] private float timeOutValue = 720.0f;
 
 
@@ -19,14 +19,14 @@ public class TimeCounter : MonoBehaviour {
     /// ゲームがスタートしてから終わるまでの経過時間を0～１の範囲で返す
     /// </summary>
     public float GameTimeRangeZeroToOne { get { return _gameTimeRangeZeroToOne; } }
-    private float _gameTimeRangeZeroToOne;
+    private  float _gameTimeRangeZeroToOne;
 
 
     /// <summary>
     /// ゲーム開始時のフラグ
     /// </summary>
     public bool GameStartTrigger { set { _gameStartTrigger = value; } }
-    private bool _gameStartTrigger;
+    private  bool _gameStartTrigger;
 
 
     /// <summary>
