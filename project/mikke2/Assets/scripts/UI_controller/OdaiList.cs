@@ -23,20 +23,29 @@ public class OdaiList : MonoBehaviour {
 
     void Start()
     {
+        ItemRegistrator i = new ItemRegistrator();
+
         var Find_GameObject = GameObject.Find("FIND_OBJECT_MANAGER");
         var tmp_FS = Find_GameObject.GetComponent<FindScriptableobjects>();
-        foreach (var element in tmp_FS.ItemsList)
+        //foreach (var element in tmp_FS.ItemsList)
+        //{
+        //    if (element.ItemName.Length != 0)
+        //    {
+        //        _itemsNameUiTexts.Enqueue(element.ItemName);
+        //    }
+        //}
+        for(int j = 0; j < i.Name.Length; j++)
         {
-            if (element.ItemName.Length != 0)
-            {
-                _itemsNameUiTexts.Enqueue(element.ItemName);
-            }
+            _itemsNameUiTexts.Enqueue(i.Name[j]);
+            Debug.Log("アイテム名:" + i.Name[j]);
         }
+        
         ChangeContainsAndDisplayOdai();
     }
 
     public /*static*/ Text AddTextToCanvas(string textString, GameObject canvasGameObject)
     {
+
         Text text = canvasGameObject.GetComponent<Text>();
         text.text = textString;
 
@@ -49,13 +58,16 @@ public class OdaiList : MonoBehaviour {
 
     public void ChangeContainsAndDisplayOdai()
     {
+
+        ItemRegistrator i = new ItemRegistrator();
         ////最初のお題
         //AddTextToCanvas(_itemsNameUiTexts.Dequeue(), textMain);
         ////次のお題
         ////AddTextToCanvas(_itemsNameUiTexts.Peek(), textSub);
-        AddTextToCanvas(_itemsNameUiTexts.Peek(), textMain);
+        ///
+       AddTextToCanvas(_itemsNameUiTexts.Peek(), textMain);// _itemsNameUiTexts.Peek()
         AddTextToCanvas("本当はここに次のお題が入るよ", textSub);
-
+        //i.DisplayOdai();
     }
 
 }

@@ -35,4 +35,10 @@ public class UIUpdate : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    private void meterChanger()
+    {
+
+    }
+
 }
