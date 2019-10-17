@@ -76,6 +76,7 @@ public class SpreadItemOnField : MonoBehaviour {
             numbers.Add(i);
 
         }
+
         //while (numbers.Count > 0)
         for (int i = 0; i < Amount; i++)
         {
