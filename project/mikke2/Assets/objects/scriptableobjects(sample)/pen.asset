@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Name: pen
   m_EditorClassIdentifier: 
   _itemName: "\u30DA\u30F3"
-  _itemObject: {fileID: 1656943410698156, guid: 34c635fcf3120e44aaa26605948b2789,
+  _itemHint: 
+  _itemObject: {fileID: 1743824582892052, guid: 8db7b85ed5be1a64d907f5bbcbd3fa3c,
     type: 2}
   _onTheDesk: 1
   _inTheDrawer: 0

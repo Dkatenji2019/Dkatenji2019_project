@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Name: locker
   m_EditorClassIdentifier: 
   _itemName: "\u30ED\u30C3\u30AB\u30FC"
-  _itemObject: {fileID: 1570556052227746, guid: 78d4dd188c13afe4cbb4c04d269cd038,
+  _itemHint: 
+  _itemObject: {fileID: 1058481005834622, guid: e3d79eb64f447a242b9aabe0d1938a6e,
     type: 2}
   _onTheDesk: 0
   _inTheDrawer: 0

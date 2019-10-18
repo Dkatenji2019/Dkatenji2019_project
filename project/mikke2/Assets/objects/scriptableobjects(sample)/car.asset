@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Name: car
   m_EditorClassIdentifier: 
   _itemName: "\u8ECA"
-  _itemObject: {fileID: 1768406552818662, guid: 9c2a74a950004a4439c78d71c6e5c1cf,
+  _itemHint: 
+  _itemObject: {fileID: 1135759748782928, guid: 7cbaa1f67cba0af4a8524c7d51492db4,
     type: 2}
   _onTheDesk: 0
   _inTheDrawer: 0

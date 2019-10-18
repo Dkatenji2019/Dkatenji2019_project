@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Name: note
   m_EditorClassIdentifier: 
   _itemName: "\u30CE\u30FC\u30C8"
-  _itemObject: {fileID: 1134234901178992, guid: b7e0be6f06bba2141978c2da04c50e39,
+  _itemHint: 
+  _itemObject: {fileID: 1816434851313156, guid: 0cb9b3d92ef065949aba97783e82bbd2,
     type: 2}
   _onTheDesk: 1
   _inTheDrawer: 0

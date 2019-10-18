@@ -241,44 +241,44 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4973320715996660, guid: 37cbaedcfcc38b94098be74a33511876, type: 2}
+    - target: {fileID: 4559653079519000, guid: de66a10459caae8499bb29394e92993a, type: 2}
       propertyPath: m_LocalPosition.x
       value: 211.79083
       objectReference: {fileID: 0}
-    - target: {fileID: 4973320715996660, guid: 37cbaedcfcc38b94098be74a33511876, type: 2}
+    - target: {fileID: 4559653079519000, guid: de66a10459caae8499bb29394e92993a, type: 2}
       propertyPath: m_LocalPosition.y
       value: -145.2574
       objectReference: {fileID: 0}
-    - target: {fileID: 4973320715996660, guid: 37cbaedcfcc38b94098be74a33511876, type: 2}
+    - target: {fileID: 4559653079519000, guid: de66a10459caae8499bb29394e92993a, type: 2}
       propertyPath: m_LocalPosition.z
       value: -95.44525
       objectReference: {fileID: 0}
-    - target: {fileID: 4973320715996660, guid: 37cbaedcfcc38b94098be74a33511876, type: 2}
+    - target: {fileID: 4559653079519000, guid: de66a10459caae8499bb29394e92993a, type: 2}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4973320715996660, guid: 37cbaedcfcc38b94098be74a33511876, type: 2}
+    - target: {fileID: 4559653079519000, guid: de66a10459caae8499bb29394e92993a, type: 2}
       propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4973320715996660, guid: 37cbaedcfcc38b94098be74a33511876, type: 2}
+    - target: {fileID: 4559653079519000, guid: de66a10459caae8499bb29394e92993a, type: 2}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4973320715996660, guid: 37cbaedcfcc38b94098be74a33511876, type: 2}
+    - target: {fileID: 4559653079519000, guid: de66a10459caae8499bb29394e92993a, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4973320715996660, guid: 37cbaedcfcc38b94098be74a33511876, type: 2}
+    - target: {fileID: 4559653079519000, guid: de66a10459caae8499bb29394e92993a, type: 2}
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 1240376379922782, guid: 37cbaedcfcc38b94098be74a33511876, type: 2}
+    - target: {fileID: 1238709126471398, guid: de66a10459caae8499bb29394e92993a, type: 2}
       propertyPath: m_Name
       value: gumball_machine_lod1 (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 37cbaedcfcc38b94098be74a33511876, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: de66a10459caae8499bb29394e92993a, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &624327008
 GameObject:

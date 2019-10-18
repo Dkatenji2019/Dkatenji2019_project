@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Name: pencil
   m_EditorClassIdentifier: 
   _itemName: "\u925B\u7B46"
-  _itemObject: {fileID: 1107553714741374, guid: b10176a70f4c29942a3311a344def927,
+  _itemHint: 
+  _itemObject: {fileID: 1758806118877914, guid: 470cc8a13c0e19c41b955ac57ba0c0f5,
     type: 2}
   _onTheDesk: 1
   _inTheDrawer: 0

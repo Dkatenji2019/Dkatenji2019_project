@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Name: gumball
   m_EditorClassIdentifier: 
   _itemName: "\u30AC\u30E0\u30DC\u30FC\u30EB"
-  _itemObject: {fileID: 1406724460708178, guid: 7bf14751ea2aa014f98acdbcb3619c1b,
+  _itemHint: 
+  _itemObject: {fileID: 1238709126471398, guid: de66a10459caae8499bb29394e92993a,
     type: 2}
   _onTheDesk: 0
   _inTheDrawer: 0
