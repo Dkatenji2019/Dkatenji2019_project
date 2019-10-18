@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//VRTKが配布している物体判定処理
+[RequireComponent(typeof(VRTK.VRTK_InteractableObject))]
+//VRTK_InteractableObjectを返すための処理
+[RequireComponent(typeof(ReturnGrabItemInformation))]
+
 public class ItemInformation
 {
     /// <summary>
