@@ -18,10 +18,13 @@ public class ItemInformation
     /// </summary>
     public int ItemNumber { get; set; }
 
-    public ItemInformation(string _itemName, GameObject _itemObject, int _itemNumber)
+    public string ItemHint { get; set; }
+
+    public ItemInformation(string _itemName, GameObject _itemObject, int _itemNumber, string _itemHint = "ヒントはないよ！")
     {
         this.ItemName = _itemName;
         this.ItemObject = _itemObject;
         this.ItemNumber = _itemNumber;
+        this.ItemHint = _itemHint;
     }
 }

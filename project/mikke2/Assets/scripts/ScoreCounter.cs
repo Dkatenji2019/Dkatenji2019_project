@@ -10,23 +10,11 @@ public class ScoreCounter : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
-
-        addScore();
-
-        //AddScore();
-
-
+        ScoreValue = 0;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void addScore(int scoreValue)
     {
-
-    }
-
-    private void addScore()
-    {
-
+        ScoreValue += scoreValue;
     }
 }

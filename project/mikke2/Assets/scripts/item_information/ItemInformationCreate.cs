@@ -15,6 +15,14 @@ public class ItemInformationCreate : ScriptableObject
              _itemName = value;
         }
     }
+
+    [SerializeField, MultilineAttribute(5)] private string _itemHint;
+    public string ItemHint
+    {
+        get { return _itemHint; }
+        set { _itemHint = value; }
+    }
+
     [SerializeField] private GameObject _itemObject;
     public GameObject ItemObject
     {

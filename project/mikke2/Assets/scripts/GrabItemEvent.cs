@@ -12,7 +12,6 @@ public class GrabItemEvent : MonoBehaviour
     readonly float DecideGripTime = 3.0f;
 
     public bool IsGripItem;
-
     public bool IsMatchedWithItem;
 
     private void Update()
@@ -44,11 +43,6 @@ public class GrabItemEvent : MonoBehaviour
         if (IsGripItem)
         {
             GripTimeCounter();
-
-            if (GripTime > DecideGripTime && IsMatchedWithItem)
-            {
-                MatchedWithItem();
-            }
         }
         else if (!IsGripItem)
         {
@@ -59,11 +53,13 @@ public class GrabItemEvent : MonoBehaviour
     private void GripTimeCounter()
     {
         GripTime += Time.deltaTime;
-    }
 
-    private void MatchedWithItem()
-    {
-        IR.DestryItem();
+        if (GripTime > DecideGripTime && IsMatchedWithItem)
+        {
+            IR.DestryItem();
+            IsGripItem = false;
+            GripTime = 0;
+        }
     }
 
     private void NonGrabItem()
