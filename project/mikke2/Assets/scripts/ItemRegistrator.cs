@@ -10,7 +10,7 @@ public class ItemRegistrator : MonoBehaviour {
         get { return this._itemInformationQ; }
     }
 
-    public string[] Name = new string[100];
+    public string[] Name;
 
     void Awake()
     {
@@ -28,27 +28,21 @@ public class ItemRegistrator : MonoBehaviour {
     {
         //Scriptableobjectsを一元管理しているクラスからの情報を格納
         var FindScriptableobject = this.GetComponent<FindScriptableobjects>();
-        List<int> numbers = new List<int>();
-
-        for (int i = 0; i < FindScriptableobject.ItemsList.Count; i++)
-        {
-            numbers.Add(i);
-        }
 
         for (int i = 0; i< FindScriptableobject.ItemsList.Count; i++)
         {
-            int r = queue_shuffle(numbers);
+            queue_shuffle();
 
             //アイテム情報を格納するItemInformationCreate(scriptableobject)に名前が記述されていなかった場合
-            if (FindScriptableobject.ItemsList[r].ItemName.Length == 0)
+            if (FindScriptableobject.ItemsList[i].ItemName.Length == 0)
             {
-                _itemInformationQ.Enqueue(new ItemInformation("☆---名前を追加してください---☆", FindScriptableobject.ItemsList[r].ItemObject, i));
+                _itemInformationQ.Enqueue(new ItemInformation("☆---名前を追加してください---☆", FindScriptableobject.ItemsList[i].ItemObject, i));
                 Name[i] = "☆---名前を追加してください---☆";
             }
             else
             {
-                _itemInformationQ.Enqueue(new ItemInformation(FindScriptableobject.ItemsList[r].ItemName, FindScriptableobject.ItemsList[r].ItemObject, i));
-                Name[i] = FindScriptableobject.ItemsList[r].ItemName;
+                _itemInformationQ.Enqueue(new ItemInformation(FindScriptableobject.ItemsList[i].ItemName, FindScriptableobject.ItemsList[i].ItemObject, i));
+                Name[i] = FindScriptableobject.ItemsList[i].ItemName;
             }
         }
 
@@ -68,16 +62,34 @@ public class ItemRegistrator : MonoBehaviour {
         //Debug.Log("-------------------------------------------");
 
     }
-    private int queue_shuffle(List<int> numbers)
+    private void queue_shuffle()
     {
 
+        var FindScriptableobject = this.GetComponent<FindScriptableobjects>();
+        int n = FindScriptableobject.ItemsList.Count;
+
+        List<int> numbers = new List<int>();
+
+        for (int i = 0; i < FindScriptableobject.ItemsList.Count; i++)
+        {
+            numbers.Add(i);
+        }
+
+        for (int i = 0; i < n; i++)
+        {
             int index = Random.Range(0, numbers.Count);
 
             int ransu = numbers[index];
 
             numbers.RemoveAt(index);
 
-        return ransu;
+            int r = ransu;
+
+            var rand = FindScriptableobject.ItemsList[r];
+            FindScriptableobject.ItemsList[r] = FindScriptableobject.ItemsList[i];
+            FindScriptableobject.ItemsList[i] = rand;
+        }
+
     }
 
     public void DestryItem()
@@ -86,12 +98,6 @@ public class ItemRegistrator : MonoBehaviour {
         _itemInformationQ.Dequeue();
 
     }
-    public void DisplayOdai()
-    {
-        OdaiList L = new OdaiList();
 
-        L.AddTextToCanvas(_itemInformationQ.Peek().ItemName, L.textMain);// _itemsNameUiTexts.Peek()
-        Debug.Log("名:" + _itemInformationQ.Peek().ItemName);
-    }
 }
 

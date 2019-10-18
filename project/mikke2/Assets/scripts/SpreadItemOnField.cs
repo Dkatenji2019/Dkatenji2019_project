@@ -10,7 +10,9 @@ public class SpreadItemOnField : MonoBehaviour {
 
     public string FilePath;
 
-    public int Amount = 50;
+    public int Amount;
+    public int area;
+
     [SerializeField] private List<GameObject> items_GameObjct = new List<GameObject>();
     [SerializeField] private List<string> items_name = new List<string>();
 
@@ -22,6 +24,9 @@ public class SpreadItemOnField : MonoBehaviour {
 
         var Find_GameObject = GameObject.Find("FIND_OBJECT_MANAGER");
         var tmp_FS = Find_GameObject.GetComponent<FindScriptableobjects>();
+
+        var I_Name = Find_GameObject.GetComponent<ItemRegistrator>();
+
         foreach (var element in tmp_FS.ItemsList)
         {
             items_GameObjct.Add(element.ItemObject);
@@ -34,11 +39,13 @@ public class SpreadItemOnField : MonoBehaviour {
             {
                 items_name.Add(element.ItemName);
             }
+        
 
-            // element.ItemObject.AddComponent<CapsuleCollider>();
-            // element.ItemObject.AddComponent<Rigidbody>();
 
-            System.Array.Resize(ref objects, objects.Length + 1);
+                // element.ItemObject.AddComponent<CapsuleCollider>();
+                // element.ItemObject.AddComponent<Rigidbody>();
+
+                System.Array.Resize(ref objects, objects.Length + 1);
             objects[objects.Length - 1] = element.ItemObject;
 
             //byte[] data = System.Text.Encoding.ASCII.GetBytes(element.ItemName);
@@ -85,10 +92,10 @@ public class SpreadItemOnField : MonoBehaviour {
 
             int ransu = numbers[index];
 
-            float x = Random.Range(-5.0f, 5.0f);
+            float x = Random.Range(-area, area);
             float y = Random.Range(0, 30.0f);
-            float z = Random.Range(-5.0f, 5.0f);
-            Instantiate(objects[index], new Vector3(x, y, z), transform.rotation);
+            float z = Random.Range(-area, area);
+            Instantiate(objects[ransu], new Vector3(x, y, z), transform.rotation);
 
            // Obje.Enqueue(objects[index]);
 
