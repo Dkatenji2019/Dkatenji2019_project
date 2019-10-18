@@ -11,9 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2ae6964ec0abe54bb47ea4526652afa, type: 3}
   m_Name: pen
   m_EditorClassIdentifier: 
-  _itemName: 
-  _itemObject: {fileID: 0}
-  _onTheDesk: 0
+  _itemName: "\u30DA\u30F3"
+  _itemObject: {fileID: 1656943410698156, guid: 34c635fcf3120e44aaa26605948b2789,
+    type: 2}
+  _onTheDesk: 1
   _inTheDrawer: 0
   _onTheFloor: 0
   _atOneFloor: 0

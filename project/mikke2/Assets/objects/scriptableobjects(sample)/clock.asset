@@ -11,9 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2ae6964ec0abe54bb47ea4526652afa, type: 3}
   m_Name: clock
   m_EditorClassIdentifier: 
-  _itemName: 
-  _itemObject: {fileID: 0}
-  _onTheDesk: 0
+  _itemName: "\u3068\u3051\u3044"
+  _itemObject: {fileID: 1349475313048534, guid: 574662662772d4341ba42edeb0b5ca2f,
+    type: 2}
+  _onTheDesk: 1
   _inTheDrawer: 0
   _onTheFloor: 0
   _atOneFloor: 0

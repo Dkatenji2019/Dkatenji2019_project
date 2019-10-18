@@ -11,10 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2ae6964ec0abe54bb47ea4526652afa, type: 3}
   m_Name: car
   m_EditorClassIdentifier: 
-  _itemName: 
-  _itemObject: {fileID: 0}
+  _itemName: "\u8ECA"
+  _itemObject: {fileID: 1768406552818662, guid: 9c2a74a950004a4439c78d71c6e5c1cf,
+    type: 2}
   _onTheDesk: 0
   _inTheDrawer: 0
-  _onTheFloor: 0
+  _onTheFloor: 1
   _atOneFloor: 0
   _atTwoFloor: 0

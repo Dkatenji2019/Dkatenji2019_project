@@ -11,10 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2ae6964ec0abe54bb47ea4526652afa, type: 3}
   m_Name: "\u2708"
   m_EditorClassIdentifier: 
-  _itemName: 
-  _itemObject: {fileID: 0}
+  _itemName: "\u98DB\u884C\u6A5F"
+  _itemObject: {fileID: 1838482869808682, guid: 48a64adde39063c4a9365666fa59d3eb,
+    type: 2}
   _onTheDesk: 0
   _inTheDrawer: 0
   _onTheFloor: 0
-  _atOneFloor: 0
+  _atOneFloor: 1
   _atTwoFloor: 0
