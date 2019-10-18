@@ -6,6 +6,7 @@ public class SpreadItemOnField : MonoBehaviour {
 
 
     public GameObject[] objects;
+    public GameObject[] ObjQueue;
     List<int> numbers = new List<int>();
 
     public string FilePath;
@@ -73,33 +74,35 @@ public class SpreadItemOnField : MonoBehaviour {
 
     private void putItemSpread()
     {
-        FilePath = Application.dataPath + "/objects/Test";
-        Object[] gameObjectArray = Resources.LoadAll(FilePath, typeof(GameObject));
 
-        //Place and Enqueue objects
-        for (int i = 0; i < objects.Length; i++)
-        {
-            // objects[i] = gameObjectArray[i];
-            numbers.Add(i);
+        ItemRegistrator IR = new ItemRegistrator();
+        //FilePath = Application.dataPath + "/objects/Test";
+        //Object[] gameObjectArray = Resources.LoadAll(FilePath, typeof(GameObject));
 
-        }
+        ////Place and Enqueue objects
+        //for (int i = 0; i < objects.Length; i++)
+        //{
+        //    // objects[i] = gameObjectArray[i];
+        //    numbers.Add(i);
 
-        //while (numbers.Count > 0)
-        for (int i = 0; i < objects.Length; i++)
-        {
+        //}
 
-            int index = Random.Range(0, numbers.Count);
+            //while (numbers.Count > 0)
+            foreach (var Q in IR.ItemInformationQ)
+            {
 
-            int ransu = numbers[index];
+            //int index = Random.Range(0, numbers.Count);
+
+            //int ransu = numbers[index];
 
             float x = Random.Range(-area, area);
             float y = Random.Range(0, 30.0f);
             float z = Random.Range(-area, area);
-            Instantiate(objects[ransu], new Vector3(x, y, z), transform.rotation);
+            Instantiate(Q.ItemObject, new Vector3(x, y, z), transform.rotation);
+            Debug.Log("Remove" );
+            // Obje.Enqueue(objects[index]);
 
-           // Obje.Enqueue(objects[index]);
-
-            numbers.RemoveAt(index);
+            //numbers.RemoveAt(index);
         }
 
         //Enqueue Looking objects 
