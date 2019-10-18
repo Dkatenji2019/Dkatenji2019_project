@@ -6,7 +6,7 @@ public class SpreadItemOnField : MonoBehaviour {
 
 
     public GameObject[] objects;
-    public GameObject[] ObjQueue;
+
     List<int> numbers = new List<int>();
 
     public string FilePath;
@@ -14,8 +14,11 @@ public class SpreadItemOnField : MonoBehaviour {
     public int Amount;
     public int area;
 
-   public List<GameObject> items_GameObjct = new List<GameObject>();//[SerializeField] private List<GameObject> items_GameObjct = new List<GameObject>();
-    [SerializeField] private List<string> items_name = new List<string>();
+    [SerializeField]ItemRegistrator IR = new ItemRegistrator();
+
+
+    //public List<GameObject> items_GameObjct = new List<GameObject>();//[SerializeField] private List<GameObject> items_GameObjct = new List<GameObject>();
+    // [SerializeField] private List<string> items_name = new List<string>();
 
     void Awake()
     {
@@ -23,31 +26,31 @@ public class SpreadItemOnField : MonoBehaviour {
         ///適当にスクリプトを綺麗にまとめてほしい
         ///こちらからRIgidBodyとCollidrは勝手につけるようにした
 
-        var Find_GameObject = GameObject.Find("FIND_OBJECT_MANAGER");
-        var tmp_FS = Find_GameObject.GetComponent<FindScriptableobjects>();
+        //var Find_GameObject = GameObject.Find("FIND_OBJECT_MANAGER");
+        //var tmp_FS = Find_GameObject.GetComponent<FindScriptableobjects>();
 
-        var I_Name = Find_GameObject.GetComponent<ItemRegistrator>();
+        //var I_Name = Find_GameObject.GetComponent<ItemRegistrator>();
 
-        foreach (var element in tmp_FS.ItemsList)
-        {
-            items_GameObjct.Add(element.ItemObject);
+        //foreach (var element in tmp_FS.ItemsList)
+        //{
+        //    items_GameObjct.Add(element.ItemObject);
 
-            if (element.ItemName.Length == 0)
-            {
-                items_name.Add("☆---名前を追加してください---☆");
-            }
-            else
-            {
-                items_name.Add(element.ItemName);
-            }
+        //    if (element.ItemName.Length == 0)
+        //    {
+        //        items_name.Add("☆---名前を追加してください---☆");
+        //    }
+        //    else
+        //    {
+        //        items_name.Add(element.ItemName);
+        //    }
         
 
 
                 // element.ItemObject.AddComponent<CapsuleCollider>();
                 // element.ItemObject.AddComponent<Rigidbody>();
 
-                System.Array.Resize(ref objects, objects.Length + 1);
-            objects[objects.Length - 1] = element.ItemObject;
+            //    System.Array.Resize(ref objects, objects.Length + 1);
+            //objects[objects.Length - 1] = element.ItemObject;
 
             //byte[] data = System.Text.Encoding.ASCII.GetBytes(element.ItemName);
             //string hoge = null;
@@ -57,25 +60,24 @@ public class SpreadItemOnField : MonoBehaviour {
             //}
             //Debug.Log("-------------------------------------------");
 
-        }
+        //}
     }
 
     // Use this for initialization
     void Start () {
-
         putItemSpread();
 
+
+
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    // Update is called once per frame
+    void Update () {
+    }
 
     private void putItemSpread()
     {
 
-        ItemRegistrator IR = new ItemRegistrator();
         //FilePath = Application.dataPath + "/objects/Test";
         //Object[] gameObjectArray = Resources.LoadAll(FilePath, typeof(GameObject));
 
@@ -86,9 +88,8 @@ public class SpreadItemOnField : MonoBehaviour {
         //    numbers.Add(i);
 
         //}
-
-            //while (numbers.Count > 0)
-            foreach (var Q in IR.ItemInformationQ)
+        //while (numbers.Count > 0)
+        foreach (var Q in IR.ItemInformationQ)
             {
 
             //int index = Random.Range(0, numbers.Count);
@@ -99,7 +100,7 @@ public class SpreadItemOnField : MonoBehaviour {
             float y = Random.Range(0, 30.0f);
             float z = Random.Range(-area, area);
             Instantiate(Q.ItemObject, new Vector3(x, y, z), transform.rotation);
-            Debug.Log("Remove" );
+            Debug.Log("Remove");
             // Obje.Enqueue(objects[index]);
 
             //numbers.RemoveAt(index);
