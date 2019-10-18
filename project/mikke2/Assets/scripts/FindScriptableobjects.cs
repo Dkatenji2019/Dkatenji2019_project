@@ -52,6 +52,34 @@ public class FindScriptableobjects : MonoBehaviour
             //Debug.Log(f.Name);
 
         }
+        queue_shuffle();
     }
+    private void queue_shuffle()
+    {
 
+        int n = ItemsList.Count;
+
+        List<int> numbers = new List<int>();
+
+        for (int i = 0; i < ItemsList.Count; i++)
+        {
+            numbers.Add(i);
+        }
+
+        for (int i = 0; i < n; i++)
+        {
+            int index = Random.Range(0, numbers.Count);
+
+            int ransu = numbers[index];
+
+            numbers.RemoveAt(index);
+
+            int r = ransu;
+
+            var rand = ItemsList[r];
+            ItemsList[r] = ItemsList[i];
+            ItemsList[i] = rand;
+        }
+
+    }
 }

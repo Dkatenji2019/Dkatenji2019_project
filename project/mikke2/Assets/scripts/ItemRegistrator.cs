@@ -10,7 +10,6 @@ public class ItemRegistrator : MonoBehaviour {
         get { return this._itemInformationQ; }
     }
 
-    public string[] Name;
 
     void Awake()
     {
@@ -37,12 +36,12 @@ public class ItemRegistrator : MonoBehaviour {
             if (FindScriptableobject.ItemsList[i].ItemName.Length == 0)
             {
                 _itemInformationQ.Enqueue(new ItemInformation("☆---名前を追加してください---☆", FindScriptableobject.ItemsList[i].ItemObject, i));
-                Name[i] = "☆---名前を追加してください---☆";
+
             }
             else
             {
                 _itemInformationQ.Enqueue(new ItemInformation(FindScriptableobject.ItemsList[i].ItemName, FindScriptableobject.ItemsList[i].ItemObject, i));
-                Name[i] = FindScriptableobject.ItemsList[i].ItemName;
+
             }
         }
 
