@@ -13,7 +13,7 @@ public class SpreadItemOnField : MonoBehaviour {
     public int Amount;
     public int area;
 
-    [SerializeField] private List<GameObject> items_GameObjct = new List<GameObject>();
+   public List<GameObject> items_GameObjct = new List<GameObject>();//[SerializeField] private List<GameObject> items_GameObjct = new List<GameObject>();
     [SerializeField] private List<string> items_name = new List<string>();
 
     void Awake()
@@ -85,7 +85,7 @@ public class SpreadItemOnField : MonoBehaviour {
         }
 
         //while (numbers.Count > 0)
-        for (int i = 0; i < Amount; i++)
+        for (int i = 0; i < objects.Length; i++)
         {
 
             int index = Random.Range(0, numbers.Count);
@@ -99,7 +99,7 @@ public class SpreadItemOnField : MonoBehaviour {
 
            // Obje.Enqueue(objects[index]);
 
-            // numbers.RemoveAt(index);
+            numbers.RemoveAt(index);
         }
 
         //Enqueue Looking objects 

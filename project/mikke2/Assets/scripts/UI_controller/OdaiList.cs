@@ -55,7 +55,6 @@ public class OdaiList : MonoBehaviour {
     public void ChangeContainsAndDisplayOdai()
     {
 
-        ItemRegistrator i = new ItemRegistrator();
         ////最初のお題
         //AddTextToCanvas(_itemsNameUiTexts.Dequeue(), textMain);
         ////次のお題

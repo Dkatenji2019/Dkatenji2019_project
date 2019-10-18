@@ -83,18 +83,18 @@ public class ItemRegistrator : MonoBehaviour {
 
             int r = ransu;
 
-            var rand = FindScriptableobject.ItemsList[r];
-            FindScriptableobject.ItemsList[r] = FindScriptableobject.ItemsList[i];
-            FindScriptableobject.ItemsList[i] = rand;
+            //var rand = FindScriptableobject.ItemsList[r];
+            //FindScriptableobject.ItemsList[r] = FindScriptableobject.ItemsList[i];
+            //FindScriptableobject.ItemsList[i] = rand;
         }
 
     }
 
     public void DestryItem()
     {
-
-        _itemInformationQ.Dequeue();
-
+        SpreadItemOnField SP = new SpreadItemOnField();
+        //Debug.Log("Remove" + SP.objects[0]);
+        Destroy(SP.objects[0]);
     }
 
 }
