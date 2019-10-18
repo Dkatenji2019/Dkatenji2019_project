@@ -6,6 +6,7 @@ public class SpreadItemOnField : MonoBehaviour {
 
 
     public GameObject[] objects;
+
     List<int> numbers = new List<int>();
 
     public string FilePath;
@@ -13,8 +14,11 @@ public class SpreadItemOnField : MonoBehaviour {
     public int Amount;
     public int area;
 
-   //public List<GameObject> items_GameObjct = new List<GameObject>();//[SerializeField] private List<GameObject> items_GameObjct = new List<GameObject>();
-   // [SerializeField] private List<string> items_name = new List<string>();
+    [SerializeField]ItemRegistrator IR = new ItemRegistrator();
+
+
+    //public List<GameObject> items_GameObjct = new List<GameObject>();//[SerializeField] private List<GameObject> items_GameObjct = new List<GameObject>();
+    // [SerializeField] private List<string> items_name = new List<string>();
 
     void Awake()
     {
@@ -61,34 +65,32 @@ public class SpreadItemOnField : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-
         putItemSpread();
 
+
+
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    // Update is called once per frame
+    void Update () {
+    }
 
     private void putItemSpread()
     {
-        ItemRegistrator IR = new ItemRegistrator();
 
         //FilePath = Application.dataPath + "/objects/Test";
         //Object[] gameObjectArray = Resources.LoadAll(FilePath, typeof(GameObject));
 
-        //Place and Enqueue objects
+        ////Place and Enqueue objects
         //for (int i = 0; i < objects.Length; i++)
         //{
         //    // objects[i] = gameObjectArray[i];
         //    numbers.Add(i);
 
         //}
-
         //while (numbers.Count > 0)
         foreach (var Q in IR.ItemInformationQ)
-        {
+            {
 
             //int index = Random.Range(0, numbers.Count);
 
@@ -98,8 +100,8 @@ public class SpreadItemOnField : MonoBehaviour {
             float y = Random.Range(0, 30.0f);
             float z = Random.Range(-area, area);
             Instantiate(Q.ItemObject, new Vector3(x, y, z), transform.rotation);
-
-           // Obje.Enqueue(objects[index]);
+            Debug.Log("Remove");
+            // Obje.Enqueue(objects[index]);
 
             //numbers.RemoveAt(index);
         }
