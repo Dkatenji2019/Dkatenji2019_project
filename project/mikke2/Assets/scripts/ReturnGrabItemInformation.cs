@@ -13,15 +13,25 @@ public class ReturnGrabItemInformation : MonoBehaviour {
         IsItemGrabbed = GameObjectGrabbedByController();
     }
 
+    private bool tmp = false;
+
     private void AddedVrtk_InteractableObjectComponent()
     {
+        if (tmp)
+        {
+            return;
+        }
         if (this.GetComponent<VRTK.VRTK_InteractableObject>() != null)
         {
+            tmp = true;
             return;
         }
         else if (this.GetComponent<VRTK.VRTK_InteractableObject>() == null)
         {
-            vrtk_InteractableObject = this.GetComponent<VRTK.VRTK_InteractableObject>();
+            //this.AddComponent<VRTK.VRTK_InteractableObject>();
+            vrtk_InteractableObject = this.gameObject.AddComponent<VRTK.VRTK_InteractableObject>();
+            vrtk_InteractableObject.isGrabbable = true;
+            vrtk_InteractableObject.touchHighlightColor = Color.blue;
         }
     }
 
