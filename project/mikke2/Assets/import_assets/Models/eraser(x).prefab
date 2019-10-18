@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33404875496238860}
   - component: {fileID: 23123082548530706}
   m_Layer: 0
-  m_Name: eraser (2)
+  m_Name: eraser(x)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
