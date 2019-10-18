@@ -99,8 +99,11 @@ public class SpreadItemOnField : MonoBehaviour {
             float x = Random.Range(-area, area);
             float y = Random.Range(0, 30.0f);
             float z = Random.Range(-area, area);
-            Instantiate(Q.ItemObject, new Vector3(x, y, z), transform.rotation);
-            Debug.Log("Remove");
+            GameObject instancedItem = Instantiate(Q.ItemObject, new Vector3(x, y, z), transform.rotation);
+            instancedItem.AddComponent<ItemInformation>();
+
+
+            // Debug.Log("Remove");
             // Obje.Enqueue(objects[index]);
 
             //numbers.RemoveAt(index);
