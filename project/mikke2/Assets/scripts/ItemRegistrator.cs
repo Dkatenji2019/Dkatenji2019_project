@@ -10,7 +10,6 @@ public class ItemRegistrator : MonoBehaviour {
         get { return this._itemInformationQ; }
     }
 
-
     void Awake()
     {
         ItemLoadToQueue_BeforeStartGame();
