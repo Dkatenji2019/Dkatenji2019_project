@@ -8,6 +8,7 @@ public class ItemRegistrator : MonoBehaviour {
     public Queue<GameObject> ItemQ
     {
         get { return this._itemQ; }
+        set { this._itemQ = value; }
     }
 
     void Awake()
