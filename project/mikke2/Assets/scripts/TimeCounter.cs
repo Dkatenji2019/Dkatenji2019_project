@@ -19,14 +19,14 @@ public class TimeCounter : MonoBehaviour {
     /// ゲームがスタートしてから終わるまでの経過時間を0～１の範囲で返す
     /// </summary>
     public float GameTimeRangeZeroToOne { get { return _gameTimeRangeZeroToOne; } }
-    private  float _gameTimeRangeZeroToOne;
+    [SerializeField] private  float _gameTimeRangeZeroToOne;
 
 
     /// <summary>
     /// ゲーム開始時のフラグ
     /// </summary>
     public bool GameStartTrigger { set { _gameStartTrigger = value; } }
-    private  bool _gameStartTrigger;
+    [SerializeField]private  bool _gameStartTrigger;
 
 
     /// <summary>
