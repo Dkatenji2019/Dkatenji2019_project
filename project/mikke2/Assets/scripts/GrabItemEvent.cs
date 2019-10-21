@@ -56,7 +56,6 @@ public class GrabItemEvent : MonoBehaviour
 
         if (GripTime > DecideGripTime && IsMatchedWithItem)
         {
-            IR.DestryItem();
             IsGripItem = false;
             GripTime = 0;
         }

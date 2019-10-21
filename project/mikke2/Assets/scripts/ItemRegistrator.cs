@@ -15,6 +15,9 @@ public class ItemRegistrator : MonoBehaviour {
         InstanceItemGameObjects();
     }
 
+    //お題は常に番号で管理される。プレイヤーがお題を１クリアするごとに１繰り上がる。
+    private int NowOdaiNumber = 0;
+
     /// <summary>
     /// ゲーム開始時にスクリプタブルオブジェクトから読み取ったアイテム情報をQueueに格納する。
     /// ここでいうアイテム情報とは、
@@ -63,12 +66,18 @@ public class ItemRegistrator : MonoBehaviour {
     }
 
 
-    public void DestryItem()
+    public void DestryItem(int grabbedItemNumber)
     {
-        SpreadItemOnField SP = new SpreadItemOnField();
-        //Debug.Log("Remove" + SP.objects[0]);
-        //Destroy(SP.objects[0]);
-        Debug.Log(SP.ItemObjectQ.Dequeue());
+        if(grabbedItemNumber == NowOdaiNumber)
+        {
+            Destroy(_itemQ.Peek());
+            _itemQ.Dequeue();
+            NowOdaiNumber++;
+        }
+        else
+        {
+            NowOdaiNumber+=0;
+        }
     }
 
 }

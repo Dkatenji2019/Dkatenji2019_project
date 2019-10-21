@@ -5,7 +5,8 @@ using UnityEngine;
 public class ReturnGrabItemInformation : MonoBehaviour {
 
     private VRTK.VRTK_InteractableObject vrtk_InteractableObject = new VRTK.VRTK_InteractableObject();
-    private ItemInformation II  = null;
+    private ItemInformation ii  = null;
+    private ItemRegistrator ir = null;
     private bool IsCompponentsAttached = false;
 
     private bool _isItemGrabbed;
@@ -25,6 +26,10 @@ public class ReturnGrabItemInformation : MonoBehaviour {
         }
     }
 
+    private void Awake()
+    {
+        ir = GameObject.FindGameObjectWithTag("ItemRegistrator").GetComponent<ItemRegistrator>(); ;
+    }
     // Update is called once per frame
     void Update () {
 
@@ -33,6 +38,8 @@ public class ReturnGrabItemInformation : MonoBehaviour {
 
         _isItemGrabbed = Func_GameObjectGrabbedByController();
         _grabbedItemNumber = Func_GameObjectNumber();
+
+        ir.DestryItem(_grabbedItemNumber);
     }
 
 
@@ -57,9 +64,9 @@ public class ReturnGrabItemInformation : MonoBehaviour {
 
     private void getItem_InformationComponent()
     {
-        if(II == null)
+        if(ii == null)
         {
-            II = this.GetComponent<ItemInformation>();
+            ii = this.GetComponent<ItemInformation>();
         }
     }
 
@@ -70,6 +77,6 @@ public class ReturnGrabItemInformation : MonoBehaviour {
 
     private int Func_GameObjectNumber()
     {
-        return II != null ? II.ItemNumber : -1 ;
+        return (ii != null && _isItemGrabbed  == false) ? ii.ItemNumber : -1 ;
     }
 }
