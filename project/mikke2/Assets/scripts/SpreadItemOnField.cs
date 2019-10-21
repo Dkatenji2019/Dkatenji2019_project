@@ -88,7 +88,7 @@ public class SpreadItemOnField : MonoBehaviour {
 
         //}
         //while (numbers.Count > 0)
-        for (int i = 0; i < 150; i++)
+        for (int i = 0; i < 50; i++)
         {
             foreach (var Q in IR.ItemInformationQ)
             {
