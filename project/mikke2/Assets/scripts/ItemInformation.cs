@@ -25,11 +25,16 @@ public class ItemInformation : MonoBehaviour
 
     public string ItemHint { get; set; }
 
-    public ItemInformation(string _itemName, GameObject _itemObject, int _itemNumber, string _itemHint = "ヒントはないよ！")
+    public int _ItemNumber;
+
+    public ItemInformation itemInformation(string _itemName, GameObject _itemObject, int _itemNumber, string _itemHint = "ヒントはないよ！")
     {
         this.ItemName = _itemName;
         this.ItemObject = _itemObject;
         this.ItemNumber = _itemNumber;
         this.ItemHint = _itemHint;
+        this._ItemNumber = _itemNumber;
+
+        return this;
     }
 }

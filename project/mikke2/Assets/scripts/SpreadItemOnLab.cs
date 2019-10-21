@@ -99,39 +99,39 @@ public class SpreadItemOnLab : MonoBehaviour
         //while (numbers.Count > 0)
         for (int i = 0; i < Amount; i++)
         {
-            foreach (var Q in IR.ItemInformationQ)
-            {
+            //foreach (var Q in IR.ItemInformationQ)
+            //{
 
-                //int index = Random.Range(0, numbers.Count);
+            //    //int index = Random.Range(0, numbers.Count);
 
-                //int ransu = numbers[index];
+            //    //int ransu = numbers[index];
 
-                float x = Random.Range(-area, area);
-                float z = Random.Range(-area, area);
+            //    float x = Random.Range(-area, area);
+            //    float z = Random.Range(-area, area);
 
-                Vector2 pos1 = new Vector2(x, z);
-                Vector2 pos2 = new Vector2(0, 0);
+            //    Vector2 pos1 = new Vector2(x, z);
+            //    Vector2 pos2 = new Vector2(0, 0);
 
-                while(Vector2.Distance(pos1, pos2) < 15 || Vector2.Distance(pos1, pos2) > 45)
-                {
-                    x = Random.Range(-area, area);
-                    z = Random.Range(-area, area);
+            //    while(Vector2.Distance(pos1, pos2) < 15 || Vector2.Distance(pos1, pos2) > 45)
+            //    {
+            //        x = Random.Range(-area, area);
+            //        z = Random.Range(-area, area);
 
-                    pos1 = new Vector2(x, z);
-                    pos2 = new Vector2(0, 0);
-                }
-                Debug.Log("抜け");
-                float y = Random.Range(0, 30.0f);
-                GameObject instancedItem = Instantiate(Q.ItemObject, new Vector3(x, y, z), transform.rotation);
-                instancedItem.AddComponent<ItemInformation>();
+            //        pos1 = new Vector2(x, z);
+            //        pos2 = new Vector2(0, 0);
+            //    }
+            //    Debug.Log("抜け");
+            //    float y = Random.Range(0, 30.0f);
+            //    GameObject instancedItem = Instantiate(Q.ItemObject, new Vector3(x, y, z), transform.rotation);
+            //    instancedItem.AddComponent<ItemInformation>();
 
-                _itemObjectQ.Enqueue(instancedItem);
+            //    _itemObjectQ.Enqueue(instancedItem);
 
-                // Debug.Log("Remove");
-                // Obje.Enqueue(objects[index]);
+            //    // Debug.Log("Remove");
+            //    // Obje.Enqueue(objects[index]);
 
-                //numbers.RemoveAt(index);
-            }
+            //    //numbers.RemoveAt(index);
+            //}
         }
         //Enqueue Looking objects 
         for (int i = 0; i < objects.Length; i++)

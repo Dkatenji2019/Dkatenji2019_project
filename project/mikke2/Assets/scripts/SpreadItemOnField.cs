@@ -94,28 +94,28 @@ public class SpreadItemOnField : MonoBehaviour {
 
         //}
         //while (numbers.Count > 0)
-        for (int i = 0; i < 50; i++)
+        for (int i = 0; i < 1; i++)
         {
-            foreach (var Q in IR.ItemInformationQ)
-            {
+            //foreach (var Q in IR.ItemInformationQ)
+            //{
 
-                //int index = Random.Range(0, numbers.Count);
+            //    //int index = Random.Range(0, numbers.Count);
 
-                //int ransu = numbers[index];
+            //    //int ransu = numbers[index];
 
-                float x = Random.Range(-area, area);
-                float y = Random.Range(0, 30.0f);
-                float z = Random.Range(-area, area);
-                GameObject instancedItem = Instantiate(Q.ItemObject, new Vector3(x, y, z), transform.rotation);
-                instancedItem.AddComponent<ItemInformation>();
+            //    float x = Random.Range(-area, area);
+            //    float y = Random.Range(0, 30.0f);
+            //    float z = Random.Range(-area, area);
+            //    GameObject instancedItem = Instantiate(Q.ItemObject, new Vector3(x, y, z), transform.rotation);
+            //    instancedItem.AddComponent<ItemInformation>();
 
-                _itemObjectQ.Enqueue(instancedItem);
+            //    _itemObjectQ.Enqueue(instancedItem);
 
-                // Debug.Log("Remove");
-                // Obje.Enqueue(objects[index]);
+            //    // Debug.Log("Remove");
+            //    // Obje.Enqueue(objects[index]);
 
-                //numbers.RemoveAt(index);
-            }
+            //    //numbers.RemoveAt(index);
+            //}
         }
         //Enqueue Looking objects 
         for (int i = 0; i < objects.Length; i++)
