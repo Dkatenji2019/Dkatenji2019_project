@@ -6,6 +6,7 @@ using UnityEngine;
 //[RequireComponent(typeof(VRTK.VRTK_InteractableObject))]
 //VRTK_InteractableObjectを返すための処理
 [RequireComponent(typeof(ReturnGrabItemInformation))]
+[RequireComponent(typeof(Rigidbody))]
 
 public class ItemInformation : MonoBehaviour
 {

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ReturnGrabItemInformation : MonoBehaviour {
 
+    public float GripTime;
+    readonly float DecideGripTime = 3.0f;
     private VRTK.VRTK_InteractableObject vrtk_InteractableObject = new VRTK.VRTK_InteractableObject();
     private ItemInformation ii  = null;
     private ItemRegistrator ir = null;
@@ -39,7 +41,8 @@ public class ReturnGrabItemInformation : MonoBehaviour {
         _isItemGrabbed = Func_GameObjectGrabbedByController();
         _grabbedItemNumber = Func_GameObjectNumber();
 
-        ir.DestryItem(_grabbedItemNumber);
+        GripTimeCounter();
+
     }
 
 
@@ -78,5 +81,23 @@ public class ReturnGrabItemInformation : MonoBehaviour {
     private int Func_GameObjectNumber()
     {
         return (ii != null && _isItemGrabbed  == false) ? ii.ItemNumber : -1 ;
+    }
+
+    private void GripTimeCounter()
+    {
+        if(_isItemGrabbed)
+        {
+            return ;
+        }
+        else
+        {
+            GripTime += Time.deltaTime;
+
+            if (GripTime > DecideGripTime)
+            {
+                GripTime = 0;
+                ir.DestryItem(_grabbedItemNumber);
+            }
+        }
     }
 }
