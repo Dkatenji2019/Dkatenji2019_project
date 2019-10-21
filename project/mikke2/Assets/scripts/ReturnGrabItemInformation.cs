@@ -5,38 +5,71 @@ using UnityEngine;
 public class ReturnGrabItemInformation : MonoBehaviour {
 
     private VRTK.VRTK_InteractableObject vrtk_InteractableObject = new VRTK.VRTK_InteractableObject();
-    public bool IsItemGrabbed;
-	
-	// Update is called once per frame
-	void Update () {
-        AddedVrtk_InteractableObjectComponent();
-        IsItemGrabbed = GameObjectGrabbedByController();
+    private ItemInformation II  = null;
+    private bool IsCompponentsAttached = false;
+
+    private bool _isItemGrabbed;
+    public bool IsItemGrabbed
+    {
+        get
+        {
+            return _isItemGrabbed;
+        }
+    }
+    [SerializeField]private int _grabbedItemNumber;
+    public int GrabbedItemNumber
+    {
+        get
+        {
+            return _grabbedItemNumber;
+        }
     }
 
-    private bool tmp = false;
+    // Update is called once per frame
+    void Update () {
+
+        AddedVrtk_InteractableObjectComponent();
+        getItem_InformationComponent();
+
+        _isItemGrabbed = Func_GameObjectGrabbedByController();
+        _grabbedItemNumber = Func_GameObjectNumber();
+    }
+
 
     private void AddedVrtk_InteractableObjectComponent()
     {
-        if (tmp)
+        if (IsCompponentsAttached)
         {
             return;
         }
         if (this.GetComponent<VRTK.VRTK_InteractableObject>() != null)
         {
-            tmp = true;
+            IsCompponentsAttached = true;
             return;
         }
         else if (this.GetComponent<VRTK.VRTK_InteractableObject>() == null)
         {
-            //this.AddComponent<VRTK.VRTK_InteractableObject>();
             vrtk_InteractableObject = this.gameObject.AddComponent<VRTK.VRTK_InteractableObject>();
             vrtk_InteractableObject.isGrabbable = true;
             vrtk_InteractableObject.touchHighlightColor = Color.blue;
         }
     }
 
-    private bool GameObjectGrabbedByController()
+    private void getItem_InformationComponent()
+    {
+        if(II == null)
+        {
+            II = this.GetComponent<ItemInformation>();
+        }
+    }
+
+    private bool Func_GameObjectGrabbedByController()
     {
         return vrtk_InteractableObject.isGrabbable;
+    }
+
+    private int Func_GameObjectNumber()
+    {
+        return II != null ? II.ItemNumber : -1 ;
     }
 }
