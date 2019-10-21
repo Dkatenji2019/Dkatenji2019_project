@@ -113,7 +113,7 @@ public class SpreadItemOnLab : MonoBehaviour
                 Vector2 pos1 = new Vector2(x, z);
                 Vector2 pos2 = new Vector2(0, 0);
 
-                while (Vector2.Distance(pos1, pos2) < 15 || Vector2.Distance(pos1, pos2) > 40)
+                while (Vector2.Distance(pos1, pos2) < 15 || Vector2.Distance(pos1, pos2) > 45)
                 {
                     x = Random.Range(-area, area);
                     z = Random.Range(-area, area);
@@ -123,7 +123,7 @@ public class SpreadItemOnLab : MonoBehaviour
                 }
 
                 float y = Random.Range(0, 30.0f);
-                Q.transform.Translate( new Vector3(x, y, z));
+                Q.transform.position = new Vector3(x, y, z);
 
                 //instancedItem.AddComponent<ItemInformation>();
 
