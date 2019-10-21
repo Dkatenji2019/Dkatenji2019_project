@@ -25,6 +25,7 @@ public class SpreadItemOnLab : MonoBehaviour
     public Queue<GameObject> ItemObjectQ
     {
         get { return this._itemObjectQ; }
+
     }
 
     void Awake()
@@ -33,31 +34,31 @@ public class SpreadItemOnLab : MonoBehaviour
         ///適当にスクリプトを綺麗にまとめてほしい
         ///こちらからRIgidBodyとCollidrは勝手につけるようにした
 
-        var Find_GameObject = GameObject.Find("FIND_OBJECT_MANAGER");
-        var tmp_FS = Find_GameObject.GetComponent<FindScriptableobjects>();
+        //var Find_GameObject = GameObject.Find("FIND_OBJECT_MANAGER");
+        //var tmp_FS = Find_GameObject.GetComponent<FindScriptableobjects>();
 
-        var I_Name = Find_GameObject.GetComponent<ItemRegistrator>();
+        //var I_Name = Find_GameObject.GetComponent<ItemRegistrator>();
 
-        foreach (var element in tmp_FS.ItemsList)
-        {
-            items_GameObjct.Add(element.ItemObject);
+        //foreach (var element in tmp_FS.ItemsList)
+        //{
+        //    items_GameObjct.Add(element.ItemObject);
 
-            if (element.ItemName.Length == 0)
-            {
-                items_name.Add("☆---名前を追加してください---☆");
-            }
-            else
-            {
-                items_name.Add(element.ItemName);
-            }
+        //    if (element.ItemName.Length == 0)
+        //    {
+        //        items_name.Add("☆---名前を追加してください---☆");
+        //    }
+        //    else
+        //    {
+        //        items_name.Add(element.ItemName);
+        //    }
 
 
 
-            //element.ItemObject.AddComponent<CapsuleCollider>();
-            //element.ItemObject.AddComponent<Rigidbody>();
+        //    //element.ItemObject.AddComponent<CapsuleCollider>();
+        //    //element.ItemObject.AddComponent<Rigidbody>();
 
-            System.Array.Resize(ref objects, objects.Length + 1);
-            objects[objects.Length - 1] = element.ItemObject;
+        //    System.Array.Resize(ref objects, objects.Length + 1);
+        //    objects[objects.Length - 1] = element.ItemObject;
 
             //byte[] data = System.Text.Encoding.ASCII.GetBytes(element.ItemName);
             //string hoge = null;
@@ -67,7 +68,7 @@ public class SpreadItemOnLab : MonoBehaviour
             //}
             //Debug.Log("-------------------------------------------");
 
-        }
+        //}
     }
 
     // Use this for initialization
@@ -97,42 +98,43 @@ public class SpreadItemOnLab : MonoBehaviour
 
         //}
         //while (numbers.Count > 0)
-        for (int i = 0; i < Amount; i++)
-        {
-            //foreach (var Q in IR.ItemInformationQ)
-            //{
+        //for (int i = 0; i < Amount; i++)
+        //{
+            foreach (var Q in IR.ItemQ)
+            {
 
-            //    //int index = Random.Range(0, numbers.Count);
+                //int index = Random.Range(0, numbers.Count);
 
-            //    //int ransu = numbers[index];
+                //int ransu = numbers[index];
 
-            //    float x = Random.Range(-area, area);
-            //    float z = Random.Range(-area, area);
+                float x = Random.Range(-area, area);
+                float z = Random.Range(-area, area);
 
-            //    Vector2 pos1 = new Vector2(x, z);
-            //    Vector2 pos2 = new Vector2(0, 0);
+                Vector2 pos1 = new Vector2(x, z);
+                Vector2 pos2 = new Vector2(0, 0);
 
-            //    while(Vector2.Distance(pos1, pos2) < 15 || Vector2.Distance(pos1, pos2) > 45)
-            //    {
-            //        x = Random.Range(-area, area);
-            //        z = Random.Range(-area, area);
+                while (Vector2.Distance(pos1, pos2) < 15 || Vector2.Distance(pos1, pos2) > 45)
+                {
+                    x = Random.Range(-area, area);
+                    z = Random.Range(-area, area);
 
-            //        pos1 = new Vector2(x, z);
-            //        pos2 = new Vector2(0, 0);
-            //    }
-            //    Debug.Log("抜け");
-            //    float y = Random.Range(0, 30.0f);
-            //    GameObject instancedItem = Instantiate(Q.ItemObject, new Vector3(x, y, z), transform.rotation);
-            //    instancedItem.AddComponent<ItemInformation>();
+                    pos1 = new Vector2(x, z);
+                    pos2 = new Vector2(0, 0);
+                }
 
-            //    _itemObjectQ.Enqueue(instancedItem);
+                float y = Random.Range(0, 30.0f);
+                Q.transform.position = new Vector3(x, y, z);
 
-            //    // Debug.Log("Remove");
-            //    // Obje.Enqueue(objects[index]);
+                //instancedItem.AddComponent<ItemInformation>();
 
-            //    //numbers.RemoveAt(index);
-            //}
-        }
+                //    _itemObjectQ.Enqueue(instancedItem);
+
+                //    // Debug.Log("Remove");
+                //    // Obje.Enqueue(objects[index]);
+
+                //    //numbers.RemoveAt(index);
+                //}
+            }
         //Enqueue Looking objects 
         for (int i = 0; i < objects.Length; i++)
         {
