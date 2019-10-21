@@ -4,22 +4,15 @@ using UnityEngine;
 
 public class ReturnGrabItemInformation : MonoBehaviour {
 
-    public float GripTime;
-    readonly float DecideGripTime = 3.0f;
     private VRTK.VRTK_InteractableObject vrtk_InteractableObject = new VRTK.VRTK_InteractableObject();
-    private ItemInformation ii  = null;
+    private ItemInformation ii = null;
     private ItemRegistrator ir = null;
-    private bool IsCompponentsAttached = false;
+    private UIManagement um = null;
 
-    private bool _isItemGrabbed;
-    public bool IsItemGrabbed
-    {
-        get
-        {
-            return _isItemGrabbed;
-        }
-    }
-    [SerializeField]private int _grabbedItemNumber = 0;
+    private bool IsCompponentsAttached = false;
+    private bool isItemGrabbed;
+
+    private int _grabbedItemNumber = 0;
     public int GrabbedItemNumber
     {
         get
@@ -27,25 +20,33 @@ public class ReturnGrabItemInformation : MonoBehaviour {
             return _grabbedItemNumber;
         }
     }
+    public float GripTime { get; set; }
+    readonly float DecideGripTime = 3.0f;
+
 
     void Start()
     {
-        ir = GameObject.FindGameObjectWithTag("ItemRegistrator").GetComponent<ItemRegistrator>(); ;
+        ir = GameObject.FindGameObjectWithTag("ItemRegistrator").GetComponent<ItemRegistrator>();
+        um = GameObject.FindGameObjectWithTag("UIUpdate").GetComponent<UIManagement>();
     }
+
     // Update is called once per frame
-    void Update () {
+    void Update() {
 
         AddedVrtk_InteractableObjectComponent();
         getItem_InformationComponent();
 
-        _isItemGrabbed = Func_GameObjectGrabbedByController();
-        _grabbedItemNumber = Func_GameObjectNumber();
+        isItemGrabbed = GameObjectGrabbedByController();
+        _grabbedItemNumber = ReturnItemNumber();
 
         GripTimeCounter();
 
+        GrabTimeUIUpdate();
+        GrabItemNameUIUpdate();
     }
 
 
+    //---コンポーネントの追加---//
     private void AddedVrtk_InteractableObjectComponent()
     {
         if (IsCompponentsAttached)
@@ -67,27 +68,30 @@ public class ReturnGrabItemInformation : MonoBehaviour {
 
     private void getItem_InformationComponent()
     {
-        if(ii == null)
+        if (ii == null)
         {
             ii = this.GetComponent<ItemInformation>();
         }
     }
 
-    private bool Func_GameObjectGrabbedByController()
+    //---グリップ時の処理---//
+    private bool GameObjectGrabbedByController()
     {
         return vrtk_InteractableObject.isGrabbable;
     }
 
-    private int Func_GameObjectNumber()
+    private int ReturnItemNumber()
     {
-        return (ii != null && _isItemGrabbed  == false) ? ii.ItemNumber : -1 ;
+        return (ii != null && isItemGrabbed == false) ? ii.ItemNumber : -1;
     }
 
+
+    //---グリップ時間のカウント---//
     private void GripTimeCounter()
     {
-        if(_isItemGrabbed)
+        if (isItemGrabbed)
         {
-            return ;
+            return;
         }
         else
         {
@@ -100,4 +104,21 @@ public class ReturnGrabItemInformation : MonoBehaviour {
             }
         }
     }
+
+    //---UI周りの処理---//
+    private void GrabTimeUIUpdate() 
+    {
+        um.GrabbedItemTime = GripTime;
+    }
+
+    private void GrabItemNameUIUpdate()
+    {
+        um.GrabItemName = ReturnItemName();
+    }
+
+    private string ReturnItemName()
+    {
+        return (ii != null && isItemGrabbed == false) ? ii.ItemName : "Nothing";
+    }
+
 }
