@@ -11,9 +11,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2ae6964ec0abe54bb47ea4526652afa, type: 3}
   m_Name: eraser
   m_EditorClassIdentifier: 
-  _itemName: "\u6D88\u3057\u30B4\u30E0"
+  _itemName: 
   _itemHint: 
-  _itemObject: {fileID: 1665467305599608, guid: 18e7eee105bd5d043b7310bf2d10c130,
+  _itemObject: {fileID: 1371912617108268, guid: ca9d52d9608ffed49b2308f21515b0ec,
     type: 2}
   _onTheDesk: 1
   _inTheDrawer: 0
