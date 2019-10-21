@@ -94,7 +94,8 @@ public class ItemRegistrator : MonoBehaviour {
     {
         SpreadItemOnField SP = new SpreadItemOnField();
         //Debug.Log("Remove" + SP.objects[0]);
-        Destroy(SP.objects[0]);
+        //Destroy(SP.objects[0]);
+        Debug.Log(SP.ItemObjectQ.Dequeue());
     }
 
 }

@@ -20,6 +20,12 @@ public class SpreadItemOnField : MonoBehaviour {
     public List<GameObject> items_GameObjct = new List<GameObject>();//[SerializeField] private List<GameObject> items_GameObjct = new List<GameObject>();
     [SerializeField] private List<string> items_name = new List<string>();
 
+    private Queue<GameObject> _itemObjectQ = new Queue<GameObject>();
+    public Queue<GameObject> ItemObjectQ
+    {
+        get { return this._itemObjectQ; }
+    }
+
     void Awake()
     {
 
@@ -103,6 +109,7 @@ public class SpreadItemOnField : MonoBehaviour {
                 GameObject instancedItem = Instantiate(Q.ItemObject, new Vector3(x, y, z), transform.rotation);
                 instancedItem.AddComponent<ItemInformation>();
 
+                _itemObjectQ.Enqueue(instancedItem);
 
                 // Debug.Log("Remove");
                 // Obje.Enqueue(objects[index]);
