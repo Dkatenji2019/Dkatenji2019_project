@@ -17,7 +17,7 @@ public class ReturnGrabItemInformation : MonoBehaviour {
             return _isItemGrabbed;
         }
     }
-    [SerializeField]private int _grabbedItemNumber;
+    [SerializeField]private int _grabbedItemNumber = 0;
     public int GrabbedItemNumber
     {
         get
@@ -26,7 +26,7 @@ public class ReturnGrabItemInformation : MonoBehaviour {
         }
     }
 
-    private void Awake()
+    void Start()
     {
         ir = GameObject.FindGameObjectWithTag("ItemRegistrator").GetComponent<ItemRegistrator>(); ;
     }

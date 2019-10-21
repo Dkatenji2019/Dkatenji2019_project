@@ -34,31 +34,31 @@ public class SpreadItemOnLab : MonoBehaviour
         ///適当にスクリプトを綺麗にまとめてほしい
         ///こちらからRIgidBodyとCollidrは勝手につけるようにした
 
-        var Find_GameObject = GameObject.Find("FIND_OBJECT_MANAGER");
-        var tmp_FS = Find_GameObject.GetComponent<FindScriptableobjects>();
+        //var Find_GameObject = GameObject.Find("FIND_OBJECT_MANAGER");
+        //var tmp_FS = Find_GameObject.GetComponent<FindScriptableobjects>();
 
-        var I_Name = Find_GameObject.GetComponent<ItemRegistrator>();
+        //var I_Name = Find_GameObject.GetComponent<ItemRegistrator>();
 
-        foreach (var element in tmp_FS.ItemsList)
-        {
-            items_GameObjct.Add(element.ItemObject);
+        //foreach (var element in tmp_FS.ItemsList)
+        //{
+        //    items_GameObjct.Add(element.ItemObject);
 
-            if (element.ItemName.Length == 0)
-            {
-                items_name.Add("☆---名前を追加してください---☆");
-            }
-            else
-            {
-                items_name.Add(element.ItemName);
-            }
+        //    if (element.ItemName.Length == 0)
+        //    {
+        //        items_name.Add("☆---名前を追加してください---☆");
+        //    }
+        //    else
+        //    {
+        //        items_name.Add(element.ItemName);
+        //    }
 
 
 
-            //element.ItemObject.AddComponent<CapsuleCollider>();
-            //element.ItemObject.AddComponent<Rigidbody>();
+        //    //element.ItemObject.AddComponent<CapsuleCollider>();
+        //    //element.ItemObject.AddComponent<Rigidbody>();
 
-            System.Array.Resize(ref objects, objects.Length + 1);
-            objects[objects.Length - 1] = element.ItemObject;
+        //    System.Array.Resize(ref objects, objects.Length + 1);
+        //    objects[objects.Length - 1] = element.ItemObject;
 
             //byte[] data = System.Text.Encoding.ASCII.GetBytes(element.ItemName);
             //string hoge = null;
@@ -68,7 +68,7 @@ public class SpreadItemOnLab : MonoBehaviour
             //}
             //Debug.Log("-------------------------------------------");
 
-        }
+        //}
     }
 
     // Use this for initialization

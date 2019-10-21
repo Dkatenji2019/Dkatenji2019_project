@@ -14,6 +14,7 @@ public class ItemRegistrator : MonoBehaviour {
     void Awake()
     {
         InstanceItemGameObjects();
+        Debug.Log("Qの長さ" + _itemQ.Count);
     }
 
     //お題は常に番号で管理される。プレイヤーがお題を１クリアするごとに１繰り上がる。
@@ -46,7 +47,9 @@ public class ItemRegistrator : MonoBehaviour {
                 ig.itemInformation(FindScriptableobject.ItemsList[i].ItemName, FindScriptableobject.ItemsList[i].ItemObject, i);
             }
             _itemQ.Enqueue(instancedgameObject);
-           // Debug.Log(instancedgameObject.GetComponent<ItemInformation>().ItemName);
+            // Debug.Log(instancedgameObject.GetComponent<ItemInformation>().ItemName);
+
+            Debug.Log("リープ回数 : " + i);
         }
 
 
@@ -64,6 +67,9 @@ public class ItemRegistrator : MonoBehaviour {
         //}
         //Debug.Log("-------------------------------------------");
 
+
+        Debug.Log("リストの長さ" + FindScriptableobject.ItemsList.Count);
+
     }
 
 
@@ -79,6 +85,8 @@ public class ItemRegistrator : MonoBehaviour {
         {
             NowOdaiNumber+=0;
         }
+
+        Debug.Log(NowOdaiNumber);
     }
 
 }
