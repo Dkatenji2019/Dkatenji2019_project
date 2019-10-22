@@ -5,7 +5,7 @@ using UnityEngine;
 ////VRTKが配布している物体判定処理
 //[RequireComponent(typeof(VRTK.VRTK_InteractableObject))]
 //VRTK_InteractableObjectを返すための処理
-[RequireComponent(typeof(ReturnGrabItemInformation))]
+[RequireComponent(typeof(GrabItemEvent))]
 [RequireComponent(typeof(Rigidbody))]
 
 public class ItemInformation : MonoBehaviour
