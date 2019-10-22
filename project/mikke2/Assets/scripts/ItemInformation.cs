@@ -24,9 +24,10 @@ public class ItemInformation : MonoBehaviour
     /// </summary>
     public int ItemNumber { get; set; }
 
+    /// <summary>
+    /// アイテムのヒントを記述
+    /// </summary>
     public string ItemHint { get; set; }
-
-    public int _ItemNumber;
 
     public ItemInformation itemInformation(string _itemName, GameObject _itemObject, int _itemNumber, string _itemHint = "ヒントはないよ！")
     {
@@ -34,7 +35,6 @@ public class ItemInformation : MonoBehaviour
         this.ItemObject = _itemObject;
         this.ItemNumber = _itemNumber;
         this.ItemHint = _itemHint;
-        this._ItemNumber = _itemNumber;
 
         return this;
     }

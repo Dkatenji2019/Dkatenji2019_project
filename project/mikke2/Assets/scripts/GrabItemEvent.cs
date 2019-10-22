@@ -24,14 +24,14 @@ public class GrabItemEvent : MonoBehaviour {
     readonly float DecideGripTime = 3.0f;
 
 
-    void Start()
+    private void Start()
     {
         ir = GameObject.FindGameObjectWithTag("ItemRegistrator").GetComponent<ItemRegistrator>();
         um = GameObject.FindGameObjectWithTag("UIManager").GetComponent<UIManagement>();
     }
 
     // Update is called once per frame
-    void Update() {
+    private void Update() {
 
         AddedVrtk_InteractableObjectComponent();
         getItem_InformationComponent();
@@ -42,7 +42,7 @@ public class GrabItemEvent : MonoBehaviour {
         GripTimeCounter();
 
         GrabTimeUIUpdate();
-        GrabItemNameUIUpdate();
+        //GrabItemNameUIUpdate();
     }
 
 
@@ -89,32 +89,33 @@ public class GrabItemEvent : MonoBehaviour {
     //---グリップ時間のカウント---//
     private void GripTimeCounter()
     {
-        if (!isItemGrabbed)
+        if(!isItemGrabbed)
         {
             GripTime += Time.deltaTime;
-
-            if (GripTime > DecideGripTime)
+            if(GripTime > DecideGripTime)
             {
                 GripTime = 0;
-                ir.DestryItem(_grabbedItemNumber);
+                this.gameObject.GetComponent<VRTK.VRTK_InteractableObject>().enabled = false;
+                ir.DestroyItem(_grabbedItemNumber);
             }
         }
-        //else
-        //{
-        //    if (GripTime == 0)
-        //    {
-        //        return;
-        //    }
-
-        //    else if (GripTime < 0)
-        //    {
-        //        GripTime = 0;
-        //        return;
-        //    }
-
-        //    GripTime -= Time.deltaTime * 2;
-        //}
-
+        else if(isItemGrabbed)
+        {
+            //GripTime -= Time.deltaTime;
+            //if (GripTime == 0)
+            //{
+            //    return;
+            //}
+            //else if (GripTime < 0)
+            //{
+            //    GripTime = 0;
+            //    return;
+            //}
+            //else
+            //{
+            //    GripTime -= Time.deltaTime;
+            //}
+        }
     }
 
     //---UI周りの処理---//
@@ -126,12 +127,12 @@ public class GrabItemEvent : MonoBehaviour {
         }
     }
 
-    private void GrabItemNameUIUpdate()
-    {
-        if(ii != null && !isItemGrabbed)
-        {
-            um.GrabItemName = ii.ItemName;
-        }
-    }
+    //private void GrabItemNameUIUpdate()
+    //{
+    //    if(ii != null && !isItemGrabbed)
+    //    {
+    //        um.GrabItemName = ii.ItemName;
+    //    }
+    //}
 
 }

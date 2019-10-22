@@ -5,31 +5,42 @@ using UnityEngine.UI;
 
 public class UIManagement:MonoBehaviour{
 
-
-    [SerializeField] private ItemRegistrator ir;
-
-    //public Text OdaiName_EditOnUnity;
-    //public Text OdaiHint_EditOnUnity;
-    public Text GrabItemName_EditOnUnity;
-    public Slider GrabbedItemTime_EditOnUnity;
-
-    //デザイン案が決まり次第、以下のフィールドに対する処理を追加する
-    //public Text IsMatchedWithOdai_EditOnUnity;
-    ////public Image GameTimeFromStart_EditOnUnity;
-    //public Image GrabbedTime_EditOnUnity;
-
     /// <summary>
     /// お題の名前
     /// </summary>
-    public string OdaiName { get; set; }
+    public Text OdaiName_EditOnUnity;
+
     /// <summary>
     /// お題のヒント
     /// </summary>
-    public string OdaiHint { get; set; }
+    public Text OdaiHint_EditOnUnity;
+
     /// <summary>
     /// 掴んでいるアイテムの名前
     /// </summary>
-    public string GrabItemName { get; set; }//ok
+    //public Text GrabItemName_EditOnUnity;
+    //public string GrabItemName { get; set; }//ok
+
+    /// <summary>
+    /// アイテムを掴んでいる時間
+    /// </summary>
+    public Slider GrabbedItemTime_EditOnUnity;
+    public float GrabbedItemTime { get; set; }//ok
+
+    /// <summary>
+    /// ゲーム時間：開始から終了まで
+    /// </summary>
+    public Text GameTimeFromStart_EditOnUnity;
+
+    [SerializeField]private ItemRegistrator ItemRegistrator;
+    [SerializeField]private TimeCounter timeCounter;
+
+
+    //デザイン案が決まり次第、以下のフィールドに対する処理を追加する
+    //public Text IsMatchedWithOdai_EditOnUnity;
+    //public Image GrabbedTime_EditOnUnity;
+
+
     /// <summary>
     /// つかんだアイテムがお題と一致しているか
     /// </summary>
@@ -39,22 +50,17 @@ public class UIManagement:MonoBehaviour{
     ///// </summary>
     //public float GameTimeFromStart { get; set; }
 
-    /// <summary>
-    /// アイテムを掴んでいる時間
-    /// </summary>
-    public float GrabbedItemTime { get; set; }//ok
-    public float _GrabbedItemTime;
-    public string _GrabItemName;
+
 
     private void Update()
     {
 
-        //OdaiName_EditOnUnity.text = OdaiName;
-        //OdaiHint_EditOnUnity.text = OdaiHint;
-        GrabItemName_EditOnUnity.text = GrabItemName;
+
+        OdaiName_EditOnUnity.text = ItemRegistrator.OdaiName;
+        OdaiHint_EditOnUnity.text = ItemRegistrator.OdaiHint;
+        //GrabItemName_EditOnUnity.text = GrabItemName;
         GrabbedItemTime_EditOnUnity.value = GrabbedItemTime;
-        _GrabbedItemTime = GrabbedItemTime;
-        _GrabItemName = GrabItemName;
+        GameTimeFromStart_EditOnUnity.text = (timeCounter.GameTimeRangeZeroToOne * timeCounter.timeOutValue).ToString();
 
     }
 }

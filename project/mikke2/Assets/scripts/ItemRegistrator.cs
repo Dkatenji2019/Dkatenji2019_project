@@ -4,11 +4,25 @@ using UnityEngine;
 
 public class ItemRegistrator : MonoBehaviour {
 
+
+    private FindScriptableobjects findScriptableObject;
+
     private Queue<GameObject> _itemQ = new Queue<GameObject>();
     public Queue<GameObject> ItemQ
     {
         get { return this._itemQ; }
         set { this._itemQ = value; }
+    }
+
+    private string _odaiName;
+    public string OdaiName
+    {
+        get { return _odaiName; }
+    }
+    private string _odaiHint;
+    public string OdaiHint
+    {
+        get { return _odaiHint; }
     }
 
     void Awake()
@@ -29,35 +43,38 @@ public class ItemRegistrator : MonoBehaviour {
     private void InstanceItemGameObjects()
     {
         //Scriptableobjectsを一元管理しているクラスからの情報を格納
-        var FindScriptableobject = this.GetComponent<FindScriptableobjects>();
+        findScriptableObject = this.GetComponent<FindScriptableobjects>();
 
-        for (int i = 0; i < FindScriptableobject.ItemsList.Count; i++)
+        //お題を混ぜる
+        queue_shuffle();
+
+
+        for (int i = 0; i < findScriptableObject.ItemsList.Count; i++)
         {
-            if (FindScriptableobject.ItemsList[i].ItemObject == null)
+            if (findScriptableObject.ItemsList[i].ItemObject == null)
             {
                 continue;
             }
             else
             {
-                    GameObject instancedgameObject = Instantiate(FindScriptableobject.ItemsList[i].ItemObject);
+                    GameObject instancedgameObject = Instantiate(findScriptableObject.ItemsList[i].ItemObject);
                     var ig = instancedgameObject.AddComponent<ItemInformation>();
 
                         //アイテム情報を格納するItemInformationCreate(scriptableobject)に名前が記述されていなかった場合
-                        if (FindScriptableobject.ItemsList[i].ItemName.Length == 0)
+                        if (findScriptableObject.ItemsList[i].ItemName.Length == 0)
                         {
-                            ig.itemInformation("☆---名前を追加してください---☆", FindScriptableobject.ItemsList[i].ItemObject, i);
+                            ig.itemInformation("☆---名前を追加してください---☆", findScriptableObject.ItemsList[i].ItemObject, i);
                         }
                         else
                         {
-                            ig.itemInformation(FindScriptableobject.ItemsList[i].ItemName, FindScriptableobject.ItemsList[i].ItemObject, i);
+                            ig.itemInformation(findScriptableObject.ItemsList[i].ItemName, findScriptableObject.ItemsList[i].ItemObject, i);
                         }
                     _itemQ.Enqueue(instancedgameObject);
                     // Debug.Log(instancedgameObject.GetComponent<ItemInformation>().ItemName);
             }
 
         }
-
-
+        UIOdaiUpadte();
 
         foreach (var q in _itemQ)
         {
@@ -74,13 +91,42 @@ public class ItemRegistrator : MonoBehaviour {
 
     }
 
+    private void queue_shuffle()
+    {
 
-    public void DestryItem(int grabbedItemNumber)
+        int n = findScriptableObject.ItemsList.Count;
+
+        List<int> numbers = new List<int>();
+
+        for (int i = 0; i < findScriptableObject.ItemsList.Count; i++)
+        {
+            numbers.Add(i);
+        }
+
+        for (int i = 0; i < n; i++)
+        {
+            int index = Random.Range(0, numbers.Count);
+
+            int ransu = numbers[index];
+
+            numbers.RemoveAt(index);
+
+            int r = ransu;
+
+            var rand = findScriptableObject.ItemsList[r];
+            findScriptableObject.ItemsList[r] = findScriptableObject.ItemsList[i];
+            findScriptableObject.ItemsList[i] = rand;
+        }
+
+    }
+
+    public void DestroyItem(int grabbedItemNumber)
     {
         if(grabbedItemNumber == NowOdaiNumber)
         {
             Destroy(_itemQ.Peek());
             _itemQ.Dequeue();
+            UIOdaiUpadte();
             NowOdaiNumber++;
         }
         else
@@ -91,5 +137,10 @@ public class ItemRegistrator : MonoBehaviour {
         //Debug.Log(NowOdaiNumber);
     }
 
+    private void UIOdaiUpadte()
+    {
+        _odaiName = _itemQ.Peek().GetComponent<ItemInformation>().ItemName;
+        _odaiHint = _itemQ.Peek().GetComponent<ItemInformation>().ItemHint;
+    }
 }
 

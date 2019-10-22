@@ -12,7 +12,7 @@ public class TimeCounter : MonoBehaviour {
     /// 何秒でゲームが終わるか
     /// </summary>
     private  float timeOut;
-    [SerializeField] private float timeOutValue = 720.0f;
+    public float timeOutValue = 360.0f;
 
 
     /// <summary>
@@ -36,22 +36,35 @@ public class TimeCounter : MonoBehaviour {
     private bool _gameEndTrigger;
 
     // Use this for initialization
-    void Start () {
+    private void Start () {
+
+        StartSetting();
+
+    }
+
+    // Update is called once per frame
+    private void Update () {
+
+        trrigerUpdate();
+
+    }
+
+    private void StartSetting()
+    {
         gameTime = 0.0f;
         timeOut = timeOutValue;
-        _gameStartTrigger = false;
+        _gameStartTrigger = true;
         _gameEndTrigger = false;
     }
-	
-	// Update is called once per frame
-	void Update () {
 
-        if(_gameEndTrigger)
+    private void trrigerUpdate()
+    {
+        if (_gameEndTrigger)
         {
             return;
         }
 
-        else if(_gameStartTrigger)
+        else if (_gameStartTrigger)
         {
             Timer();
             Caluculate_GameTimeRangeZeroToOne();
