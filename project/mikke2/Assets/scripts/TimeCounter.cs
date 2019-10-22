@@ -1,20 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class TimeCounter : MonoBehaviour {
 
-
-
+    private ScoreCounter sc = null;
     private float gameTime;
 
     /// <summary>
     /// 何秒でゲームが終わるか
     /// </summary>
     private  float timeOut;
-    public float timeOutValue = 360.0f;
+
+ //   public float timeOutValue = 360.0f;
 
 
+    public float timeOutValue = 5.0f;
     /// <summary>
     /// ゲームがスタートしてから終わるまでの経過時間を0～１の範囲で返す
     /// </summary>
@@ -36,11 +38,20 @@ public class TimeCounter : MonoBehaviour {
     private bool _gameEndTrigger;
 
     // Use this for initialization
-    private void Start () {
+    private void Start() {
 
         StartSetting();
 
+        // イベントにイベントハンドラーを追加
+        SceneManager.sceneLoaded += SceneLoaded;
     }
+
+        // イベントハンドラー（イベント発生時に動かしたい処理）
+        void SceneLoaded(Scene nextScene, LoadSceneMode mode)
+        {
+            Debug.Log(nextScene.name);
+            Debug.Log(mode);
+        }
 
     // Update is called once per frame
     private void Update () {
@@ -61,6 +72,7 @@ public class TimeCounter : MonoBehaviour {
     {
         if (_gameEndTrigger)
         {
+            GameEnd();
             return;
         }
 
@@ -96,5 +108,12 @@ public class TimeCounter : MonoBehaviour {
         {
             _gameTimeRangeZeroToOne = 0;
         }
+    }
+
+    private void GameEnd()
+    {
+        sc = GameObject.FindGameObjectWithTag("ScoreCounter").GetComponent<ScoreCounter>();
+        DontDestroyOnLoad(sc);
+        SceneManager.LoadScene("Start");
     }
 }

@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 
-public class SceneChange_Test : MonoBehaviour {
+public class SceneChangeToMiniture : MonoBehaviour
+{
 
     public float GripTime;// { get; set; }
     readonly float DecideGripTime = 3.0f;
@@ -31,7 +32,7 @@ public class SceneChange_Test : MonoBehaviour {
         {
             IsGripItem = false;
             GripTime = 0;
-            SceneManager.LoadScene("Lab");
+            SceneManager.LoadScene("Miniture");
         }
     }
 
