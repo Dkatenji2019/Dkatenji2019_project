@@ -50,8 +50,6 @@ public class SpreadItemOnField : MonoBehaviour {
                 items_name.Add(element.ItemName);
             }
 
-
-
             //element.ItemObject.AddComponent<CapsuleCollider>();
             //element.ItemObject.AddComponent<Rigidbody>();
 

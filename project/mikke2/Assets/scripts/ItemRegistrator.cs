@@ -16,6 +16,7 @@ public class ItemRegistrator : MonoBehaviour {
         InstanceItemGameObjects();
     }
 
+
     //お題は常に番号で管理される。プレイヤーがお題を１クリアするごとに１繰り上がる。
     private int NowOdaiNumber = 0;
 
@@ -28,6 +29,7 @@ public class ItemRegistrator : MonoBehaviour {
     /// </summary>
     private void InstanceItemGameObjects()
     {
+
         //Scriptableobjectsを一元管理しているクラスからの情報を格納
         var FindScriptableobject = this.GetComponent<FindScriptableobjects>();
 
@@ -45,13 +47,27 @@ public class ItemRegistrator : MonoBehaviour {
                         //アイテム情報を格納するItemInformationCreate(scriptableobject)に名前が記述されていなかった場合
                         if (FindScriptableobject.ItemsList[i].ItemName.Length == 0)
                         {
-                            ig.itemInformation("☆---名前を追加してください---☆", FindScriptableobject.ItemsList[i].ItemObject, i);
+                    if (FindScriptableobject.ItemsList[i].ItemHint.Length == 0)
+                    {
+                        ig.itemInformation("☆---名前を追加してください---☆", FindScriptableobject.ItemsList[i].ItemObject, i, "ヒントはないよ！");
+                    }
+                    else
+                    {
+                        ig.itemInformation("☆---名前を追加してください---☆", FindScriptableobject.ItemsList[i].ItemObject, i, FindScriptableobject.ItemsList[i].ItemHint);
+                    }
+                        
+
+                        }
+                        else if(FindScriptableobject.ItemsList[i].ItemHint.Length == 0)
+                        {
+                            ig.itemInformation(FindScriptableobject.ItemsList[i].ItemName, FindScriptableobject.ItemsList[i].ItemObject, i, "ヒントはないよ！");
                         }
                         else
                         {
-                            ig.itemInformation(FindScriptableobject.ItemsList[i].ItemName, FindScriptableobject.ItemsList[i].ItemObject, i);
+                            ig.itemInformation(FindScriptableobject.ItemsList[i].ItemName, FindScriptableobject.ItemsList[i].ItemObject, i, FindScriptableobject.ItemsList[i].ItemHint);
                         }
-                    _itemQ.Enqueue(instancedgameObject);
+
+                _itemQ.Enqueue(instancedgameObject);
                     // Debug.Log(instancedgameObject.GetComponent<ItemInformation>().ItemName);
             }
 
@@ -61,7 +77,7 @@ public class ItemRegistrator : MonoBehaviour {
 
         foreach (var q in _itemQ)
         {
-            Debug.Log("アイテム名:" + q.GetComponent<ItemInformation>().ItemName + "３Ｄオブジェクト名:" + q.GetComponent<ItemInformation>().ItemObject + "格納順:" + q.GetComponent<ItemInformation>().ItemNumber);
+            Debug.Log("アイテム名:" + q.GetComponent<ItemInformation>().ItemName + "３Ｄオブジェクト名:" + q.GetComponent<ItemInformation>().ItemObject + "格納順:" + q.GetComponent<ItemInformation>().ItemNumber + "ヒント:" + q.GetComponent<ItemInformation>().ItemHint);
         }
 
         //byte[] data = System.Text.Encoding.ASCII.GetBytes(element.ItemName);
