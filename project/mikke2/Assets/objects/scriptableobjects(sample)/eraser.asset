@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Name: eraser
   m_EditorClassIdentifier: 
   _itemName: 
-  _itemHint: 
+  _itemPoint: 0
+  _itemHint: eraser
   _itemObject: {fileID: 1371912617108268, guid: ca9d52d9608ffed49b2308f21515b0ec,
     type: 2}
   _onTheDesk: 1
