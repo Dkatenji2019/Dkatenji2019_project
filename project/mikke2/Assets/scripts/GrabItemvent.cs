@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ReturnGrabItemInformation : MonoBehaviour {
+public class GrabItemEvent : MonoBehaviour {
 
     private VRTK.VRTK_InteractableObject vrtk_InteractableObject = new VRTK.VRTK_InteractableObject();
     private ItemInformation ii = null;
