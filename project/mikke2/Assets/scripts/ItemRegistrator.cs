@@ -65,25 +65,22 @@ public class ItemRegistrator : MonoBehaviour {
                         //アイテム情報を格納するItemInformationCreate(scriptableobject)に名前が記述されていなかった場合
                         if (findScriptableObject.ItemsList[i].ItemName.Length == 0)
                         {
-
-                    if (findScriptableObject.ItemsList[i].ItemHint.Length == 0)
-                    {
-                        ig.itemInformation("☆---名前を追加してください---☆", findScriptableObject.ItemsList[i].ItemObject, i, "ヒントはないよ！");
-                    }
-                    else
-                    {
-                        ig.itemInformation("☆---名前を追加してください---☆", findScriptableObject.ItemsList[i].ItemObject, i, findScriptableObject.ItemsList[i].ItemHint);
-                    }
-                        
-
+                                if (findScriptableObject.ItemsList[i].ItemHint.Length == 0)
+                                {
+                                    ig.itemInformation("☆---名前を追加してください---☆", findScriptableObject.ItemsList[i].ItemObject, i, findScriptableObject.ItemsList[i].ItemPoint, "ヒントはないよ！");
+                                }
+                                else
+                                {
+                                    ig.itemInformation("☆---名前を追加してください---☆", findScriptableObject.ItemsList[i].ItemObject, i, findScriptableObject.ItemsList[i].ItemPoint, findScriptableObject.ItemsList[i].ItemHint);
+                                }
                         }
                         else if(findScriptableObject.ItemsList[i].ItemHint.Length == 0)
                         {
-                            ig.itemInformation(findScriptableObject.ItemsList[i].ItemName, findScriptableObject.ItemsList[i].ItemObject, i, "ヒントはないよ！");
+                            ig.itemInformation(findScriptableObject.ItemsList[i].ItemName, findScriptableObject.ItemsList[i].ItemObject, i, findScriptableObject.ItemsList[i].ItemPoint, "ヒントはないよ！");
                         }
                         else
                         {
-                            ig.itemInformation(findScriptableObject.ItemsList[i].ItemName, findScriptableObject.ItemsList[i].ItemObject, i, findScriptableObject.ItemsList[i].ItemHint);
+                            ig.itemInformation(findScriptableObject.ItemsList[i].ItemName, findScriptableObject.ItemsList[i].ItemObject, i, findScriptableObject.ItemsList[i].ItemPoint, findScriptableObject.ItemsList[i].ItemHint);
                         }
 
                 _itemQ.Enqueue(instancedgameObject);
@@ -91,7 +88,7 @@ public class ItemRegistrator : MonoBehaviour {
             }
 
         }
-        UIOdaiUpadte();
+        OdaiUpadte();
 
         foreach (var q in _itemQ)
         {
@@ -143,7 +140,7 @@ public class ItemRegistrator : MonoBehaviour {
         {
             Destroy(_itemQ.Peek());
             _itemQ.Dequeue();
-            UIOdaiUpadte();
+            OdaiUpadte();
             NowOdaiNumber++;
         }
         else
@@ -154,7 +151,7 @@ public class ItemRegistrator : MonoBehaviour {
         //Debug.Log(NowOdaiNumber);
     }
 
-    private void UIOdaiUpadte()
+    private void OdaiUpadte()
     {
         _odaiName = _itemQ.Peek().GetComponent<ItemInformation>().ItemName;
         _odaiHint = _itemQ.Peek().GetComponent<ItemInformation>().ItemHint;

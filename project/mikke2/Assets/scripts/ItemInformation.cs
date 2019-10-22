@@ -29,13 +29,19 @@ public class ItemInformation : MonoBehaviour
     /// </summary>
     public string ItemHint { get; set; }
 
-    public ItemInformation itemInformation(string _itemName, GameObject _itemObject, int _itemNumber, string _itemHint = "ヒントはないよ！")
+
+    /// <summary>
+    /// アイテム一つ当たりのポイントを記述
+    /// </summary>
+    public int ItemPoint { get; set; }
+
+    public ItemInformation itemInformation(string _itemName, GameObject _itemObject, int _itemNumber, int _itemPoint, string _itemHint = "ヒントはないよ！")
     {
         this.ItemName = _itemName;
         this.ItemObject = _itemObject;
         this.ItemNumber = _itemNumber;
+        this.ItemPoint = _itemPoint;
         this.ItemHint = _itemHint;
-
         return this;
     }
 }

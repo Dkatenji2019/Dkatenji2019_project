@@ -16,6 +16,13 @@ public class ItemInformationCreate : ScriptableObject
         }
     }
 
+    [SerializeField] private int _itemPoint;
+    public int ItemPoint
+    {
+        get { return _itemPoint; }
+        set { _itemPoint = value; }
+    }
+
     [SerializeField, MultilineAttribute(5)] private string _itemHint;
     public string ItemHint
     {
