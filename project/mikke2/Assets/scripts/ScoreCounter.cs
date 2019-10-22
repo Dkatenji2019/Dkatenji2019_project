@@ -4,17 +4,15 @@ using UnityEngine;
 
 public class ScoreCounter : MonoBehaviour
 {
-
+    [SerializeField] ItemRegistrator itemRegistrator;
     public int ScoreValue { get; set; }
+    public static int _scoreValue;
+
 
     // Use this for initialization
-    void Start()
+    void Update()
     {
-        ScoreValue = 0;
+        ScoreValue = _scoreValue;
     }
 
-    private void addScore(int scoreValue)
-    {
-        ScoreValue += scoreValue;
-    }
 }
