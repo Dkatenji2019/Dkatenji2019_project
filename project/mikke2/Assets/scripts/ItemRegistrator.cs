@@ -66,24 +66,24 @@ public class ItemRegistrator : MonoBehaviour {
                         if (findScriptableObject.ItemsList[i].ItemName.Length == 0)
                         {
 
-                    if (FindScriptableobject.ItemsList[i].ItemHint.Length == 0)
+                    if (findScriptableObject.ItemsList[i].ItemHint.Length == 0)
                     {
-                        ig.itemInformation("☆---名前を追加してください---☆", FindScriptableobject.ItemsList[i].ItemObject, i, "ヒントはないよ！");
+                        ig.itemInformation("☆---名前を追加してください---☆", findScriptableObject.ItemsList[i].ItemObject, i, "ヒントはないよ！");
                     }
                     else
                     {
-                        ig.itemInformation("☆---名前を追加してください---☆", FindScriptableobject.ItemsList[i].ItemObject, i, FindScriptableobject.ItemsList[i].ItemHint);
+                        ig.itemInformation("☆---名前を追加してください---☆", findScriptableObject.ItemsList[i].ItemObject, i, findScriptableObject.ItemsList[i].ItemHint);
                     }
                         
 
                         }
-                        else if(FindScriptableobject.ItemsList[i].ItemHint.Length == 0)
+                        else if(findScriptableObject.ItemsList[i].ItemHint.Length == 0)
                         {
-                            ig.itemInformation(FindScriptableobject.ItemsList[i].ItemName, FindScriptableobject.ItemsList[i].ItemObject, i, "ヒントはないよ！");
+                            ig.itemInformation(findScriptableObject.ItemsList[i].ItemName, findScriptableObject.ItemsList[i].ItemObject, i, "ヒントはないよ！");
                         }
                         else
                         {
-                            ig.itemInformation(FindScriptableobject.ItemsList[i].ItemName, FindScriptableobject.ItemsList[i].ItemObject, i, FindScriptableobject.ItemsList[i].ItemHint);
+                            ig.itemInformation(findScriptableObject.ItemsList[i].ItemName, findScriptableObject.ItemsList[i].ItemObject, i, findScriptableObject.ItemsList[i].ItemHint);
                         }
 
                 _itemQ.Enqueue(instancedgameObject);

@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class SceneChange_Test : MonoBehaviour {
 
-    [SerializeField] private ItemRegistrator IR;
-
     public float GripTime;// { get; set; }
     readonly float DecideGripTime = 3.0f;
 
@@ -15,30 +13,6 @@ public class SceneChange_Test : MonoBehaviour {
 
     private void Update()
     {
-        /*--------------------------*/
-        //Correctの場合はC
-        //Gripの場合はG
-        //controllerが実装できるまでキーで代用
-
-        if (Input.GetKey(KeyCode.G))
-        {
-            IsGripItem = true;
-        }
-        else
-        {
-            IsGripItem = false;
-        }
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            IsMatchedWithItem = true;
-        }
-        else if ((Input.GetKeyUp(KeyCode.Space)))
-        {
-            IsMatchedWithItem = false;
-        }
-        /*---------------------------*/
-
         if (IsGripItem)
         {
             GripTimeCounter();
