@@ -44,6 +44,7 @@ public class UIManagement:MonoBehaviour{
     /// </summary>
     public float GrabbedItemTime { get; set; }//ok
     public float _GrabbedItemTime;
+    public string _GrabItemName;
 
     private void Update()
     {
@@ -52,6 +53,8 @@ public class UIManagement:MonoBehaviour{
         //OdaiHint_EditOnUnity.text = OdaiHint;
         GrabItemName_EditOnUnity.text = GrabItemName;
         GrabbedItemTime_EditOnUnity.value = GrabbedItemTime;
+        _GrabbedItemTime = GrabbedItemTime;
+        _GrabItemName = GrabItemName;
 
     }
 }

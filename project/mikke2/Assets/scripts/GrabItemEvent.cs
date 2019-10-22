@@ -27,7 +27,7 @@ public class GrabItemEvent : MonoBehaviour {
     void Start()
     {
         ir = GameObject.FindGameObjectWithTag("ItemRegistrator").GetComponent<ItemRegistrator>();
-        um = GameObject.FindGameObjectWithTag("UIUpdate").GetComponent<UIManagement>();
+        um = GameObject.FindGameObjectWithTag("UIManager").GetComponent<UIManagement>();
     }
 
     // Update is called once per frame
@@ -89,22 +89,7 @@ public class GrabItemEvent : MonoBehaviour {
     //---グリップ時間のカウント---//
     private void GripTimeCounter()
     {
-        if (isItemGrabbed)
-        {
-            if (GripTime == 0)
-            {
-                return;
-            }
-
-            else if (GripTime < 0)
-            {
-                GripTime = 0;
-                return;
-            }
-
-            GripTime -= Time.deltaTime * 2 ;
-        }
-        else
+        if (!isItemGrabbed)
         {
             GripTime += Time.deltaTime;
 
@@ -114,6 +99,22 @@ public class GrabItemEvent : MonoBehaviour {
                 ir.DestryItem(_grabbedItemNumber);
             }
         }
+        //else
+        //{
+        //    if (GripTime == 0)
+        //    {
+        //        return;
+        //    }
+
+        //    else if (GripTime < 0)
+        //    {
+        //        GripTime = 0;
+        //        return;
+        //    }
+
+        //    GripTime -= Time.deltaTime * 2;
+        //}
+
     }
 
     //---UI周りの処理---//
@@ -127,15 +128,10 @@ public class GrabItemEvent : MonoBehaviour {
 
     private void GrabItemNameUIUpdate()
     {
-        if(!isItemGrabbed)
+        if(ii != null && !isItemGrabbed)
         {
-            um.GrabItemName = ReturnItemName();
+            um.GrabItemName = ii.ItemName;
         }
-    }
-
-    private string ReturnItemName()
-    {
-        return (ii != null && isItemGrabbed == false) ? ii.ItemName : "Nothing";
     }
 
 }
