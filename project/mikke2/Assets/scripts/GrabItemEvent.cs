@@ -91,7 +91,18 @@ public class GrabItemEvent : MonoBehaviour {
     {
         if (isItemGrabbed)
         {
-            return;
+            if (GripTime == 0)
+            {
+                return;
+            }
+
+            else if (GripTime < 0)
+            {
+                GripTime = 0;
+                return;
+            }
+
+            GripTime -= Time.deltaTime * 2 ;
         }
         else
         {
@@ -108,12 +119,18 @@ public class GrabItemEvent : MonoBehaviour {
     //---UI周りの処理---//
     private void GrabTimeUIUpdate() 
     {
-        um.GrabbedItemTime = GripTime;
+        if(!isItemGrabbed)
+        {
+            um.GrabbedItemTime = GripTime / DecideGripTime;
+        }
     }
 
     private void GrabItemNameUIUpdate()
     {
-        um.GrabItemName = ReturnItemName();
+        if(!isItemGrabbed)
+        {
+            um.GrabItemName = ReturnItemName();
+        }
     }
 
     private string ReturnItemName()

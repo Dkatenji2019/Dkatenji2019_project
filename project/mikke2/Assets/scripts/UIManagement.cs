@@ -8,8 +8,8 @@ public class UIManagement:MonoBehaviour{
 
     [SerializeField] private ItemRegistrator ir;
 
-    public Text OdaiName_EditOnUnity;
-    public Text OdaiHint_EditOnUnity;
+    //public Text OdaiName_EditOnUnity;
+    //public Text OdaiHint_EditOnUnity;
     public Text GrabItemName_EditOnUnity;
     public Slider GrabbedItemTime_EditOnUnity;
 
@@ -43,12 +43,15 @@ public class UIManagement:MonoBehaviour{
     /// アイテムを掴んでいる時間
     /// </summary>
     public float GrabbedItemTime { get; set; }//ok
+    public float _GrabbedItemTime;
 
     private void Update()
     {
-        OdaiName_EditOnUnity.text = OdaiName;
-        OdaiHint_EditOnUnity.text = OdaiHint;
+
+        //OdaiName_EditOnUnity.text = OdaiName;
+        //OdaiHint_EditOnUnity.text = OdaiHint;
         GrabItemName_EditOnUnity.text = GrabItemName;
-        GrabbedItemTime_EditOnUnity.value = 3/GrabbedItemTime;
+        GrabbedItemTime_EditOnUnity.value = GrabbedItemTime;
+
     }
 }

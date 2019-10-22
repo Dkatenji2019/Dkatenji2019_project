@@ -54,6 +54,13 @@ public class FindScriptableobjects : MonoBehaviour
         }
         queue_shuffle();
     }
+
+    private void Awake()
+    {
+        queue_shuffle();
+
+    }
+
     private void queue_shuffle()
     {
 

@@ -33,29 +33,36 @@ public class ItemRegistrator : MonoBehaviour {
 
         for (int i = 0; i < FindScriptableobject.ItemsList.Count; i++)
         {
-            GameObject instancedgameObject = Instantiate(FindScriptableobject.ItemsList[i].ItemObject);
-            var ig = instancedgameObject.AddComponent<ItemInformation>();
-
-            //アイテム情報を格納するItemInformationCreate(scriptableobject)に名前が記述されていなかった場合
-            if (FindScriptableobject.ItemsList[i].ItemName.Length == 0)
+            if (FindScriptableobject.ItemsList[i].ItemObject == null)
             {
-                ig.itemInformation("☆---名前を追加してください---☆", FindScriptableobject.ItemsList[i].ItemObject, i);
+                continue;
             }
             else
             {
-                ig.itemInformation(FindScriptableobject.ItemsList[i].ItemName, FindScriptableobject.ItemsList[i].ItemObject, i);
+                    GameObject instancedgameObject = Instantiate(FindScriptableobject.ItemsList[i].ItemObject);
+                    var ig = instancedgameObject.AddComponent<ItemInformation>();
+
+                        //アイテム情報を格納するItemInformationCreate(scriptableobject)に名前が記述されていなかった場合
+                        if (FindScriptableobject.ItemsList[i].ItemName.Length == 0)
+                        {
+                            ig.itemInformation("☆---名前を追加してください---☆", FindScriptableobject.ItemsList[i].ItemObject, i);
+                        }
+                        else
+                        {
+                            ig.itemInformation(FindScriptableobject.ItemsList[i].ItemName, FindScriptableobject.ItemsList[i].ItemObject, i);
+                        }
+                    _itemQ.Enqueue(instancedgameObject);
+                    // Debug.Log(instancedgameObject.GetComponent<ItemInformation>().ItemName);
             }
-            _itemQ.Enqueue(instancedgameObject);
-            // Debug.Log(instancedgameObject.GetComponent<ItemInformation>().ItemName);
 
         }
 
 
 
-        //foreach (var q in _itemQ)
-        //{
-        //    Debug.Log("アイテム名:" + q.GetComponent<ItemInformation>().ItemName + "３Ｄオブジェクト名:" + q.GetComponent<ItemInformation>().ItemObject + "格納順:" + q.GetComponent<ItemInformation>().ItemNumber);
-        //}
+        foreach (var q in _itemQ)
+        {
+            Debug.Log("アイテム名:" + q.GetComponent<ItemInformation>().ItemName + "３Ｄオブジェクト名:" + q.GetComponent<ItemInformation>().ItemObject + "格納順:" + q.GetComponent<ItemInformation>().ItemNumber);
+        }
 
         //byte[] data = System.Text.Encoding.ASCII.GetBytes(element.ItemName);
         //string hoge = null;
