@@ -9,13 +9,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e2ae6964ec0abe54bb47ea4526652afa, type: 3}
-  m_Name: kinoko
+  m_Name: "\u3046\u307E"
   m_EditorClassIdentifier: 
-  _itemName: "\u30AD\u30CE\u30B3"
-  _itemPoint: 20
-  _itemHint: "\u571F\u306E\u4E0A\u306B\u751F\u3048\u3066\u308B\u304B\u3082\uFF1F"
-  _itemObject: {fileID: 1757249909515682, guid: 14309c93316a70147bb7accd60ac40ac,
-    type: 2}
+  _itemName: 
+  _itemPoint: 0
+  _itemHint: 
+  _itemObject: {fileID: 0}
   _onTheDesk: 0
   _inTheDrawer: 0
   _onTheFloor: 0
