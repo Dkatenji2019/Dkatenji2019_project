@@ -14,7 +14,8 @@ MonoBehaviour:
   _itemName: 
   _itemPoint: 0
   _itemHint: 
-  _itemObject: {fileID: 0}
+  _itemObject: {fileID: 1757249909515682, guid: 14309c93316a70147bb7accd60ac40ac,
+    type: 2}
   _onTheDesk: 0
   _inTheDrawer: 0
   _onTheFloor: 0
