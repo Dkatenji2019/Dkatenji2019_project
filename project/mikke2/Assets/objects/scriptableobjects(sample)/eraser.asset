@@ -11,13 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2ae6964ec0abe54bb47ea4526652afa, type: 3}
   m_Name: eraser
   m_EditorClassIdentifier: 
-  _itemName: 
-  _itemPoint: 0
+  _itemName: erse
+  _itemPoint: 20
   _itemHint: eraser
   _itemObject: {fileID: 1371912617108268, guid: ca9d52d9608ffed49b2308f21515b0ec,
     type: 2}
-  _onTheDesk: 1
-  _inTheDrawer: 0
-  _onTheFloor: 0
   _atOneFloor: 0
   _atTwoFloor: 0
+  positionEnumerate: 1

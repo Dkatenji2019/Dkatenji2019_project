@@ -12,11 +12,10 @@ MonoBehaviour:
   m_Name: soccerball
   m_EditorClassIdentifier: 
   _itemName: "\u30B5\u30C3\u30AB\u30FC\u30DC\u30FC\u30EB"
-  _itemHint: 
+  _itemPoint: 20
+  _itemHint: f
   _itemObject: {fileID: 1585294534119912, guid: 9066593321a112f4a8e7e9ee9c2b7b6d,
     type: 2}
-  _onTheDesk: 0
-  _inTheDrawer: 0
-  _onTheFloor: 0
   _atOneFloor: 0
   _atTwoFloor: 0
+  positionEnumerate: 2

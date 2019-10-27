@@ -12,11 +12,10 @@ MonoBehaviour:
   m_Name: caluculator
   m_EditorClassIdentifier: 
   _itemName: "\u96FB\u5353"
-  _itemHint: 
+  _itemPoint: 20
+  _itemHint: a
   _itemObject: {fileID: 1844182777080232, guid: 85f7914524b8c904b88031d674f2d64e,
     type: 2}
-  _onTheDesk: 1
-  _inTheDrawer: 0
-  _onTheFloor: 0
   _atOneFloor: 0
   _atTwoFloor: 0
+  positionEnumerate: 1

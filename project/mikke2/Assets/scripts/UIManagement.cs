@@ -54,13 +54,15 @@ public class UIManagement:MonoBehaviour{
 
     private void Update()
     {
-
-
-        OdaiName_EditOnUnity.text = ItemRegistrator.OdaiName;
-        OdaiHint_EditOnUnity.text = ItemRegistrator.OdaiHint;
         //GrabItemName_EditOnUnity.text = GrabItemName;
         GrabbedItemTime_EditOnUnity.value = GrabbedItemTime;
         GameTimeFromStart_EditOnUnity.text = (timeCounter.GameTimeRangeZeroToOne * timeCounter.timeOutValue).ToString();
 
+    }
+
+    public void UITextUpdate()
+    {
+        OdaiName_EditOnUnity.text = ItemRegistrator.OdaiName;
+        OdaiHint_EditOnUnity.text = ItemRegistrator.OdaiHint;
     }
 }

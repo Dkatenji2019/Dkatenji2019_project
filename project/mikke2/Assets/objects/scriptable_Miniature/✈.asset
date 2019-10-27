@@ -12,11 +12,10 @@ MonoBehaviour:
   m_Name: "\u2708"
   m_EditorClassIdentifier: 
   _itemName: "\u98DB\u884C\u6A5F"
+  _itemPoint: 0
   _itemHint: 
   _itemObject: {fileID: 1757249909515682, guid: 14309c93316a70147bb7accd60ac40ac,
     type: 2}
-  _onTheDesk: 0
-  _inTheDrawer: 0
-  _onTheFloor: 0
-  _atOneFloor: 1
+  _atOneFloor: 0
   _atTwoFloor: 0
+  positionEnumerate: 0

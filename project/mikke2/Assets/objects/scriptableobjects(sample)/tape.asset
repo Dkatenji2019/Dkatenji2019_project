@@ -11,12 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2ae6964ec0abe54bb47ea4526652afa, type: 3}
   m_Name: tape
   m_EditorClassIdentifier: 
-  _itemName: 
-  _itemHint: 
+  _itemName: d
+  _itemPoint: 20
+  _itemHint: s
   _itemObject: {fileID: 1240317908736668, guid: c9a20175fd39e144283d1e17802c1418,
     type: 2}
-  _onTheDesk: 0
-  _inTheDrawer: 0
-  _onTheFloor: 0
   _atOneFloor: 0
   _atTwoFloor: 0
+  positionEnumerate: 2

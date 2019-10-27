@@ -12,11 +12,10 @@ MonoBehaviour:
   m_Name: holepunch
   m_EditorClassIdentifier: 
   _itemName: "\u30DB\u30C3\u30C1\u30AD\u30B9"
-  _itemHint: 
+  _itemPoint: 50
+  _itemHint: a
   _itemObject: {fileID: 1766528647092818, guid: 1f0f19c05a3f60e4e9ace1cac4bc8aec,
     type: 2}
-  _onTheDesk: 1
-  _inTheDrawer: 0
-  _onTheFloor: 0
   _atOneFloor: 0
   _atTwoFloor: 0
+  positionEnumerate: 2

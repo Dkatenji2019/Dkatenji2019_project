@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Name: kosenpenguin
   m_EditorClassIdentifier: 
   _itemName: "\u9AD8\u5C02\u30DA\u30F3\u30B0\u30A4\u30F3"
+  _itemPoint: 50
+  _itemHint: a
   _itemObject: {fileID: 1121685653588350, guid: 2cd65e1ac34062748b7d2ff6f7aa376d,
     type: 2}
-  _onTheDesk: 0
-  _inTheDrawer: 0
-  _onTheFloor: 1
   _atOneFloor: 0
   _atTwoFloor: 0
+  positionEnumerate: 2

@@ -12,11 +12,10 @@ MonoBehaviour:
   m_Name: greenstickynote
   m_EditorClassIdentifier: 
   _itemName: "\u7DD1\u306E\u4ED8\u7B8B"
-  _itemHint: 
+  _itemPoint: 100
+  _itemHint: a
   _itemObject: {fileID: 1744486882282280, guid: 9100b6c00b2adbe4a86ce2c98d62054f,
     type: 2}
-  _onTheDesk: 1
-  _inTheDrawer: 0
-  _onTheFloor: 0
   _atOneFloor: 0
   _atTwoFloor: 0
+  positionEnumerate: 2

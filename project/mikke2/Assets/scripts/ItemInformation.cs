@@ -35,13 +35,19 @@ public class ItemInformation : MonoBehaviour
     /// </summary>
     public int ItemPoint { get; set; }
 
-    public ItemInformation itemInformation(string _itemName, GameObject _itemObject, int _itemNumber, int _itemPoint, string _itemHint = "ヒントはないよ！")
+    /// <summary>
+    /// アイテム生成場所を記述
+    /// </summary>
+    public int ItemRespawnPosition { get; set; }
+
+    public ItemInformation itemInformation(string itemName, GameObject itemObject, int itemNumber, int itemPoint, int itemRespawnPosition = 01, string itemHint = "ヒントはないよ！")
     {
-        this.ItemName = _itemName;
-        this.ItemObject = _itemObject;
-        this.ItemNumber = _itemNumber;
-        this.ItemPoint = _itemPoint;
-        this.ItemHint = _itemHint;
+        this.ItemName = itemName;
+        this.ItemObject = itemObject;
+        this.ItemNumber = itemNumber;
+        this.ItemPoint = itemPoint;
+        this.ItemRespawnPosition = itemRespawnPosition;
+        this.ItemHint = itemHint;
         return this;
     }
 }

@@ -12,11 +12,10 @@ MonoBehaviour:
   m_Name: golfball
   m_EditorClassIdentifier: 
   _itemName: 
-  _itemHint: 
+  _itemPoint: 0
+  _itemHint: a
   _itemObject: {fileID: 1870953951569184, guid: f5798e33db320a14f978441959b007c7,
     type: 2}
-  _onTheDesk: 0
-  _inTheDrawer: 0
-  _onTheFloor: 0
   _atOneFloor: 0
   _atTwoFloor: 0
+  positionEnumerate: 11

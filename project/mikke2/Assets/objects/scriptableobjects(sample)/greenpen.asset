@@ -12,11 +12,10 @@ MonoBehaviour:
   m_Name: greenpen
   m_EditorClassIdentifier: 
   _itemName: "\u7DD1\u306E\u30DA\u30F3"
-  _itemHint: 
+  _itemPoint: 100
+  _itemHint: a
   _itemObject: {fileID: 1324046557227122, guid: 7022f306695342840b3a508ac8af52f6,
     type: 2}
-  _onTheDesk: 1
-  _inTheDrawer: 0
-  _onTheFloor: 0
   _atOneFloor: 0
   _atTwoFloor: 0
+  positionEnumerate: 1

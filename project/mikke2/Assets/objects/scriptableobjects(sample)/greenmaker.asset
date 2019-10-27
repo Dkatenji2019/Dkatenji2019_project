@@ -12,11 +12,10 @@ MonoBehaviour:
   m_Name: greenmaker
   m_EditorClassIdentifier: 
   _itemName: "\u7DD1\u306E\u30DE\u30FC\u30AB\u30FC"
-  _itemHint: 
+  _itemPoint: 100
+  _itemHint: a
   _itemObject: {fileID: 1582770782384520, guid: a6c4dc3757345d64a9b3be8fabb546da,
     type: 2}
-  _onTheDesk: 0
-  _inTheDrawer: 0
-  _onTheFloor: 0
   _atOneFloor: 0
   _atTwoFloor: 0
+  positionEnumerate: 1

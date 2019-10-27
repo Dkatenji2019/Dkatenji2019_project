@@ -12,11 +12,10 @@ MonoBehaviour:
   m_Name: yellowpencil
   m_EditorClassIdentifier: 
   _itemName: "\u9EC4\u8272\u306E\u925B\u7B46"
-  _itemHint: 
+  _itemPoint: 20
+  _itemHint: g
   _itemObject: {fileID: 1501416087633506, guid: 48f2b66454aa53f41be56e415c30f3e7,
     type: 2}
-  _onTheDesk: 1
-  _inTheDrawer: 0
-  _onTheFloor: 0
   _atOneFloor: 0
   _atTwoFloor: 0
+  positionEnumerate: 3

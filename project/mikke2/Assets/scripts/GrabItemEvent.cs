@@ -5,9 +5,9 @@ using UnityEngine;
 public class GrabItemEvent : MonoBehaviour {
 
     private VRTK.VRTK_InteractableObject vrtk_InteractableObject = new VRTK.VRTK_InteractableObject();
-    private ItemInformation ii = null;
-    private ItemRegistrator ir = null;
-    private UIManagement um = null;
+    private ItemInformation itemInformation = null;
+    private ItemRegistrator itemRegistrator = null;
+    private UIManagement uiManagement = null;
 
     private bool IsCompponentsAttached = false;
     private bool isItemGrabbed;
@@ -26,8 +26,8 @@ public class GrabItemEvent : MonoBehaviour {
 
     private void Start()
     {
-        ir = GameObject.FindGameObjectWithTag("ItemRegistrator").GetComponent<ItemRegistrator>();
-        um = GameObject.FindGameObjectWithTag("UIManager").GetComponent<UIManagement>();
+        itemRegistrator = GameObject.FindGameObjectWithTag("ItemRegistrator").GetComponent<ItemRegistrator>();
+        uiManagement = GameObject.FindGameObjectWithTag("UIManager").GetComponent<UIManagement>();
     }
 
     // Update is called once per frame
@@ -62,15 +62,17 @@ public class GrabItemEvent : MonoBehaviour {
         {
             vrtk_InteractableObject = this.gameObject.AddComponent<VRTK.VRTK_InteractableObject>();
             vrtk_InteractableObject.isGrabbable = true;
+
+            //任意の色に変更すること
             vrtk_InteractableObject.touchHighlightColor = Color.blue;
         }
     }
 
     private void getItem_InformationComponent()
     {
-        if (ii == null)
+        if (itemInformation == null)
         {
-            ii = this.GetComponent<ItemInformation>();
+            itemInformation = this.GetComponent<ItemInformation>();
         }
     }
 
@@ -82,7 +84,7 @@ public class GrabItemEvent : MonoBehaviour {
 
     private int ReturnItemNumber()
     {
-        return (ii != null && isItemGrabbed == false) ? ii.ItemNumber : -1;
+        return (itemInformation != null && isItemGrabbed == false) ? itemInformation.ItemNumber : -1;
     }
 
 
@@ -96,7 +98,7 @@ public class GrabItemEvent : MonoBehaviour {
             {
                 GripTime = 0;
                 this.gameObject.GetComponent<VRTK.VRTK_InteractableObject>().enabled = false;
-                ir.DestroyItem(_grabbedItemNumber);
+                itemRegistrator.DestroyItem(_grabbedItemNumber);
             }
         }
         else if(isItemGrabbed)
@@ -123,7 +125,7 @@ public class GrabItemEvent : MonoBehaviour {
     {
         if(!isItemGrabbed)
         {
-            um.GrabbedItemTime = GripTime / DecideGripTime;
+            uiManagement.GrabbedItemTime = GripTime / DecideGripTime;
         }
     }
 
