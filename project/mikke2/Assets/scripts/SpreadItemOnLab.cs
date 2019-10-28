@@ -22,6 +22,7 @@ public class SpreadItemOnLab : MonoBehaviour
                 continue;
             }
 
+            /**/
             float x = Random.Range(-area, area);
             float z = Random.Range(-area, area);
 
@@ -39,6 +40,8 @@ public class SpreadItemOnLab : MonoBehaviour
 
             float y = Random.Range(0, 30.0f);
             Q.transform.position = new Vector3(x, y, z);
+
+            /**/
         }
 
     }

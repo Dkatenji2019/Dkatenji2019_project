@@ -6,21 +6,25 @@ using UnityEngine;
 public class SceneChangeToForest : MonoBehaviour
 {
 
-    public float GripTime;// { get; set; }
+    private VRTK.VRTK_InteractableObject vrtk_InteractableObject = new VRTK.VRTK_InteractableObject();
+    private float GripTime;
     readonly float DecideGripTime = 3.0f;
 
-    public bool IsGripItem;
-    public bool IsMatchedWithItem;
+    private void Start()
+    {
+        vrtk_InteractableObject = this.gameObject.GetComponent<VRTK.VRTK_InteractableObject>();
+        vrtk_InteractableObject.isGrabbable = true;
+    }
 
     private void Update()
     {
-        if (IsGripItem)
+        if (vrtk_InteractableObject.isGrabbable)
+        {
+            GripTime = 0;
+        }
+        else
         {
             GripTimeCounter();
-        }
-        else if (!IsGripItem)
-        {
-            NonGrabItem();
         }
     }
 
@@ -28,30 +32,12 @@ public class SceneChangeToForest : MonoBehaviour
     {
         GripTime += Time.deltaTime;
 
-        if (GripTime > DecideGripTime && IsMatchedWithItem)
+        if (GripTime > DecideGripTime)
         {
-            IsGripItem = false;
-            GripTime = 0;
             SceneManager.LoadScene("Forrest");
-        }
-    }
-
-    private void NonGrabItem()
-    {
-        if (GripTime == 0)
-        {
-            return;
-        }
-
-        else if (GripTime < 0)
-        {
             GripTime = 0;
-            return;
         }
-
-        GripTime -= Time.deltaTime;
     }
-
 }
 
 
