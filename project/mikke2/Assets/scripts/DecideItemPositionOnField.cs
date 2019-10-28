@@ -52,7 +52,6 @@ public class DecideItemPositionOnField : MonoBehaviour
         int drawerNumberCounter = 0;
         int Forrest_GroundNumbwerCounter = 0;
         int Lab_CenterTableNumbwerCounter = 0;
-        /**/
 
         foreach (Transform childTransform in this.transform)
         {
