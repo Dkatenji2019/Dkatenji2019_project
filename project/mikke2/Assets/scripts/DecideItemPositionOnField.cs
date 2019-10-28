@@ -43,9 +43,16 @@ public class DecideItemPositionOnField : MonoBehaviour
         List<ComplexTypeTransform> tablePosition = new List<ComplexTypeTransform>();
         List<ComplexTypeTransform> shelfPosition = new List<ComplexTypeTransform>();
         List<ComplexTypeTransform> drawerPosition = new List<ComplexTypeTransform>();
+        List<ComplexTypeTransform> Forrest_Ground = new List<ComplexTypeTransform>();
+        List<ComplexTypeTransform> Lab_CenterTable = new List<ComplexTypeTransform>();
+        List<ComplexTypeTransform> Lab_SideTable = new List<ComplexTypeTransform>();
+        List<ComplexTypeTransform> Miniature_Ground = new List<ComplexTypeTransform>();
 
         int shelfNumberCounter = 0;
         int drawerNumberCounter = 0;
+        int Forrest_GroundNumbwerCounter = 0;
+        int Lab_CenterTableNumbwerCounter = 0;
+        /**/
 
         foreach (Transform childTransform in this.transform)
         {
@@ -60,6 +67,18 @@ public class DecideItemPositionOnField : MonoBehaviour
                     break;
                 case 3:
                     drawerPosition.Add(new ComplexTypeTransform(childTransform, 0));
+                    break;
+                case 10:
+                    Forrest_Ground.Add(new ComplexTypeTransform(childTransform, 0));
+                    break;
+                case 21:
+                    Lab_CenterTable.Add(new ComplexTypeTransform(childTransform, 0));
+                    break;
+                case 22:
+                    Lab_SideTable.Add(new ComplexTypeTransform(childTransform, 0));
+                    break;
+                case 30:
+                    Miniature_Ground.Add(new ComplexTypeTransform(childTransform, 0));
                     break;
             }
         }
@@ -101,6 +120,46 @@ public class DecideItemPositionOnField : MonoBehaviour
                     break;
                 //引き出しの中に格納する場合 :　3
                 case 3:
+
+                    instancedGameObject.transform.position = ArrageOnShelf(drawerPosition[drawerNumberCounter]);
+                    drawerNumberCounter++;
+                    if (drawerNumberCounter >= drawerPosition.Count)
+                    {
+                        drawerNumberCounter = 0;
+                    }
+                    break;
+                //引き出しの中に格納する場合 :　10
+                case 10:
+
+                    instancedGameObject.transform.position = ArrageOnShelf(drawerPosition[Forrest_GroundNumbwerCounter]);
+                    drawerNumberCounter++;
+                    if (drawerNumberCounter >= drawerPosition.Count)
+                    {
+                        drawerNumberCounter = 0;
+                    }
+                    break;
+                //引き出しの中に格納する場合 :　21
+                case 21:
+
+                    instancedGameObject.transform.position = ArrageOnShelf(drawerPosition[drawerNumberCounter]);
+                    drawerNumberCounter++;
+                    if (drawerNumberCounter >= drawerPosition.Count)
+                    {
+                        drawerNumberCounter = 0;
+                    }
+                    break;
+                //引き出しの中に格納する場合 :　22
+                case 22:
+
+                    instancedGameObject.transform.position = ArrageOnShelf(drawerPosition[drawerNumberCounter]);
+                    drawerNumberCounter++;
+                    if (drawerNumberCounter >= drawerPosition.Count)
+                    {
+                        drawerNumberCounter = 0;
+                    }
+                    break;
+                //引き出しの中に格納する場合 :　30
+                case 30:
 
                     instancedGameObject.transform.position = ArrageOnShelf(drawerPosition[drawerNumberCounter]);
                     drawerNumberCounter++;
