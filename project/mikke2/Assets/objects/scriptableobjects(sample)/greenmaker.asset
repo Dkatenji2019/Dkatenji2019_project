@@ -11,8 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2ae6964ec0abe54bb47ea4526652afa, type: 3}
   m_Name: greenmaker
   m_EditorClassIdentifier: 
-  _itemName: "\u7DD1\u306E\u30DE\u30FC\u30AB\u30FC"
-  _itemPoint: 100
+  _itemName: idonma-ka
+  _itemPoint: 20
   _itemHint: a
   _itemObject: {fileID: 1582770782384520, guid: a6c4dc3757345d64a9b3be8fabb546da,
     type: 2}
