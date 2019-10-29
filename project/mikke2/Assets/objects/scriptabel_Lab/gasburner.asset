@@ -11,8 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2ae6964ec0abe54bb47ea4526652afa, type: 3}
   m_Name: gasburner
   m_EditorClassIdentifier: 
-  _itemName: 
-  _itemPoint: 0
+  _itemName: "\u30AC\u30B9\u30D0\u30FC\u30CA\u30FC"
+  _itemPoint: 10
   _itemHint: 
   _itemObject: {fileID: 0}
   _atOneFloor: 0

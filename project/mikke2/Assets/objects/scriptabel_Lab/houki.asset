@@ -11,8 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2ae6964ec0abe54bb47ea4526652afa, type: 3}
   m_Name: houki
   m_EditorClassIdentifier: 
-  _itemName: 
-  _itemPoint: 0
+  _itemName: "\u307B\u3046\u304D"
+  _itemPoint: 10
   _itemHint: 
   _itemObject: {fileID: 0}
   _atOneFloor: 0
