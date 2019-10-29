@@ -11,8 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2ae6964ec0abe54bb47ea4526652afa, type: 3}
   m_Name: campfire
   m_EditorClassIdentifier: 
-  _itemName: 
-  _itemPoint: 0
+  _itemName: "\u30AD\u30E3\u30F3\u30D7\U0001F3D5\u30D5\u30A1\u30A4\u30E4\u30FC"
+  _itemPoint: 10
   _itemHint: 
   _itemObject: {fileID: 0}
   _atOneFloor: 0

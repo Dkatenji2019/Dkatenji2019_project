@@ -12,11 +12,9 @@ MonoBehaviour:
   m_Name: skelton
   m_EditorClassIdentifier: 
   _itemName: skelon
-  _itemPoint: 0
+  _itemPoint: 10
   _itemHint: 
   _itemObject: {fileID: 100134, guid: 39d03f82786b57d41af8bd27bce84402, type: 3}
-  _onTheDesk: 0
-  _inTheDrawer: 0
-  _onTheFloor: 0
   _atOneFloor: 0
   _atTwoFloor: 0
+  positionEnumerate: 0

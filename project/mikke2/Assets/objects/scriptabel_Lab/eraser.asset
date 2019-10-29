@@ -12,11 +12,10 @@ MonoBehaviour:
   m_Name: eraser
   m_EditorClassIdentifier: 
   _itemName: "\u6D88\u3057\u30B4\u30E0"
+  _itemPoint: 10
   _itemHint: 
   _itemObject: {fileID: 1665467305599608, guid: 18e7eee105bd5d043b7310bf2d10c130,
     type: 2}
-  _onTheDesk: 1
-  _inTheDrawer: 0
-  _onTheFloor: 0
   _atOneFloor: 0
   _atTwoFloor: 0
+  positionEnumerate: 0
