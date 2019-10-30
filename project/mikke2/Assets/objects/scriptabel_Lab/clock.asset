@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: clock
   m_EditorClassIdentifier: 
   _itemName: "\u6642\u8A08"
-  _itemPoint: 0
+  _itemPoint: 10
   _itemHint: 
   _itemObject: {fileID: 1466464069443116, guid: e4f293a55fac00d4ea3d810b55f677c6,
     type: 2}

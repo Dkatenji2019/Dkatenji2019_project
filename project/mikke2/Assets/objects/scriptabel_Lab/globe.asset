@@ -11,8 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2ae6964ec0abe54bb47ea4526652afa, type: 3}
   m_Name: globe
   m_EditorClassIdentifier: 
-  _itemName: 
-  _itemPoint: 0
+  _itemName: "\u5730\u7403\u5100"
+  _itemPoint: 10
   _itemHint: 
   _itemObject: {fileID: 1883673563187902, guid: f167f48a8502c6240b997d3f99ff94dd,
     type: 2}

@@ -11,8 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2ae6964ec0abe54bb47ea4526652afa, type: 3}
   m_Name: bigsetsquare
   m_EditorClassIdentifier: 
-  _itemName: 
-  _itemPoint: 0
+  _itemName: "\u30D3\u30C3\u30B0\u4E09\u89D2\u5B9A\u898F"
+  _itemPoint: 10
   _itemHint: 
   _itemObject: {fileID: 0}
   _atOneFloor: 0
