@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: chalk
   m_EditorClassIdentifier: 
   _itemName: "\u30C1\u30E7\u30FC\u30AF"
-  _itemPoint: 0
+  _itemPoint: 10
   _itemHint: 
   _itemObject: {fileID: 0}
   _atOneFloor: 0

@@ -11,10 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2ae6964ec0abe54bb47ea4526652afa, type: 3}
   m_Name: turuhashi
   m_EditorClassIdentifier: 
-  _itemName: 
-  _itemPoint: 0
+  _itemName: "\u3064\u308B\u306F\u3057"
+  _itemPoint: 10
   _itemHint: 
-  _itemObject: {fileID: 0}
+  _itemObject: {fileID: 1512493361906526, guid: 4780dee8ef3508441871d8e57ffa243c,
+    type: 2}
   _atOneFloor: 0
   _atTwoFloor: 0
   positionEnumerate: 0
