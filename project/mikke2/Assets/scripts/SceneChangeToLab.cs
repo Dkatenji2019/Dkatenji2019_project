@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class SceneChangeToLab : MonoBehaviour {
 
+    public string SceneName = "";
     private VRTK.VRTK_InteractableObject vrtk_InteractableObject = new VRTK.VRTK_InteractableObject();
     private float GripTime;
     readonly float DecideGripTime = 3.0f;
@@ -33,7 +34,7 @@ public class SceneChangeToLab : MonoBehaviour {
 
         if (GripTime > DecideGripTime)
         {
-            SceneManager.LoadScene("Lab");
+            SceneManager.LoadScene(SceneName);
             GripTime = 0;
         }
     }

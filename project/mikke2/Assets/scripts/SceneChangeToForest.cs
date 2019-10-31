@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class SceneChangeToForest : MonoBehaviour
 {
-
+    public string SceneName = "";
     private VRTK.VRTK_InteractableObject vrtk_InteractableObject = new VRTK.VRTK_InteractableObject();
     private float GripTime;
     readonly float DecideGripTime = 3.0f;
@@ -34,8 +34,7 @@ public class SceneChangeToForest : MonoBehaviour
 
         if (GripTime > DecideGripTime)
         {
-            SceneManager.LoadScene("Forrest");
-            GripTime = 0;
+            SceneManager.LoadScene(SceneName);
         }
     }
 }
