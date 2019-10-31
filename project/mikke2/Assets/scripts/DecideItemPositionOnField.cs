@@ -52,6 +52,8 @@ public class DecideItemPositionOnField : MonoBehaviour
         int drawerNumberCounter = 0;
         int Forrest_GroundNumbwerCounter = 0;
         int Lab_CenterTableNumbwerCounter = 0;
+        int Lab_SideTableNumbwerCounter = 0;
+        int Miniature_GroundNumbwerCounter = 0;
 
         foreach (Transform childTransform in this.transform)
         {
@@ -127,44 +129,44 @@ public class DecideItemPositionOnField : MonoBehaviour
                         drawerNumberCounter = 0;
                     }
                     break;
-                //引き出しの中に格納する場合 :　10
+                //森の地面に散らばせる場合 :　10
                 case 10:
 
-                    instancedGameObject.transform.position = ArrageOnShelf(drawerPosition[Forrest_GroundNumbwerCounter]);
-                    drawerNumberCounter++;
-                    if (drawerNumberCounter >= drawerPosition.Count)
+                    instancedGameObject.transform.position = ArrageOnShelf(Forrest_Ground[Forrest_GroundNumbwerCounter]);
+                    Forrest_GroundNumbwerCounter++;
+                    if (Forrest_GroundNumbwerCounter >= Forrest_Ground.Count)
                     {
-                        drawerNumberCounter = 0;
+                        Forrest_GroundNumbwerCounter = 0;
                     }
                     break;
-                //引き出しの中に格納する場合 :　21
+                //Labの中央テーブルに散らばせる場合 :　21
                 case 21:
 
-                    instancedGameObject.transform.position = ArrageOnShelf(drawerPosition[drawerNumberCounter]);
-                    drawerNumberCounter++;
-                    if (drawerNumberCounter >= drawerPosition.Count)
+                    instancedGameObject.transform.position = ArrageOnShelf(Lab_CenterTable[Lab_CenterTableNumbwerCounter]);
+                    Lab_CenterTableNumbwerCounter++;
+                    if (Lab_CenterTableNumbwerCounter >= Lab_CenterTable.Count)
                     {
-                        drawerNumberCounter = 0;
+                        Lab_CenterTableNumbwerCounter = 0;
                     }
                     break;
-                //引き出しの中に格納する場合 :　22
+                //Labのサイドテーブルに散らばせる場合 :　22
                 case 22:
 
-                    instancedGameObject.transform.position = ArrageOnShelf(drawerPosition[drawerNumberCounter]);
-                    drawerNumberCounter++;
-                    if (drawerNumberCounter >= drawerPosition.Count)
+                    instancedGameObject.transform.position = ArrageOnShelf(Lab_SideTable[Lab_SideTableNumbwerCounter]);
+                    Lab_SideTableNumbwerCounter++;
+                    if (Lab_SideTableNumbwerCounter >= Lab_SideTable.Count)
                     {
-                        drawerNumberCounter = 0;
+                        Lab_SideTableNumbwerCounter = 0;
                     }
                     break;
-                //引き出しの中に格納する場合 :　30
+                //Miniatureの床に散らばせる場合 :　30
                 case 30:
 
-                    instancedGameObject.transform.position = ArrageOnShelf(drawerPosition[drawerNumberCounter]);
-                    drawerNumberCounter++;
-                    if (drawerNumberCounter >= drawerPosition.Count)
+                    instancedGameObject.transform.position = ArrageOnShelf(Miniature_Ground[Miniature_GroundNumbwerCounter]);
+                    Miniature_GroundNumbwerCounter++;
+                    if (Miniature_GroundNumbwerCounter >= Miniature_Ground.Count)
                     {
-                        drawerNumberCounter = 0;
+                        Miniature_GroundNumbwerCounter = 0;
                     }
                     break;
             }
