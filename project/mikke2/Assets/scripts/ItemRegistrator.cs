@@ -18,7 +18,7 @@ public class ItemRegistrator : MonoBehaviour {
         set { this._itemQ = value; }
     }
 
-    private string _odaiName;
+     private string _odaiName;
     public string OdaiName
     {
         get { return _odaiName; }

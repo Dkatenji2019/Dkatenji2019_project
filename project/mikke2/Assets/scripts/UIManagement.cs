@@ -57,7 +57,7 @@ public class UIManagement:MonoBehaviour{
         //GrabItemName_EditOnUnity.text = GrabItemName;
         GrabbedItemTime_EditOnUnity.value = GrabbedItemTime;
         GameTimeFromStart_EditOnUnity.text = (timeCounter.GameTimeRangeZeroToOne * timeCounter.timeOutValue).ToString();
-
+        UITextUpdate();
     }
 
     public void UITextUpdate()

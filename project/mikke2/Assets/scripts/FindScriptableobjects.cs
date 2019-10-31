@@ -25,7 +25,7 @@ public class FindScriptableobjects : MonoBehaviour
     [Tooltip("\nディレクトリのパスを記入\n")]
     [Header("ディレクトリパスを記入")]
     [Multiline(3)]
-    public string PathName = "Assets/objects/scriptableobjects(sample)";
+    public string PathName;
 
     public void find_scriptableobjects_in_folda()
     {
@@ -47,7 +47,7 @@ public class FindScriptableobjects : MonoBehaviour
 
         foreach (FileInfo f in info)
         {
-            var element = AssetDatabase.LoadAssetAtPath<ItemInformationCreate>(Path.Combine("Assets/objects/scriptableobjects(sample)", f.Name));
+            var element = AssetDatabase.LoadAssetAtPath<ItemInformationCreate>(Path.Combine(PathName, f.Name));
             _itemsList.Add(element);
             //Debug.Log(f.Name);
 
