@@ -14,7 +14,8 @@ MonoBehaviour:
   _itemName: "\u7A7A\u304D\u7F36"
   _itemPoint: 10
   _itemHint: 
-  _itemObject: {fileID: 0}
+  _itemObject: {fileID: 1021811472160680, guid: fd8f038f009c9724d9f5afea0105e679,
+    type: 2}
   _atOneFloor: 0
   _atTwoFloor: 0
   positionEnumerate: 0
