@@ -9,14 +9,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e2ae6964ec0abe54bb47ea4526652afa, type: 3}
-  m_Name: "\u30B5\u30C3\u30AB\u30FC\u30DC\u30FC\u30EB"
+  m_Name: soccerball
   m_EditorClassIdentifier: 
   _itemName: 
+  _itemPoint: 0
   _itemHint: 
   _itemObject: {fileID: 1325337824914420, guid: 033787549ff68624baba40b1563a2fcf,
     type: 2}
-  _onTheDesk: 0
-  _inTheDrawer: 0
-  _onTheFloor: 1
   _atOneFloor: 0
   _atTwoFloor: 0
+  positionEnumerate: 0

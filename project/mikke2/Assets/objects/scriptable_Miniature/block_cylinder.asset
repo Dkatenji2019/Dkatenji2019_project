@@ -9,14 +9,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e2ae6964ec0abe54bb47ea4526652afa, type: 3}
-  m_Name: "\u7A4D\u307F\u6728\uFF08\u5186\u67F1\uFF09"
+  m_Name: block_cylinder
   m_EditorClassIdentifier: 
   _itemName: 
+  _itemPoint: 0
   _itemHint: 
   _itemObject: {fileID: 1521694404315062, guid: 459b8d078e6f5e740bd043b603bf2fe7,
     type: 2}
-  _onTheDesk: 1
-  _inTheDrawer: 0
-  _onTheFloor: 1
   _atOneFloor: 0
   _atTwoFloor: 0
+  positionEnumerate: 0
