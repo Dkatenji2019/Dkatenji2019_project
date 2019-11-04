@@ -6,44 +6,79 @@ public class SpreadItemOnForrest : MonoBehaviour
 {
     [SerializeField] private int area;
     [SerializeField] private ItemRegistrator itemRegistrator;
+    [SerializeField] private Transform CenterTransform;
 
+    public List<GameObject> colliderArray;
     // Use this for initialization
     void Start()
     {
         putItemSpread();
+        SearchColliderObjects();
     }
 
+
+    private void SearchColliderObjects()
+    {
+        foreach (Transform child in this.transform)
+        {
+            if (child.gameObject.tag == "Collider")
+            {
+                colliderArray.Add(child.gameObject);
+            }
+        }
+    }
     private void putItemSpread()
     {
+        while (itemRegistrator.ItemQ == null);
+
         foreach (var Q in itemRegistrator.ItemQ)
         {
             if (Q.gameObject.GetComponent<ItemInformation>().ItemRespawnPosition != 0)
             {
                 continue;
             }
+            bool flag = true;
+            Q.transform.position = ItemArrage();
 
-            /**/
-            float x = Random.Range(-area, area);
-            float z = Random.Range(-area, area);
+            //while(flag)
+            //{
+            //    foreach (var elm in colliderArray)
+            //    {
+            //        if (!elm.GetComponent<CheckObjectRapWithCollider>().IsRapWithObject)
+            //        {
+            //            flag = false;
+            //            continue;
+            //        }
+            //        else if (elm.GetComponent<CheckObjectRapWithCollider>().IsRapWithObject == true)
+            //        {
+            //            flag = true;
+            //            elm.GetComponent<CheckObjectRapWithCollider>().IsRapWithObject = false;
+            //            break;
+            //        }
+            //    }
 
-            Vector2 pos1 = new Vector2(x, z);
-            Vector2 pos2 = new Vector2(0, 0);
+            //    if (flag == false)
+            //    {
+            //        break;
+            //    }
+            //    else if (flag == true)
+            //    {
+            //        Q.transform.position = ItemArrage();
+            //    }
 
-            while (Vector2.Distance(pos1, pos2) < 15 || Vector2.Distance(pos1, pos2) > 45)
-            {
-                x = Random.Range(-area, area);
-                z = Random.Range(-area, area);
+            //}
 
-                pos1 = new Vector2(x, z);
-                pos2 = new Vector2(0, 0);
-            }
 
-            float y = Random.Range(0, 30.0f);
-            Q.transform.position = new Vector3(x, y, z);
-
-            /**/
         }
 
+    }
+
+    private Vector3 ItemArrage()
+    {
+        float x = Random.Range(CenterTransform.position.x - area, CenterTransform.position.x +  area);
+        float z = Random.Range(CenterTransform.position.z - area, CenterTransform.position.z + area);
+
+        return new Vector3(x, CenterTransform.position.y, z);
     }
 }
 

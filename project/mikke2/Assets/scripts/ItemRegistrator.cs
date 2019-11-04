@@ -28,11 +28,11 @@ public class ItemRegistrator : MonoBehaviour {
     {
         get { return _odaiHint; }
     }
-    //private int _odaiLeftAmount;
-    //public int OdaiLeftAmount
-    //{
-    //    get { return _odaiLeftAmount; }
-    //}
+    private int _odaiLeftAmount;
+    public int OdaiLeftAmount
+    {
+        get { return _odaiLeftAmount; }
+    }
 
     ScoreCounter scoreCounter; 
 
@@ -58,7 +58,7 @@ public class ItemRegistrator : MonoBehaviour {
     /// </summary>
     private void InstanceItemGameObjects()
     {
-       // _odaiLeftAmount = 0;
+        _odaiLeftAmount = 0;
         findScriptableObject = this.GetComponent<FindScriptableobjects>();
 
         //お題を混ぜる
@@ -106,7 +106,7 @@ public class ItemRegistrator : MonoBehaviour {
             }
 
         }
-       // _odaiLeftAmount = _itemQ.Count;
+        _odaiLeftAmount = _itemQ.Count;
         OdaiUpadte();
 
         //byte[] data = System.Text.Encoding.ASCII.GetBytes(element.ItemName);
@@ -180,7 +180,7 @@ public class ItemRegistrator : MonoBehaviour {
             ScoreCounter.AddScoreValue(_itemQ.Peek().GetComponent<ItemInformation>().ItemPoint);
             Destroy(_itemQ.Peek());
             _itemQ.Dequeue();
-            //_odaiLeftAmount = _itemQ.Count;
+            _odaiLeftAmount = _itemQ.Count;
 
             OdaiUpadte();
             NowOdaiNumber++;

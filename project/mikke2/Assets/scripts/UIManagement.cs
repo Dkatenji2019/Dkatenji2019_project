@@ -70,6 +70,6 @@ public class UIManagement:MonoBehaviour{
     {
         OdaiName_EditOnUnity.text = ItemRegistrator.OdaiName;
         OdaiHint_EditOnUnity.text = ItemRegistrator.OdaiHint;
-       // ItemLeftAmount.text = ItemRegistrator.OdaiLeftAmount.ToString();
+        ItemLeftAmount.text = ItemRegistrator.OdaiLeftAmount.ToString();
     }
 }

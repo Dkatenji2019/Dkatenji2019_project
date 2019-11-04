@@ -6,6 +6,9 @@ TagManager:
   tags:
   - object
   - find
+  - UIManager
+  - ItemRegistrator
+  - Collider
   layers:
   - Default
   - TransparentFX
