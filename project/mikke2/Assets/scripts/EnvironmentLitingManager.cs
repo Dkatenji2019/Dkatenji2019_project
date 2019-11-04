@@ -8,7 +8,7 @@ public class EnvironmentLitingManager : MonoBehaviour {
     // Use this for initialization
 
     Color32 firstSkyboxColor = new Color32(141, 189, 255, 1);
-    Color32 endSkyboxColor = new Color32(208, 110, 87, 1);
+    Color32 endSkyboxColor = new Color32(124, 53, 37, 1);
 
     TimeCounter timeCounter;
 
