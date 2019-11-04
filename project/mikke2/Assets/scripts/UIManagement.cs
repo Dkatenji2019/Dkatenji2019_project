@@ -29,7 +29,8 @@ public class UIManagement:MonoBehaviour{
     /// <summary>
     /// アイテムを掴んでいる時間
     /// </summary>
-    public Slider GrabbedItemTime_EditOnUnity;
+    //public Slider GrabbedItemTime_EditOnUnity;
+    public Image GrabbedItemTime_EditOnUnity;
     public float GrabbedItemTime { get; set; }//ok
 
     /// <summary>
@@ -60,7 +61,7 @@ public class UIManagement:MonoBehaviour{
     private void Update()
     {
         //GrabItemName_EditOnUnity.text = GrabItemName;
-        GrabbedItemTime_EditOnUnity.value = GrabbedItemTime;
+        GrabbedItemTime_EditOnUnity.fillAmount = GrabbedItemTime;
         GameTimeFromStart_EditOnUnity.text = (timeCounter.GameTimeRangeZeroToOne * timeCounter.timeOutValue).ToString();
         UITextUpdate();
     }

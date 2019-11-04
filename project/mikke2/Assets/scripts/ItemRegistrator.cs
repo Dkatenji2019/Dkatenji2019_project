@@ -58,7 +58,7 @@ public class ItemRegistrator : MonoBehaviour {
     /// </summary>
     private void InstanceItemGameObjects()
     {
-        
+        _odaiLeftAmount = 0;
         findScriptableObject = this.GetComponent<FindScriptableobjects>();
 
         //お題を混ぜる
@@ -173,16 +173,9 @@ public class ItemRegistrator : MonoBehaviour {
 
     }
 
-    void Update()
-    {
-        if(Input.GetKey(KeyCode.W))
-        {
-            DestroyItem(0);
-        }
-    }
     public void DestroyItem(int grabbedItemNumber)
     {
-        if(grabbedItemNumber == NowOdaiNumber || Input.GetKeyDown(KeyCode.Space))
+        if(grabbedItemNumber == NowOdaiNumber)
         {
             ScoreCounter.AddScoreValue(_itemQ.Peek().GetComponent<ItemInformation>().ItemPoint);
             Destroy(_itemQ.Peek());
