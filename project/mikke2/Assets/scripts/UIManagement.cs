@@ -16,6 +16,11 @@ public class UIManagement:MonoBehaviour{
     public Text OdaiHint_EditOnUnity;
 
     /// <summary>
+    /// アイテムの残り数
+    /// </summary>
+    public Text ItemLeftAmount;
+
+    /// <summary>
     /// 掴んでいるアイテムの名前
     /// </summary>
     //public Text GrabItemName_EditOnUnity;
@@ -64,5 +69,6 @@ public class UIManagement:MonoBehaviour{
     {
         OdaiName_EditOnUnity.text = ItemRegistrator.OdaiName;
         OdaiHint_EditOnUnity.text = ItemRegistrator.OdaiHint;
+        ItemLeftAmount.text = ItemRegistrator.OdaiLeftAmount.ToString();
     }
 }
