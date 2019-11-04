@@ -5,6 +5,14 @@ using UnityEngine.UI;
 
 public class UIDisplayOnGameFinish : MonoBehaviour {
 
-    //public Te
+    public Text ScoreText;
 
+    void Start()
+    {
+        ScoreDisplay();
+    }
+    private void ScoreDisplay()
+    {
+        ScoreText.text = ScoreCounter.scoreValue.ToString();
+    }
 }

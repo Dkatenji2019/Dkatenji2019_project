@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class ScoreCounter : MonoBehaviour
 {
-    public static int scoreValue;
+    public static int scoreValue = 0;
 
     void Awake()
     {
-        SetScoreValueToZero();
     }
 
     public static void AddScoreValue(int _scoreValue)
