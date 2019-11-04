@@ -5,4 +5,6 @@ using UnityEngine.UI;
 
 public class UIDisplayOnGameFinish : MonoBehaviour {
 
+    //public Te
+
 }

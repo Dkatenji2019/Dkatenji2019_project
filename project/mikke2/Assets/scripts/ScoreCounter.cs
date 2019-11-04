@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class ScoreCounter : MonoBehaviour
 {
-    [SerializeField] ItemRegistrator itemRegistrator;
-    public int ScoreValue { get; set; }
-    public static int _scoreValue;
+    public static int scoreValue;
 
-
-    // Use this for initialization
-    void Update()
+    void Awake()
     {
-        ScoreValue = _scoreValue;
+        SetScoreValueToZero();
     }
 
+    public static void AddScoreValue(int _scoreValue)
+    {
+        scoreValue += _scoreValue;
+    }
+
+    public static void SetScoreValueToZero()
+    {
+        scoreValue = 0;
+    }
 }

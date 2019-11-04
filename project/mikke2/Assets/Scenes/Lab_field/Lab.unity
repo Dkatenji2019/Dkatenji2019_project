@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1732353485}
-  m_IndirectSpecularColor: {r: 0.28406513, g: 0.15780793, b: 0.15601496, a: 1}
+  m_IndirectSpecularColor: {r: 0.28094977, g: 0.15695682, b: 0.15566409, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -2735,6 +2735,7 @@ GameObject:
   - component: {fileID: 1469833374}
   - component: {fileID: 1469833375}
   - component: {fileID: 1469833376}
+  - component: {fileID: 1469833377}
   m_Layer: 0
   m_Name: '[Lab_World]'
   m_TagString: Untagged
@@ -2787,9 +2788,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9901e8b1826965d4a855e64733584bf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeOutValue: 30
+  timeOutValue: 3
   _gameTimeRangeZeroToOne: 0
   _gameStartTrigger: 0
+  _gameEndTrigger: 0
 --- !u!114 &1469833376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2802,6 +2804,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sky: {fileID: 2100000, guid: 2611f352fe507c248a95e53912b0f3b6, type: 2}
+--- !u!114 &1469833377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1469833373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8acc87f2ddf1aaf4896c0ee0dcbedabb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeCounter: {fileID: 1469833375}
 --- !u!1 &1501543172
 GameObject:
   m_ObjectHideFlags: 0
@@ -3331,7 +3345,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8e5cb18d5b3ed54faf4cd6fee1d942d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemRegistrator: {fileID: 14479392}
 --- !u!4 &1562206270
 Transform:
   m_ObjectHideFlags: 0

@@ -35,6 +35,7 @@ public class SceneChangeToMiniture : MonoBehaviour
         if (GripTime > DecideGripTime)
         {
             SceneManager.LoadScene(SceneName);
+            ScoreCounter.SetScoreValueToZero();
             GripTime = 0;
         }
     }

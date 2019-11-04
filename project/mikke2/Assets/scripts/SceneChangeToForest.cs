@@ -35,6 +35,8 @@ public class SceneChangeToForest : MonoBehaviour
         if (GripTime > DecideGripTime)
         {
             SceneManager.LoadScene(SceneName);
+            ScoreCounter.SetScoreValueToZero();
+            GripTime = 0;
         }
     }
 }

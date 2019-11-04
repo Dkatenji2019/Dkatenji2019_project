@@ -28,12 +28,8 @@ public class ItemRegistrator : MonoBehaviour {
     {
         get { return _odaiHint; }
     }
-    private int _itemPoint;
-    public int ItemPoint
-    {
-        get { return _itemPoint; }
-    }
 
+    ScoreCounter scoreCounter; 
 
     void Awake()
     {
@@ -173,9 +169,9 @@ public class ItemRegistrator : MonoBehaviour {
 
     public void DestroyItem(int grabbedItemNumber)
     {
-        if(grabbedItemNumber == NowOdaiNumber)
+        if(grabbedItemNumber == NowOdaiNumber || Input.GetKeyDown(KeyCode.Space))
         {
-            _itemPoint += _itemQ.Peek().GetComponent<ItemInformation>().ItemPoint;
+            ScoreCounter.AddScoreValue(_itemQ.Peek().GetComponent<ItemInformation>().ItemPoint);
             Destroy(_itemQ.Peek());
             _itemQ.Dequeue();
             OdaiUpadte();

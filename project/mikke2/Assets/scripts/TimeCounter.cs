@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class TimeCounter : MonoBehaviour {
 
-    private ScoreCounter sc = null;
     private float gameTime;
 
     /// <summary>
@@ -35,23 +34,14 @@ public class TimeCounter : MonoBehaviour {
     /// ゲーム終了時のフラグ
     /// </summary>
     public bool GameEndTrigger { get { return this._gameEndTrigger; } }
-    private bool _gameEndTrigger;
+    public bool _gameEndTrigger;
 
     // Use this for initialization
     private void Start() {
 
         StartSetting();
 
-        // イベントにイベントハンドラーを追加
-        SceneManager.sceneLoaded += SceneLoaded;
     }
-
-        // イベントハンドラー（イベント発生時に動かしたい処理）
-        void SceneLoaded(Scene nextScene, LoadSceneMode mode)
-        {
-            Debug.Log(nextScene.name);
-            Debug.Log(mode);
-        }
 
     // Update is called once per frame
     private void Update () {
@@ -72,21 +62,20 @@ public class TimeCounter : MonoBehaviour {
     {
         if (_gameEndTrigger)
         {
-            GameEnd();
             return;
         }
-
+        else if (gameTime >= timeOut)
+        {
+            _gameEndTrigger = true;
+            gameTime = 0.0f;
+        }
         else if (_gameStartTrigger)
         {
             Timer();
             Caluculate_GameTimeRangeZeroToOne();
         }
 
-        else if (gameTime >= timeOut)
-        {
-            gameTime = 0.0f;
-            _gameEndTrigger = true;
-        }
+
     }
 
     private void Timer()
@@ -108,12 +97,5 @@ public class TimeCounter : MonoBehaviour {
         {
             _gameTimeRangeZeroToOne = 1;
         }
-    }
-
-    private void GameEnd()
-    {
-        sc = GameObject.FindGameObjectWithTag("ScoreCounter").GetComponent<ScoreCounter>();
-        DontDestroyOnLoad(sc);
-        SceneManager.LoadScene("Start");
     }
 }
