@@ -98,15 +98,15 @@ public class TimeCounter : MonoBehaviour {
     {
         if(gameTime == 0)
         {
-            _gameTimeRangeZeroToOne = 1;
+            _gameTimeRangeZeroToOne = 0;
         }
         else if(timeOutValue - gameTime > 0)
         {
-            _gameTimeRangeZeroToOne = (timeOutValue - gameTime) / timeOutValue;
+            _gameTimeRangeZeroToOne =  1 - ((timeOutValue - gameTime) / timeOutValue);
         }
         else if(gameTime - timeOutValue >= 0)
         {
-            _gameTimeRangeZeroToOne = 0;
+            _gameTimeRangeZeroToOne = 1;
         }
     }
 
