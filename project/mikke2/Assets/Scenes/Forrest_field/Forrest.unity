@@ -1341,6 +1341,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OdaiName_EditOnUnity: {fileID: 941562074}
   OdaiHint_EditOnUnity: {fileID: 1269268370}
+  ItemLeftAmount: {fileID: 0}
   GrabbedItemTime_EditOnUnity: {fileID: 515359229}
   GameTimeFromStart_EditOnUnity: {fileID: 1871465084}
   ItemRegistrator: {fileID: 2100703571}
@@ -3019,7 +3020,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1240678385}
   m_LocalRotation: {x: 0.7033001, y: 0.09597239, z: -0.072678, w: 0.70062554}
-  m_LocalPosition: {x: 9.68, y: 7.76, z: -13.27}
+  m_LocalPosition: {x: 7.99, y: 7.72, z: -15.36}
   m_LocalScale: {x: 3, y: 1, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4490,7 +4491,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1968812247}
   m_LocalRotation: {x: 0, y: 0.7082782, z: -0, w: -0.7059335}
-  m_LocalPosition: {x: 10.14, y: 0, z: -7.47}
+  m_LocalPosition: {x: 25.62, y: 4.5, z: 4.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2064431464}
@@ -4899,7 +4900,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2064431463}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.92, y: 4.42, z: 19.65}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1968812248}
