@@ -20,7 +20,7 @@ public class GrabItemEvent : MonoBehaviour {
             return _grabbedItemNumber;
         }
     }
-    public float GripTime { get; set; }
+    public float GripTime;// { get; set; }
     readonly float DecideGripTime = 3.0f;
 
 
@@ -89,41 +89,36 @@ public class GrabItemEvent : MonoBehaviour {
 
 
     //---グリップ時間のカウント---//
+    public bool IsNotGrrabed;
     private void GripTimeCounter()
     {
-        if(!isItemGrabbed)
+        if (!isItemGrabbed)
         {
+            IsNotGrrabed = true;
             GripTime += Time.deltaTime;
             if(GripTime > DecideGripTime)
             {
+
                 GripTime = 0;
                 this.gameObject.GetComponent<VRTK.VRTK_InteractableObject>().enabled = false;
                 itemRegistrator.DestroyItem(_grabbedItemNumber);
             }
         }
-        else if(isItemGrabbed)
+        if(IsNotGrrabed == true && vrtk_InteractableObject.enabled == false)
         {
-            //GripTime -= Time.deltaTime;
-            //if (GripTime == 0)
-            //{
-            //    return;
-            //}
-            //else if (GripTime < 0)
-            //{
-            //    GripTime = 0;
-            //    return;
-            //}
-            //else
-            //{
-            //    GripTime -= Time.deltaTime;
-            //}
+            GripTime -= Time.deltaTime;
+            if(GripTime < 0)
+            {
+                GripTime = 0;
+                IsNotGrrabed = false;
+            }
         }
     }
 
     //---UI周りの処理---//
     private void GrabTimeUIUpdate() 
     {
-        if(!isItemGrabbed)
+        if(!isItemGrabbed || IsNotGrrabed)
         {
             uiManagement.GrabbedItemTime = GripTime / DecideGripTime;
         }

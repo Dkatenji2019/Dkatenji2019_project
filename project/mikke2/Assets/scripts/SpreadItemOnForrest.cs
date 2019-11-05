@@ -13,20 +13,8 @@ public class SpreadItemOnForrest : MonoBehaviour
     void Start()
     {
         putItemSpread();
-        SearchColliderObjects();
     }
 
-
-    private void SearchColliderObjects()
-    {
-        foreach (Transform child in this.transform)
-        {
-            if (child.gameObject.tag == "Collider")
-            {
-                colliderArray.Add(child.gameObject);
-            }
-        }
-    }
     private void putItemSpread()
     {
         while (itemRegistrator.ItemQ == null);
@@ -37,38 +25,7 @@ public class SpreadItemOnForrest : MonoBehaviour
             {
                 continue;
             }
-            bool flag = true;
             Q.transform.position = ItemArrage();
-
-            //while(flag)
-            //{
-            //    foreach (var elm in colliderArray)
-            //    {
-            //        if (!elm.GetComponent<CheckObjectRapWithCollider>().IsRapWithObject)
-            //        {
-            //            flag = false;
-            //            continue;
-            //        }
-            //        else if (elm.GetComponent<CheckObjectRapWithCollider>().IsRapWithObject == true)
-            //        {
-            //            flag = true;
-            //            elm.GetComponent<CheckObjectRapWithCollider>().IsRapWithObject = false;
-            //            break;
-            //        }
-            //    }
-
-            //    if (flag == false)
-            //    {
-            //        break;
-            //    }
-            //    else if (flag == true)
-            //    {
-            //        Q.transform.position = ItemArrage();
-            //    }
-
-            //}
-
-
         }
 
     }
