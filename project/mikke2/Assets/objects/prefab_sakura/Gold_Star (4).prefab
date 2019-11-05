@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33591203192779498}
   - component: {fileID: 23773629816625442}
   - component: {fileID: 95657620288071738}
+  - component: {fileID: 65027772925986208}
   m_Layer: 0
   m_Name: Gold_Star (4)
   m_TagString: Untagged
@@ -81,6 +82,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1199127491230158}
   m_Mesh: {fileID: 4300000, guid: 52e9c24576c5d3e4fbb4b9c34eaf4ecd, type: 3}
+--- !u!65 &65027772925986208
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1199127491230158}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9011596, y: 0.947535, z: 0.08201686}
+  m_Center: {x: 0.047475614, y: -0.000000039579472, z: 0.04100832}
 --- !u!95 &95657620288071738
 Animator:
   serializedVersion: 3

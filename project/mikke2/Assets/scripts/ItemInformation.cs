@@ -40,7 +40,7 @@ public class ItemInformation : MonoBehaviour
     /// </summary>
     public int ItemRespawnPosition { get; set; }
 
-    public ItemInformation itemInformation(string itemName, GameObject itemObject, int itemNumber, int itemPoint, int itemRespawnPosition = 01, string itemHint = "ヒントはないよ！")
+    public ItemInformation itemInformation(string itemName, GameObject itemObject, int itemNumber, int itemPoint, int itemRespawnPosition = 0, string itemHint = "ヒントはないよ！")
     {
         this.ItemName = itemName;
         this.ItemObject = itemObject;

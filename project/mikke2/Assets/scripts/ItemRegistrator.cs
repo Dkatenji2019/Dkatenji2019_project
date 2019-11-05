@@ -10,6 +10,7 @@ public class ItemRegistrator : MonoBehaviour {
     ///FindScriptableObject
     ///</summary>
     private FindScriptableobjects findScriptableObject;
+    private FindSakuraObjects findSakuraObjects;
 
     private Queue<GameObject> _itemQ = new Queue<GameObject>();
     public Queue<GameObject> ItemQ
@@ -39,6 +40,7 @@ public class ItemRegistrator : MonoBehaviour {
     void Awake()
     {
         InstanceItemGameObjects();
+        InstanceSakuraItemGameObjects();
     }
 
 
@@ -56,7 +58,9 @@ public class ItemRegistrator : MonoBehaviour {
     /// [6]アイテムのヒント
     /// である
     /// </summary>
-    private void InstanceItemGameObjects()
+    /// 
+
+        private void InstanceItemGameObjects()
     {
         _odaiLeftAmount = 0;
         findScriptableObject = this.GetComponent<FindScriptableobjects>();
@@ -117,6 +121,30 @@ public class ItemRegistrator : MonoBehaviour {
         //}
         //Debug.Log("-------------------------------------------");
 
+    }
+
+    private void InstanceSakuraItemGameObjects()
+    {
+        findSakuraObjects = this.GetComponent<FindSakuraObjects>();
+        findSakuraObjects.find_scriptableobjects_in_folda();
+
+        for (int i = 0; i < findSakuraObjects.SakuraItemsList.Count; i++)
+        {
+            for (int j = 0; j < findSakuraObjects.seiseisuu; j++)
+            {
+                GameObject instancedGameObject = Instantiate(findSakuraObjects.SakuraItemsList[i]);
+                var iteminformation = instancedGameObject.AddComponent<ItemInformation>();
+
+                iteminformation.itemInformation("SakuraObjects",
+                                                instancedGameObject,
+                                                -1,
+                                                0,
+                                                0
+                                               );
+                _itemQ.Enqueue(instancedGameObject);
+            }
+
+        }
     }
 
     private bool CheckNoMissFromItemInformation(ItemInformationCreate sourceinformation)

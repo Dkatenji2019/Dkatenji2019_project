@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4948119200990590}
   - component: {fileID: 33013235648902512}
   - component: {fileID: 23067637160790926}
+  - component: {fileID: 65580283421015854}
   m_Layer: 0
   m_Name: Love
   m_TagString: Untagged
@@ -80,3 +81,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1858972861617988}
   m_Mesh: {fileID: 4300000, guid: 31f610f28c6ba554ba7bfca81a70fc98, type: 3}
+--- !u!65 &65580283421015854
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1858972861617988}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.080330215, y: 0.039584417, z: 0.06715539}
+  m_Center: {x: -0.00003537163, y: 0.00004212187, z: 0.0017946796}

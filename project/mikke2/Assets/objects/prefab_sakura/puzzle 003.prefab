@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4114491767994992}
   - component: {fileID: 33791359304440986}
   - component: {fileID: 23758546916078704}
+  - component: {fileID: 65391308026010312}
   m_Layer: 0
   m_Name: puzzle 003
   m_TagString: Untagged
@@ -80,3 +81,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1765029874749530}
   m_Mesh: {fileID: 4300004, guid: 77f8aa8dc9891234ea4e6c0c3aa603eb, type: 3}
+--- !u!65 &65391308026010312
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1765029874749530}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.30000174, y: 0.300001, z: 0.009000014}
+  m_Center: {x: 0.000000014810264, y: 0.0000000298518, z: 0.0044999565}

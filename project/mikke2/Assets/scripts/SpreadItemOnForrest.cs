@@ -26,8 +26,8 @@ public class SpreadItemOnForrest : MonoBehaviour
                 continue;
             }
             Q.transform.position = ItemArrage();
+            Q.transform.rotation = Quaternion.Euler(ItemRandomRotation(Q.transform.rotation));
         }
-
     }
 
     private Vector3 ItemArrage()
@@ -36,6 +36,11 @@ public class SpreadItemOnForrest : MonoBehaviour
         float z = Random.Range(CenterTransform.position.z - area, CenterTransform.position.z + area);
 
         return new Vector3(x, CenterTransform.position.y, z);
+    }
+
+    private Vector3 ItemRandomRotation(Quaternion t)
+    {
+        return new Vector3(t.x, Random.Range(0,180), t.z);
     }
 }
 
