@@ -112,7 +112,7 @@ public class ItemRegistrator : MonoBehaviour {
             }
 
         }
-        _odaiLeftAmount = _itemQ.Count;
+        _odaiLeftAmount = _itemQ.Count + 1;
         OdaiUpadte();
 
         //byte[] data = System.Text.Encoding.ASCII.GetBytes(element.ItemName);
@@ -210,7 +210,7 @@ public class ItemRegistrator : MonoBehaviour {
             ScoreCounter.AddScoreValue(_itemQ.Peek().GetComponent<ItemInformation>().ItemPoint);
             Destroy(_itemQ.Peek());
             _itemQ.Dequeue();
-            _odaiLeftAmount = _itemQ.Count;
+            _odaiLeftAmount = _itemQ.Count + 1;
 
             OdaiUpadte();
             NowOdaiNumber++;
