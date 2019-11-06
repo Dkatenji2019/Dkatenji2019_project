@@ -11,10 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2ae6964ec0abe54bb47ea4526652afa, type: 3}
   m_Name: teddybear
   m_EditorClassIdentifier: 
-  _itemName: 
-  _itemPoint: 0
-  _itemHint: 
-  _itemObject: {fileID: 0}
+  _itemName: "\u30C6\u30C7\u30A3\u30D9\u30A2"
+  _itemPoint: 10
+  _itemHint: "\u306C\u3044\u3050\u308B\u307F\u306E\u30AF\u30DE"
+  _itemObject: {fileID: 100000, guid: f9b1e647e94b55643afb1a6286d973da, type: 3}
   _atOneFloor: 0
   _atTwoFloor: 0
   positionEnumerate: 0

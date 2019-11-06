@@ -11,10 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2ae6964ec0abe54bb47ea4526652afa, type: 3}
   m_Name: apple
   m_EditorClassIdentifier: 
-  _itemName: 
-  _itemPoint: 0
-  _itemHint: 
-  _itemObject: {fileID: 0}
+  _itemName: "\u308A\u3093\u3054"
+  _itemPoint: 10
+  _itemHint: "\u8D64\u3044\u679C\u7269"
+  _itemObject: {fileID: 1238172953047844, guid: 119c1065c71ff3246b30c0a0f3cf2226,
+    type: 2}
   _atOneFloor: 0
   _atTwoFloor: 0
   positionEnumerate: 0

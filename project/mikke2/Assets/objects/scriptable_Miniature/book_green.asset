@@ -11,10 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2ae6964ec0abe54bb47ea4526652afa, type: 3}
   m_Name: book_green
   m_EditorClassIdentifier: 
-  _itemName: 
-  _itemPoint: 0
-  _itemHint: 
-  _itemObject: {fileID: 0}
+  _itemName: "\u672C"
+  _itemPoint: 10
+  _itemHint: "\u7DD1\u306E\u672C"
+  _itemObject: {fileID: 100000, guid: 7405d013b15855a45827cb6d0d2ede7b, type: 3}
   _atOneFloor: 0
   _atTwoFloor: 0
   positionEnumerate: 0

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Name: plane
   m_EditorClassIdentifier: 
   _itemName: "\u98DB\u884C\u6A5F"
-  _itemPoint: 0
-  _itemHint: 
+  _itemPoint: 10
+  _itemHint: "\u7A7A\u98DB\u3076\u7269\u4F53"
   _itemObject: {fileID: 1757249909515682, guid: 14309c93316a70147bb7accd60ac40ac,
     type: 2}
   _atOneFloor: 0

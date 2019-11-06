@@ -11,10 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2ae6964ec0abe54bb47ea4526652afa, type: 3}
   m_Name: star
   m_EditorClassIdentifier: 
-  _itemName: 
-  _itemPoint: 0
-  _itemHint: 
-  _itemObject: {fileID: 0}
+  _itemName: "\u661F"
+  _itemPoint: 10
+  _itemHint: "\u591C\u7A7A\u306B\u3042\u308B\u3084\u3064"
+  _itemObject: {fileID: 100000, guid: 617e65ca4317f214da3d20efeb78ed53, type: 3}
   _atOneFloor: 0
   _atTwoFloor: 0
   positionEnumerate: 0
