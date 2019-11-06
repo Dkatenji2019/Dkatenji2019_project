@@ -10,7 +10,9 @@ public class SceneChangeToStart : MonoBehaviour {
 	void Update () {
         if(timeCounter.GameEndTrigger)
         {
+            ScoreCounter.SetScoreValueToRanking();
             SceneManager.LoadScene(ScenenName);
+            return;
         }
     }
 }

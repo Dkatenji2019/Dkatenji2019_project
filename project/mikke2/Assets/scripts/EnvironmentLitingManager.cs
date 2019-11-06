@@ -33,7 +33,6 @@ public class EnvironmentLitingManager : MonoBehaviour {
         sky.SetColor("_Tint", lerpedColor);
 
         float lerpedExposureValue = Mathf.Lerp(1.0f, 0.8f, timeCounter.GameTimeRangeZeroToOne);
-        Debug.Log(lerpedExposureValue);
         RenderSettings.skybox.SetFloat("_Exposure", lerpedExposureValue);
     }
 
