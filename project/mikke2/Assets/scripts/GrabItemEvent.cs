@@ -8,9 +8,12 @@ public class GrabItemEvent : MonoBehaviour {
     private ItemInformation itemInformation = null;
     private ItemRegistrator itemRegistrator = null;
     private UIManagement uiManagement = null;
+    private SteamVR_TrackedObject trackedObj;
 
     private bool IsCompponentsAttached = false;
     private bool isItemGrabbed;
+
+    private SteamVR_Controller.Device controller;
 
     private int _grabbedItemNumber = 0;
     public int GrabbedItemNumber
@@ -26,6 +29,8 @@ public class GrabItemEvent : MonoBehaviour {
 
     private void Start()
     {
+        trackedObj = GetComponent<SteamVR_TrackedObject>();
+
         itemRegistrator = GameObject.FindGameObjectWithTag("ItemRegistrator").GetComponent<ItemRegistrator>();
         uiManagement = GameObject.FindGameObjectWithTag("UIManager").GetComponent<UIManagement>();
     }
@@ -43,6 +48,13 @@ public class GrabItemEvent : MonoBehaviour {
 
         GrabTimeUIUpdate();
         //GrabItemNameUIUpdate();
+
+        //controller = SteamVR_Controller.Input((int)trackedObj.index);
+
+        //if (controller.GetPressDown(SteamVR_Controller.ButtonMask.Trigger))
+        //{
+        //    controller.TriggerHapticPulse(2000);
+        //}
     }
 
 
@@ -94,6 +106,7 @@ public class GrabItemEvent : MonoBehaviour {
     {
         if (!isItemGrabbed)
         {
+            //controller.TriggerHapticPulse(2000);
             IsNotGrrabed = true;
             GripTime += Time.deltaTime;
             if(GripTime > DecideGripTime)
