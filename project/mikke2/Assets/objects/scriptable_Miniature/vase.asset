@@ -12,11 +12,10 @@ MonoBehaviour:
   m_Name: vase
   m_EditorClassIdentifier: 
   _itemName: "\u82B1\u74F6"
-  _itemHint: 
+  _itemPoint: 10
+  _itemHint: "\u82B1\u3092\u98FE\u308B\u5165\u308C\u7269"
   _itemObject: {fileID: 1075730520172882, guid: 7510283df16c3aa4c89ae634da60c237,
     type: 2}
-  _onTheDesk: 1
-  _inTheDrawer: 0
-  _onTheFloor: 0
   _atOneFloor: 0
   _atTwoFloor: 0
+  positionEnumerate: 0

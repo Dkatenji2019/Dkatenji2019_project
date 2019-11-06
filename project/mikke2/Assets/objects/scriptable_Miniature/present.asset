@@ -11,10 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2ae6964ec0abe54bb47ea4526652afa, type: 3}
   m_Name: present
   m_EditorClassIdentifier: 
-  _itemName: 
-  _itemPoint: 0
-  _itemHint: 
-  _itemObject: {fileID: 0}
+  _itemName: "\u30D7\u30EC\u30BC\u30F3\u30C8"
+  _itemPoint: 10
+  _itemHint: "\u8D64\u3068\u9752\u306E\u8D08\u308A\u7269"
+  _itemObject: {fileID: 100000, guid: 1cda905d0776c754199e04be35b19f35, type: 3}
   _atOneFloor: 0
   _atTwoFloor: 0
   positionEnumerate: 0

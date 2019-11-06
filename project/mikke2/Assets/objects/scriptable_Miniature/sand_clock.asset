@@ -11,10 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2ae6964ec0abe54bb47ea4526652afa, type: 3}
   m_Name: sand_clock
   m_EditorClassIdentifier: 
-  _itemName: 
-  _itemPoint: 0
-  _itemHint: 
-  _itemObject: {fileID: 0}
+  _itemName: "\u7802\u6642\u8A08"
+  _itemPoint: 10
+  _itemHint: "\u6728\u88FD\u306E\u7802\u6642\u8A08"
+  _itemObject: {fileID: 100000, guid: f580448fb862c8644bbb6c984f24030b, type: 3}
   _atOneFloor: 0
   _atTwoFloor: 0
   positionEnumerate: 0

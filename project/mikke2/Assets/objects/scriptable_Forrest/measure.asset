@@ -13,8 +13,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _itemName: "\u30E1\u30B8\u30E3\u30FC"
   _itemPoint: 10
-  _itemHint: 
-  _itemObject: {fileID: 0}
+  _itemHint: "\u9EC4\u8272\u306E\u30C6\u30FC\u30D7\u307F\u305F\u3044\u306A\u306E"
+  _itemObject: {fileID: 1849785174259848, guid: 6f6322617e45f2541a9f7637aeb22f11,
+    type: 2}
   _atOneFloor: 0
   _atTwoFloor: 0
   positionEnumerate: 0
