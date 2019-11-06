@@ -22,7 +22,7 @@ public class ItemInformation : MonoBehaviour
     /// <summary>
     /// アイテムの格納順を記述
     /// </summary>
-    public int ItemNumber { get; set; }
+    public int ItemNumber;/*{ get; set; }**/
 
     /// <summary>
     /// アイテムのヒントを記述

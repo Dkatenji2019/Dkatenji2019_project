@@ -38,8 +38,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4133442078116774}
   - component: {fileID: 33008968265601122}
-  - component: {fileID: 136152235191019254}
   - component: {fileID: 23152251819906426}
+  - component: {fileID: 65945599055558444}
   m_Layer: 0
   m_Name: hammer
   m_TagString: Untagged
@@ -152,8 +152,8 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1078371262804000}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!136 &136152235191019254
-CapsuleCollider:
+--- !u!65 &65945599055558444
+BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -161,10 +161,9 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  serializedVersion: 2
+  m_Size: {x: 1.0000002, y: 1.9999999, z: 1.000001}
+  m_Center: {x: 0.000000059604645, y: -1.9428903e-16, z: -0.00000008940697}
 --- !u!136 &136515918474440840
 CapsuleCollider:
   m_ObjectHideFlags: 1

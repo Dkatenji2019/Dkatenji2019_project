@@ -68,6 +68,7 @@ public class ItemRegistrator : MonoBehaviour {
         //お題を混ぜる
         queue_shuffle();
 
+        int kakunoujyun = 0;
         //以下は元データ(scriptableobjects)の数だけカウントされる
         for (int i = 0; i < findScriptableObject.ItemsList.Count; i++)
         {
@@ -98,12 +99,13 @@ public class ItemRegistrator : MonoBehaviour {
                 else
                 {
                  iteminformation.itemInformation(sourceinformation.ItemName,
-                                                 sourceinformation.ItemObject, 
-                                                 i,
+                                                 sourceinformation.ItemObject,
+                                                 kakunoujyun,
                                                  sourceinformation.ItemPoint, 
                                                  (int)sourceinformation.positionEnumerate, 
                                                  sourceinformation.ItemHint
                                                 );
+                    kakunoujyun += 1;
                 }
                 //アイテムをＱに格納する
                 _itemQ.Enqueue(instancedGameObject);
