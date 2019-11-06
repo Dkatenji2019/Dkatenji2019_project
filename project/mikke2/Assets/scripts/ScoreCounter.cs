@@ -5,10 +5,7 @@ using UnityEngine;
 public class ScoreCounter : MonoBehaviour
 {
     public static int scoreValue = 0;
-
-    void Awake()
-    {
-    }
+    public static Queue<int> ScoreRanking;
 
     public static void AddScoreValue(int _scoreValue)
     {
@@ -18,5 +15,11 @@ public class ScoreCounter : MonoBehaviour
     public static void SetScoreValueToZero()
     {
         scoreValue = 0;
+    }
+
+    public static void SetScoreValueToRanking()
+    {
+        //ゲーム終了時に呼ばれる関数
+        ScoreRanking.Enqueue(scoreValue);
     }
 }
