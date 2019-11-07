@@ -11,10 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2ae6964ec0abe54bb47ea4526652afa, type: 3}
   m_Name: RedDice
   m_EditorClassIdentifier: 
-  _itemName: 
-  _itemPoint: 0
-  _itemHint: 
-  _itemObject: {fileID: 0}
+  _itemName: "\u30B5\u30A4\u30B3\u30ED"
+  _itemPoint: 10
+  _itemHint: "\u8D64\u3044\u30B5\u30A4\u30B3\u30ED"
+  _itemObject: {fileID: 1539579123105684, guid: 36e28e4d60c9e2648bb82f27f3bee090,
+    type: 2}
   _atOneFloor: 0
   _atTwoFloor: 0
   positionEnumerate: 0

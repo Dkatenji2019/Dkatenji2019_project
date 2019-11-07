@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4603276861451292}
   - component: {fileID: 33204472436979156}
   - component: {fileID: 23446690636862646}
+  - component: {fileID: 65204121797438434}
   m_Layer: 0
   m_Name: TVset
   m_TagString: Untagged
@@ -80,3 +81,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1538827246990096}
   m_Mesh: {fileID: 4300000, guid: 11daad35ae5097a408e005b0580b4669, type: 3}
+--- !u!65 &65204121797438434
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1538827246990096}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0582167, y: 0.17884134, z: 0.90528196}
+  m_Center: {x: 1.0035824e-15, y: 4.0420595e-16, z: -0.00000001490116}

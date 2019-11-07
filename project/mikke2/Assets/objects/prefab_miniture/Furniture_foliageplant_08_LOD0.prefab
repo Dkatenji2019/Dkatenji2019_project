@@ -54,6 +54,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4698396624069168}
   - component: {fileID: 95243132577293680}
+  - component: {fileID: 65334615296969474}
   m_Layer: 0
   m_Name: Furniture_foliageplant_08_LOD0
   m_TagString: Untagged
@@ -180,6 +181,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1024639622507012}
   m_Mesh: {fileID: 4300002, guid: 0353d7430d945be47b7deb8a9a193983, type: 3}
+--- !u!65 &65334615296969474
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1597931098694268}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &95243132577293680
 Animator:
   serializedVersion: 3

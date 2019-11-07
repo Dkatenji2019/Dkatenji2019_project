@@ -11,10 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2ae6964ec0abe54bb47ea4526652afa, type: 3}
   m_Name: trump_6Diamonds
   m_EditorClassIdentifier: 
-  _itemName: 
-  _itemPoint: 0
-  _itemHint: 
-  _itemObject: {fileID: 0}
+  _itemName: "\u30C8\u30E9\u30F3\u30D7"
+  _itemPoint: 10
+  _itemHint: "6\u306E\u30C0\u30A4\u30E4"
+  _itemObject: {fileID: 1347471334061322, guid: fb79d5630bf26504986b2feefd8e8788,
+    type: 2}
   _atOneFloor: 0
   _atTwoFloor: 0
   positionEnumerate: 0

@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4031673534920176}
   - component: {fileID: 33036394333185980}
   - component: {fileID: 23899402086690312}
+  - component: {fileID: 65892344271378986}
   m_Layer: 0
   m_Name: GuitarFBX
   m_TagString: Untagged
@@ -80,3 +81,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1734304915163140}
   m_Mesh: {fileID: 4300000, guid: 15a2806138ed87a45afede16ec9ca99f, type: 3}
+--- !u!65 &65892344271378986
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1734304915163140}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.948103, y: 0.24595003, z: 2.904411}
+  m_Center: {x: -0.012393504, y: -0.034295004, z: 0.3110455}
