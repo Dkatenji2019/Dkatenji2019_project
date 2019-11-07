@@ -19,6 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4955710531898892}
+  - component: {fileID: 65573442391523440}
   m_Layer: 0
   m_Name: Bed
   m_TagString: Untagged
@@ -212,9 +213,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1117013624873738}
-  m_LocalRotation: {x: -0, y: 0.69308525, z: -0, w: 0.72085565}
-  m_LocalPosition: {x: -2.68, y: 0.56, z: 2.85}
-  m_LocalScale: {x: 0.09898249, y: 0.09898241, z: 0.14289683}
+  m_LocalRotation: {x: -0, y: 0.7074459, z: -0, w: 0.70676744}
+  m_LocalPosition: {x: -24.052244, y: -0.2829677, z: 11.396574}
+  m_LocalScale: {x: 0.25462577, y: 0.25462565, z: 0.36759245}
   m_Children:
   - {fileID: 4406435625125964}
   - {fileID: 4476007278134748}
@@ -224,7 +225,7 @@ Transform:
   - {fileID: 4683333106626904}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 87.75001, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90.05501, z: 0}
 --- !u!23 &23181570615066516
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -459,3 +460,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1616915034364250}
   m_Mesh: {fileID: 4300010, guid: 4122dec1742e2904f93fe455f244efa4, type: 3}
+--- !u!65 &65573442391523440
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1117013624873738}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 22.86, y: 6.1, z: 27.16}
+  m_Center: {x: 0, y: 4, z: 1.1}
