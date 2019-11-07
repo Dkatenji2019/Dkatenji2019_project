@@ -9,46 +9,45 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1347471334061322}
+  m_RootGameObject: {fileID: 1463604349075354}
   m_IsPrefabParent: 1
---- !u!1 &1347471334061322
+--- !u!1 &1463604349075354
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4712445623550222}
-  - component: {fileID: 33162728318752510}
-  - component: {fileID: 23793243435641358}
-  - component: {fileID: 54193173101892460}
-  - component: {fileID: 65456868832869752}
+  - component: {fileID: 4825078889344848}
+  - component: {fileID: 33868680043012106}
+  - component: {fileID: 23432765468500994}
+  - component: {fileID: 95007615144433386}
   m_Layer: 0
-  m_Name: 6ofDIamonds
+  m_Name: Candy-Cane 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4712445623550222
+--- !u!4 &4825078889344848
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1347471334061322}
-  m_LocalRotation: {x: -0.99852204, y: 0.000000009067143, z: -0.000000030510094, w: 0.054347828}
-  m_LocalPosition: {x: 2.3038, y: 1.0902, z: -3.9278}
-  m_LocalScale: {x: 10, y: 1000, z: 10}
+  m_GameObject: {fileID: 1463604349075354}
+  m_LocalRotation: {x: -0.6711097, y: -0.21680737, z: -0.21794045, w: 0.6746172}
+  m_LocalPosition: {x: 27.850687, y: 2.0212867, z: 13.051156}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -173.769, y: 0, z: -0.000015258789}
---- !u!23 &23793243435641358
+  m_LocalEulerAnglesHint: {x: -89.701004, y: -0.001, z: -35.806004}
+--- !u!23 &23432765468500994
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1347471334061322}
+  m_GameObject: {fileID: 1463604349075354}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -56,8 +55,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: b772342598992437eaaad37fe9b4f6c7, type: 2}
-  - {fileID: 2100000, guid: 8855214bbe53d441ea97116eb69b717d, type: 2}
+  - {fileID: 2100000, guid: bcc73751ac5c7d74698b5cb3b435f2f9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -76,37 +74,27 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33162728318752510
+--- !u!33 &33868680043012106
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1347471334061322}
-  m_Mesh: {fileID: 4300000, guid: ab9e24e14f0b1400aa074527c8c3b4ee, type: 3}
---- !u!54 &54193173101892460
-Rigidbody:
+  m_GameObject: {fileID: 1463604349075354}
+  m_Mesh: {fileID: 4300000, guid: b836073c6cab63d4cbe80ae0d4326cd9, type: 3}
+--- !u!95 &95007615144433386
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1347471334061322}
-  serializedVersion: 2
-  m_Mass: 0.1
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 1
---- !u!65 &65456868832869752
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1347471334061322}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_GameObject: {fileID: 1463604349075354}
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.014215222, y: 0.000108975364, z: 0.019198282}
-  m_Center: {x: 6.984921e-10, y: -1.4551915e-10, z: 0.009701044}
+  m_Avatar: {fileID: 9000000, guid: b836073c6cab63d4cbe80ae0d4326cd9, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
