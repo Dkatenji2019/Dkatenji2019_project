@@ -7,6 +7,7 @@ public class SceneChangeToStart : MonoBehaviour {
 
     readonly string ScenenName = "Start";
     [SerializeField]private TimeCounter timeCounter;
+
 	void Update () {
         if(timeCounter.GameEndTrigger)
         {

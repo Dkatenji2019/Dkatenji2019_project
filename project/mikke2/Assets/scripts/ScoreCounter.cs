@@ -5,7 +5,7 @@ using UnityEngine;
 public class ScoreCounter : MonoBehaviour
 {
     public static int scoreValue = 0;
-    public static List<int> ScoreRanking;
+    public static List<int> ScoreRanking = new List<int>();
 
     public static void AddScoreValue(int _scoreValue)
     {
