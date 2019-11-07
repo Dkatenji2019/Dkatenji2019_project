@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 23146508890857868}
   - component: {fileID: 95521749481125298}
   - component: {fileID: 54768184533205170}
+  - component: {fileID: 65697001258359738}
   m_Layer: 0
   m_Name: pfl1
   m_TagString: Untagged
@@ -97,6 +98,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &65697001258359738
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1718430755099560}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0427578, y: 0.04855949, z: 0.08439074}
+  m_Center: {x: -0.005306079, y: 0.0044590486, z: 0.04219537}
 --- !u!95 &95521749481125298
 Animator:
   serializedVersion: 3
