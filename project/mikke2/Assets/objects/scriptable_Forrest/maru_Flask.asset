@@ -9,13 +9,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e2ae6964ec0abe54bb47ea4526652afa, type: 3}
-  m_Name: maruta
+  m_Name: maru_Flask
   m_EditorClassIdentifier: 
-  _itemName: "\u307E\u308B\u305F"
-  _itemPoint: 10
+  _itemName: 
+  _itemPoint: 0
   _itemHint: 
-  _itemObject: {fileID: 1358693154885434, guid: 767fa3b79515555418c14d4709b208e0,
-    type: 2}
+  _itemObject: {fileID: 0}
   _atOneFloor: 0
   _atTwoFloor: 0
   positionEnumerate: 0
