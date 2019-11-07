@@ -17,7 +17,7 @@ public class UIDisplayOnGameFinish : MonoBehaviour {
     }
     private void ScoreDisplay()
     {
-        ScoreText.text = ScoreCounter.scoreValue.ToString();
+        ScoreText.text = ScoreCounter.scoreValue.ToString() + "  point";
     }
 
     private void RankingDisplay()
@@ -35,11 +35,11 @@ public class UIDisplayOnGameFinish : MonoBehaviour {
         {
             if(toQueueRankingValue.Count == 0)
             {
-                elm.text = "0";
+                elm.text = "0  points";
                 continue;
             }
 
-            elm.text = toQueueRankingValue.Peek().ToString();
+            elm.text = toQueueRankingValue.Peek().ToString() + "  point";
             toQueueRankingValue.Dequeue();
         }
     }
