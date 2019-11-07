@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4803836745096906}
   - component: {fileID: 54578991136103396}
+  - component: {fileID: 65912421106519402}
   m_Layer: 0
   m_Name: Scissors_blue 1
   m_TagString: Untagged
@@ -195,3 +196,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &65912421106519402
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1055828819347222}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}

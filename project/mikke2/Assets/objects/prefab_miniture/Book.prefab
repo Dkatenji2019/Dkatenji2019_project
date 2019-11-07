@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33734749124527968}
   - component: {fileID: 23845023000964276}
   - component: {fileID: 54446213046630392}
+  - component: {fileID: 65448591677805976}
   m_Layer: 0
   m_Name: Book
   m_TagString: Untagged
@@ -96,3 +97,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &65448591677805976
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1461665162512510}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1779899, y: 0.7196192, z: 0.5172792}
+  m_Center: {x: -4.6429347e-17, y: 0.0010534526, z: 0.0065499544}

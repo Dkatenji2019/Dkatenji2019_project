@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4810030694540226}
   - component: {fileID: 33200936811712800}
   - component: {fileID: 23365825542935464}
+  - component: {fileID: 65256883215836236}
   m_Layer: 0
   m_Name: TV_furniture
   m_TagString: Untagged
@@ -82,3 +83,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1605936954652076}
   m_Mesh: {fileID: 4300000, guid: 0190f3f0bd258714eb26512c8b481e81, type: 3}
+--- !u!65 &65256883215836236
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1605936954652076}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.8439968, y: 0.3759191, z: 0.52594894}
+  m_Center: {x: 0.22611092, y: 0.000000005187478, z: 0.2629744}
