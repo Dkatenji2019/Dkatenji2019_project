@@ -106,6 +106,7 @@ public class GrabItemEvent : MonoBehaviour {
     {
         if (!isItemGrabbed)
         {
+            SoundManager.PlayGrubTimeSound();
             controller.TriggerHapticPulse(100);
             IsNotGrrabed = true;
             GripTime += Time.deltaTime;
@@ -118,6 +119,7 @@ public class GrabItemEvent : MonoBehaviour {
         }
         if(IsNotGrrabed == true && vrtk_InteractableObject.enabled == false)
         {
+            SoundManager.StopGrubTimeSound();
             GripTime -= Time.deltaTime;
             if(GripTime < 0)
             {

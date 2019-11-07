@@ -9,18 +9,36 @@ public class SoundManager : MonoBehaviour {
     static public AudioSource GrubTiming;
     static public AudioSource Footsteps;
 
-    [SerializeField]private AudioSource _grubTiming;
+    [SerializeField]private AudioSource _grubTime;
     [SerializeField]private AudioSource _true;
     [SerializeField]private AudioSource _false;
     [SerializeField]private AudioSource _footsteps;
+    [SerializeField]private AudioSource gameSound;
 
+    int volume = 0;
     private void Awake()
     {
         True = _true;
         False  = _false;
-        GrubTiming = _grubTiming;
+        GrubTiming = _grubTime;
         Footsteps = _footsteps;
     }
+
+    private void Update()
+    {
+        if(gameSound.time < 5f)
+        {
+            StopAllCoroutines();
+            Fadein();
+
+        }
+        if (gameSound.time > gameSound.clip.length - 5.0f)
+        {
+            StopAllCoroutines();
+            Fadeout();
+        }
+    }
+
 
     static public void PlayTrueSound()
     {
@@ -55,5 +73,45 @@ public class SoundManager : MonoBehaviour {
     static public void VolumeChangefootstepsSound(float value)
     {
         Footsteps.volume = value;
+    }
+
+    static public void PlayGrubTimeSound()
+    {
+        if (!GrubTiming.isPlaying)
+        {
+            GrubTiming.Play();
+        }
+        
+    }
+
+    static public void StopGrubTimeSound()
+    {
+        if (GrubTiming.isPlaying)
+        {
+            Footsteps.Pause();
+        }
+
+    }
+
+    IEnumerator Fadein()
+    {
+        gameSound.enabled = true;
+        for (; volume < 100; volume++)
+        {
+            gameSound.volume = (float)volume / 100;
+            yield return null;
+        }
+        gameSound.volume = 1;
+    }
+
+    IEnumerator Fadeout()
+    {
+        for (; volume > 0; volume--)
+        {
+            gameSound.volume = (float)(volume) / 100;
+            yield return null;
+        }
+        gameSound.volume = 0;
+        gameSound.enabled = false;
     }
 }
