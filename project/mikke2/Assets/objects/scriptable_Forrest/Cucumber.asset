@@ -11,10 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2ae6964ec0abe54bb47ea4526652afa, type: 3}
   m_Name: Cucumber
   m_EditorClassIdentifier: 
-  _itemName: 
-  _itemPoint: 0
-  _itemHint: 
-  _itemObject: {fileID: 0}
+  _itemName: "\u304D\u3085\u3046\u308A"
+  _itemPoint: 100
+  _itemHint: "\u7DD1\u8272\u306E\u91CE\u83DC"
+  _itemObject: {fileID: 1612044494675304, guid: a1082aa86fc5de945a1fb6765730a486,
+    type: 2}
   _atOneFloor: 0
   _atTwoFloor: 0
   positionEnumerate: 0

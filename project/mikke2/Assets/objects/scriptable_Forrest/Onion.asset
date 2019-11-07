@@ -11,10 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2ae6964ec0abe54bb47ea4526652afa, type: 3}
   m_Name: Onion
   m_EditorClassIdentifier: 
-  _itemName: 
-  _itemPoint: 0
-  _itemHint: 
-  _itemObject: {fileID: 0}
+  _itemName: "\u305F\u307E\u306D\u304E"
+  _itemPoint: 100
+  _itemHint: "\u304D\u3064\u306D\u8272\u306E\u91CE\u83DC"
+  _itemObject: {fileID: 1673205417236538, guid: 5be878d17b175124aaab9f16798e1707,
+    type: 2}
   _atOneFloor: 0
   _atTwoFloor: 0
   positionEnumerate: 0

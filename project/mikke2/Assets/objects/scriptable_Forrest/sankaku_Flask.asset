@@ -11,10 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2ae6964ec0abe54bb47ea4526652afa, type: 3}
   m_Name: sankaku_Flask
   m_EditorClassIdentifier: 
-  _itemName: 
-  _itemPoint: 0
-  _itemHint: 
-  _itemObject: {fileID: 0}
+  _itemName: "\u4E09\u89D2\u30D5\u30E9\u30B9\u30B3"
+  _itemPoint: 100
+  _itemHint: "\u4E09\u89D2\u306E\u5F62\u3092\u3057\u305F\u30D5\u30E9\u30B9\u30B3"
+  _itemObject: {fileID: 1144786966978350, guid: ec1351801e468b8498175e44273c7729,
+    type: 2}
   _atOneFloor: 0
   _atTwoFloor: 0
   positionEnumerate: 0

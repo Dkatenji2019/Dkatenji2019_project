@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: kuwa
   m_EditorClassIdentifier: 
   _itemName: "\u304F\u308F"
-  _itemPoint: 10
+  _itemPoint: 100
   _itemHint: "\u9244\u90E8\u5206\u306E\u7247\u5074\u304C\u3068\u304C\u3063\u3066\u3044\u308B"
   _itemObject: {fileID: 1370010498382302, guid: 139b1cc1c61cf8c4e8a9a3bf0428e7ec,
     type: 2}

@@ -11,10 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2ae6964ec0abe54bb47ea4526652afa, type: 3}
   m_Name: mushimegane
   m_EditorClassIdentifier: 
-  _itemName: 
-  _itemPoint: 0
-  _itemHint: 
-  _itemObject: {fileID: 0}
+  _itemName: "\u866B\u30E1\u30AC\u30CD"
+  _itemPoint: 100
+  _itemHint: "\u3075\u3061\u304C\u9ED2\u3044"
+  _itemObject: {fileID: 1956170722700124, guid: 8bb719fa706ddae49bce85affa519bb3,
+    type: 2}
   _atOneFloor: 0
   _atTwoFloor: 0
   positionEnumerate: 0

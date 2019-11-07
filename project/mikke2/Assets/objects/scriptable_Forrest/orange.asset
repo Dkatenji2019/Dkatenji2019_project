@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: orange
   m_EditorClassIdentifier: 
   _itemName: "\u307F\u304B\u3093"
-  _itemPoint: 10
+  _itemPoint: 100
   _itemHint: "\u30AA\u30EC\u30F3\u30B8\u8272\u306E\u679C\u7269"
   _itemObject: {fileID: 1782297017940988, guid: afedbdecbc7ad5146960af73bcf81e94,
     type: 2}

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: greap
   m_EditorClassIdentifier: 
   _itemName: "\u3076\u3069\u3046"
-  _itemPoint: 10
+  _itemPoint: 100
   _itemHint: "\u7D2B\u8272\u306E\u3064\u3076\u3064\u3076\u304C\u3044\u3063\u3071\u3044"
   _itemObject: {fileID: 1212860537772606, guid: e41bcf94c5b706541975a5969ca2ad54,
     type: 2}

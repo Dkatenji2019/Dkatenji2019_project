@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: hasigo
   m_EditorClassIdentifier: 
   _itemName: "\u306F\u3057\u3054"
-  _itemPoint: 10
+  _itemPoint: 100
   _itemHint: "\u6728\u88FD\u306E\u306F\u3057\u3054"
   _itemObject: {fileID: 1683473644301668, guid: 9634b697001ac3b4e88b8fedc0ae1afa,
     type: 2}

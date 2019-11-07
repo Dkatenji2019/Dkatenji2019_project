@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: turuhashi
   m_EditorClassIdentifier: 
   _itemName: "\u3064\u308B\u306F\u3057"
-  _itemPoint: 10
+  _itemPoint: 100
   _itemHint: "\u9244\u306E\u90E8\u5206\u306E\u4E21\u7AEF\u304C\u3068\u304C\u3063\u3066\u308B"
   _itemObject: {fileID: 1057584589218798, guid: 5d4ff8001f802694b900c20ec4906eb6,
     type: 2}

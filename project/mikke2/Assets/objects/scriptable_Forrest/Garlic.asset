@@ -9,12 +9,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e2ae6964ec0abe54bb47ea4526652afa, type: 3}
-  m_Name: New Item Information Create
+  m_Name: Garlic
   m_EditorClassIdentifier: 
-  _itemName: 
-  _itemPoint: 0
-  _itemHint: 
-  _itemObject: {fileID: 0}
+  _itemName: "\u30CB\u30F3\u30CB\u30AF"
+  _itemPoint: 100
+  _itemHint: "\u304D\u3064\u306D\u8272\u306E\u91CE\u83DC"
+  _itemObject: {fileID: 1439328213690526, guid: b8acf13cef4206645a87c6f173bd8b3f,
+    type: 2}
   _atOneFloor: 0
   _atTwoFloor: 0
   positionEnumerate: 0

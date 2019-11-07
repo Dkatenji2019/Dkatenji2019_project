@@ -9,12 +9,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e2ae6964ec0abe54bb47ea4526652afa, type: 3}
-  m_Name: cactas
+  m_Name: cactus
   m_EditorClassIdentifier: 
-  _itemName: 
-  _itemPoint: 0
-  _itemHint: 
-  _itemObject: {fileID: 0}
+  _itemName: "\u30B5\u30DC\u30C6\u30F3"
+  _itemPoint: 100
+  _itemHint: "\u7DD1\u306E\u30B5\u30DC\u30C6\u30F3"
+  _itemObject: {fileID: 1889517684976672, guid: f4e34613592047341a01f5f5b13ef147,
+    type: 2}
   _atOneFloor: 0
   _atTwoFloor: 0
   positionEnumerate: 0

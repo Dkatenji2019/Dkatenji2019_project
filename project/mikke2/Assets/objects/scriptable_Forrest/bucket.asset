@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: bucket
   m_EditorClassIdentifier: 
   _itemName: "\u30D0\u30B1\u30C4"
-  _itemPoint: 10
+  _itemPoint: 100
   _itemHint: "\u9244\u306E\u30D0\u30B1\u30C4"
   _itemObject: {fileID: 1877845507826900, guid: 57ff8a834a662a549aef04ec093de9f9,
     type: 2}
