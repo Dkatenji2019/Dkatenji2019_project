@@ -667,7 +667,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -1242,7 +1242,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 556419129}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: dee0331ab5c77b44c8b2ef56aec94e81, type: 3}
@@ -1428,7 +1428,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &631302386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3029,6 +3029,7 @@ GameObject:
   - component: {fileID: 1147372701}
   - component: {fileID: 1147372700}
   - component: {fileID: 1147372699}
+  - component: {fileID: 1147372703}
   m_Layer: 0
   m_Name: '[CameraRig]'
   m_TagString: Untagged
@@ -3136,6 +3137,19 @@ MonoBehaviour:
   right: {fileID: 1052941797}
   objects: []
   assignAllBeforeIdentified: 0
+--- !u!114 &1147372703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1147372697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d223bc709297601418b7b8f1cddd5841, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delayTime: 100
+  moveMargin: 0.1
 --- !u!1 &1167314414
 GameObject:
   m_ObjectHideFlags: 0
@@ -3938,7 +3952,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -3989,10 +4003,10 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1047054fe9dc1ac4a92bd58ea968fc23, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 483ab11c374936e4d99d4787a0595aa8, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0
-  m_Pitch: 1
+  m_Pitch: 0.6
   Loop: 1
   Mute: 0
   Spatialize: 0
@@ -4149,7 +4163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9901e8b1826965d4a855e64733584bf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeOutValue: 60
+  timeOutValue: 720
   _gameTimeRangeZeroToOne: 0
   _gameStartTrigger: 0
   _gameEndTrigger: 0
@@ -4494,13 +4508,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _itemsList:
   - {fileID: 11400000, guid: 452d072e21a30d94b9145eff5be870ac, type: 2}
+  - {fileID: 11400000, guid: f57c82c1bd142fb4fb2d44e20574cbe0, type: 2}
   - {fileID: 11400000, guid: 34ee0bc842468004ea57c45fd70aa3e2, type: 2}
+  - {fileID: 11400000, guid: 56bca929941261e44ab47dca196cc0d5, type: 2}
+  - {fileID: 11400000, guid: 50387de6231b432428ddfe25df42bdd3, type: 2}
+  - {fileID: 11400000, guid: 68b620021b2e7564ba911fab3953c349, type: 2}
   - {fileID: 11400000, guid: 938979670564e3048bfa2b3f04e54f69, type: 2}
   - {fileID: 11400000, guid: a568906e0506f5149a00a656a35f1ebf, type: 2}
+  - {fileID: 11400000, guid: 0e685ed57ebd3b942a705861a7b2ed19, type: 2}
   - {fileID: 11400000, guid: 3b7a3a512faaef943ae75ea7e59a8d05, type: 2}
-  - {fileID: 11400000, guid: d0b5cdd22f61f6641997de99ab44b562, type: 2}
+  - {fileID: 11400000, guid: 2c47aa3e65a99b84f9d665872ffc18c3, type: 2}
   - {fileID: 11400000, guid: 8a98b36ee461ab343b4896aeffc2f00c, type: 2}
+  - {fileID: 11400000, guid: b1ef0ccff39830c43975e69e52323273, type: 2}
+  - {fileID: 11400000, guid: 813de7b68f9a3c64a8606196682d3817, type: 2}
   - {fileID: 11400000, guid: 5873a7915d49fbc4fa8d2dea3a2de1c8, type: 2}
+  - {fileID: 11400000, guid: 2e5021a4236583b498650a826ab325ec, type: 2}
+  - {fileID: 11400000, guid: eec952edc36d9774ba8d5859f4f3e94f, type: 2}
   - {fileID: 11400000, guid: f93d64787039bed489a95a74fac035b4, type: 2}
   - {fileID: 11400000, guid: c1911031e8bda854ebfd4fe9f6232517, type: 2}
   PathName: Assets/objects/scriptable_Forrest
@@ -5793,7 +5816,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:

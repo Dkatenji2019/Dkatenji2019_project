@@ -14,8 +14,10 @@ public class SoundManager : MonoBehaviour {
     [SerializeField]private AudioSource _false;
     [SerializeField]private AudioSource _footsteps;
     [SerializeField]private AudioSource gameSound;
-
-    int volume = 0;
+    private int volume_gameMusic = 0;
+    private int volume_walkSound = 0;
+    private bool IsMusicPlaying = false;
+    private bool IsWalking = false;
     private void Awake()
     {
         True = _true;
@@ -24,19 +26,38 @@ public class SoundManager : MonoBehaviour {
         Footsteps = _footsteps;
     }
 
-    private void Update()
+        private void Update()
     {
-        if(gameSound.time < 5f)
+        if (gameSound.time < 5f && IsMusicPlaying == false)
         {
+            IsMusicPlaying = true;
             StopAllCoroutines();
-            Fadein();
+            if (gameObject.activeSelf)
+                StartCoroutine(Fadein_GameMusic());
+        }
+        if (gameSound.time > gameSound.clip.length - 5.0f && IsMusicPlaying == true)
+        {
+            IsMusicPlaying = false;
+            StopAllCoroutines();
+            if (gameObject.activeSelf)
+            StartCoroutine(Fadeout_GameMusic());
+        }
 
-        }
-        if (gameSound.time > gameSound.clip.length - 5.0f)
-        {
-            StopAllCoroutines();
-            Fadeout();
-        }
+
+        //if (!Footsteps.isPlaying && IsWalking == false)
+        //{
+        //    IsWalking = true;
+        //    StopAllCoroutines();
+        //    if (gameObject.activeSelf)
+        //        StartCoroutine(Fadein_walk());
+        //}
+        //if (Footsteps.isPlaying && IsWalking == true)
+        //{
+        //    IsWalking = false;
+        //    StopAllCoroutines();
+        //    if (gameObject.activeSelf)
+        //        StartCoroutine(Fadeout_walk());
+        //}
     }
 
 
@@ -93,25 +114,47 @@ public class SoundManager : MonoBehaviour {
 
     }
 
-    IEnumerator Fadein()
+    IEnumerator Fadein_GameMusic()
     {
         gameSound.enabled = true;
-        for (; volume < 100; volume++)
+        for (; volume_gameMusic < 100; volume_gameMusic++)
         {
-            gameSound.volume = (float)volume / 100;
+            gameSound.volume = (float)volume_gameMusic / 100;
             yield return null;
         }
         gameSound.volume = 1;
     }
 
-    IEnumerator Fadeout()
+    IEnumerator Fadeout_GameMusic()
     {
-        for (; volume > 0; volume--)
+        for (; volume_gameMusic > 0; volume_gameMusic--)
         {
-            gameSound.volume = (float)(volume) / 100;
+            gameSound.volume = (float)(volume_gameMusic) / 100;
             yield return null;
         }
         gameSound.volume = 0;
         gameSound.enabled = false;
+    }
+
+    IEnumerator Fadein_walk()
+    {
+        Footsteps.enabled = true;
+        for (; volume_walkSound < 1000; volume_walkSound++)
+        {
+            Footsteps.volume = (float)volume_walkSound / 1000;
+            yield return null;
+        }
+        Footsteps.volume = 1;
+    }
+
+    IEnumerator Fadeout_walk()
+    {
+        for (; volume_walkSound > 0; volume_walkSound--)
+        {
+            Footsteps.volume = (float)(volume_walkSound) / 1000;
+            yield return null;
+        }
+        Footsteps.volume = 0;
+        Footsteps.enabled = false;
     }
 }
