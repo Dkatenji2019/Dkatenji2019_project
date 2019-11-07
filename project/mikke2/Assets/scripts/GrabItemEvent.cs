@@ -8,7 +8,6 @@ public class GrabItemEvent : MonoBehaviour {
     private ItemInformation itemInformation = null;
     private ItemRegistrator itemRegistrator = null;
     private UIManagement uiManagement = null;
-    private SteamVR_TrackedObject trackedObj;
 
     private bool IsCompponentsAttached = false;
     private bool isItemGrabbed;
@@ -31,8 +30,6 @@ public class GrabItemEvent : MonoBehaviour {
 
     private void Start()
     {
-        trackedObj = GameObject.FindGameObjectWithTag("Controller").GetComponent<SteamVR_TrackedObject>();
-        controller = SteamVR_Controller.Input((int)trackedObj.index);
 
         itemRegistrator = GameObject.FindGameObjectWithTag("ItemRegistrator").GetComponent<ItemRegistrator>();
         uiManagement = GameObject.FindGameObjectWithTag("UIManager").GetComponent<UIManagement>();
