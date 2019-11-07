@@ -12,6 +12,8 @@ public class GrabItemEvent : MonoBehaviour {
 
     private bool IsCompponentsAttached = false;
     private bool isItemGrabbed;
+    private bool IsNotGrrabed;
+    private bool IsGrabedSoundRang;
 
     private SteamVR_Controller.Device controller;
 
@@ -101,7 +103,7 @@ public class GrabItemEvent : MonoBehaviour {
 
 
     //---グリップ時間のカウント---//
-    public bool IsNotGrrabed;
+
     private void GripTimeCounter()
     {
         if (!isItemGrabbed)
@@ -111,7 +113,6 @@ public class GrabItemEvent : MonoBehaviour {
             GripTime += Time.deltaTime;
             if(GripTime > DecideGripTime)
             {
-
                 GripTime = 0;
                 this.gameObject.GetComponent<VRTK.VRTK_InteractableObject>().enabled = false;
                 itemRegistrator.DestroyItem(_grabbedItemNumber);

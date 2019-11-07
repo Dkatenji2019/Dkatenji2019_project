@@ -207,6 +207,8 @@ public class ItemRegistrator : MonoBehaviour {
     {
         if(grabbedItemNumber == NowOdaiNumber)
         {
+            SoundManager.PlayTrueSound();
+
             ScoreCounter.AddScoreValue(_itemQ.Peek().GetComponent<ItemInformation>().ItemPoint);
             Destroy(_itemQ.Peek());
             _itemQ.Dequeue();
@@ -217,7 +219,9 @@ public class ItemRegistrator : MonoBehaviour {
         }
         else
         {
-            NowOdaiNumber+=0;
+            SoundManager.PlayFalseSound();
+
+            NowOdaiNumber += 0;
         }
 
         //Debug.Log(NowOdaiNumber);
