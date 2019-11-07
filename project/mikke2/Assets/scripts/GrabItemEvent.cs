@@ -31,7 +31,8 @@ public class GrabItemEvent : MonoBehaviour {
 
     private void Start()
     {
-        trackedObj = GetComponent<SteamVR_TrackedObject>();
+        trackedObj = GameObject.FindGameObjectWithTag("Controller").GetComponent<SteamVR_TrackedObject>();
+        controller = SteamVR_Controller.Input((int)trackedObj.index);
 
         itemRegistrator = GameObject.FindGameObjectWithTag("ItemRegistrator").GetComponent<ItemRegistrator>();
         uiManagement = GameObject.FindGameObjectWithTag("UIManager").GetComponent<UIManagement>();
@@ -108,7 +109,7 @@ public class GrabItemEvent : MonoBehaviour {
     {
         if (!isItemGrabbed)
         {
-            //controller.TriggerHapticPulse(2000);
+            controller.TriggerHapticPulse(100);
             IsNotGrrabed = true;
             GripTime += Time.deltaTime;
             if(GripTime > DecideGripTime)
