@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33693745612611334}
   - component: {fileID: 23765762081801780}
   - component: {fileID: 54996761119667006}
+  - component: {fileID: 65024046733332186}
   m_Layer: 0
   m_Name: Orange_cup
   m_TagString: Untagged
@@ -96,3 +97,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &65024046733332186
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1228192665507792}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.18267944, y: 0.2081228, z: 0.24612097}
+  m_Center: {x: 0.000000022351742, y: 0.10406139, z: -0.031049855}

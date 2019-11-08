@@ -18,6 +18,8 @@ public class SoundManager : MonoBehaviour {
     private int volume_walkSound = 0;
     private bool IsMusicPlaying = false;
     private bool IsWalking = false;
+    public float DownVolumeLate = 0.15f;
+
     private void Awake()
     {
         True = _true;
@@ -141,17 +143,21 @@ public class SoundManager : MonoBehaviour {
         Footsteps.enabled = true;
         for (; volume_walkSound < 1000; volume_walkSound++)
         {
-            Footsteps.volume = (float)volume_walkSound / 1000;
+            Footsteps.volume = ((float)volume_walkSound / 1000);
+            if (Footsteps.volume > DownVolumeLate)
+            {
+                break;
+            }
             yield return null;
         }
-        Footsteps.volume = 1;
+        Footsteps.volume = DownVolumeLate;
     }
 
     IEnumerator Fadeout_walk()
     {
         for (; volume_walkSound > 0; volume_walkSound--)
         {
-            Footsteps.volume = (float)(volume_walkSound) / 1000;
+            Footsteps.volume = ((float)(volume_walkSound) / 1000);
             yield return null;
         }
         Footsteps.volume = 0;

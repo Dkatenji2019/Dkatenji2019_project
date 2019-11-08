@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33242068651107422}
   - component: {fileID: 23259357150784748}
   - component: {fileID: 54997904396985702}
+  - component: {fileID: 65266075949279912}
   m_Layer: 0
   m_Name: Yellow_cup
   m_TagString: Untagged
@@ -96,3 +97,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &65266075949279912
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1005214089629872}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.18267944, y: 0.2081228, z: 0.24612097}
+  m_Center: {x: 0.000000022351742, y: 0.10406139, z: -0.031049855}

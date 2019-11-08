@@ -107,7 +107,6 @@ public class GrabItemEvent : MonoBehaviour {
         if (!isItemGrabbed)
         {
             SoundManager.PlayGrubTimeSound();
-            controller.TriggerHapticPulse(100);
             IsNotGrrabed = true;
             GripTime += Time.deltaTime;
             if(GripTime > DecideGripTime)

@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 33310093670033384}
   - component: {fileID: 23957565547004948}
   - component: {fileID: 54829574881766222}
+  - component: {fileID: 65607310521497040}
   m_Layer: 0
   m_Name: shirinnder1
   m_TagString: Untagged
@@ -166,3 +167,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &65607310521497040
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1852072689262014}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.13005672, y: 0.47850493, z: 0.13005614}
+  m_Center: {x: -0.00000055134296, y: 0.23925246, z: -0.0000048838556}
