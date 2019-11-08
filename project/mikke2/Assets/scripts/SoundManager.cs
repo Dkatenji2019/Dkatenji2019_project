@@ -121,17 +121,17 @@ public class SoundManager : MonoBehaviour {
         gameSound.enabled = true;
         for (; volume_gameMusic < 100; volume_gameMusic++)
         {
-            gameSound.volume = (float)volume_gameMusic / 100;
+            gameSound.volume = (float)volume_gameMusic / 100 * DownVolumeLate;
             yield return null;
         }
-        gameSound.volume = 1;
+        gameSound.volume = DownVolumeLate;
     }
 
     IEnumerator Fadeout_GameMusic()
     {
         for (; volume_gameMusic > 0; volume_gameMusic--)
         {
-            gameSound.volume = (float)(volume_gameMusic) / 100;
+            gameSound.volume = (float)(volume_gameMusic) / 100 * DownVolumeLate;
             yield return null;
         }
         gameSound.volume = 0;
@@ -146,7 +146,8 @@ public class SoundManager : MonoBehaviour {
             Footsteps.volume = ((float)volume_walkSound / 1000);
             if (Footsteps.volume > DownVolumeLate)
             {
-                break;
+                Footsteps.volume = DownVolumeLate;
+                yield return null;
             }
             yield return null;
         }

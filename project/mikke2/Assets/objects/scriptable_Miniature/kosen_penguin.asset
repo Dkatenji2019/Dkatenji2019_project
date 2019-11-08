@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Name: kosen_penguin
   m_EditorClassIdentifier: 
   _itemName: "\u9AD8\u5C02\u30DA\u30F3\u30AE\u30F3"
-  _itemPoint: 10
+  _itemPoint: 100
   _itemHint: "\u30B5\u30F3\u30B0\u30E9\u30B9\u3092\u304B\u3051\u305F\u30DA\u30F3\u30AE\u30F3"
-  _itemObject: {fileID: 1871079085342228, guid: aa320fd20b073b042bbdee6bb7bdbf8c,
+  _itemObject: {fileID: 1207984414098496, guid: efe59315a4d064a44b136ce4a44f2336,
     type: 2}
   _atOneFloor: 0
   _atTwoFloor: 0

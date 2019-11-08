@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: cake
   m_EditorClassIdentifier: 
   _itemName: "\u30B1\u30FC\u30AD"
-  _itemPoint: 10
+  _itemPoint: 100
   _itemHint: "\u30DB\u30C3\u30C8\u30B1\u30FC\u30AD"
   _itemObject: {fileID: 1939761752338524, guid: 702af0fc8fc387f4a8c06b17fffef759,
     type: 2}

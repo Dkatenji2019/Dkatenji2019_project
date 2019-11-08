@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Name: car
   m_EditorClassIdentifier: 
   _itemName: "\u8ECA"
-  _itemPoint: 10
+  _itemPoint: 100
   _itemHint: "\u9ED2\u8272\u306E\u8ECA"
-  _itemObject: {fileID: 1793813872790286, guid: 7f32eef15d493ca46b79f38d68ea8a30,
+  _itemObject: {fileID: 1346236785837096, guid: fcd74a7c8d26862439b2228c1d8d3660,
     type: 2}
   _atOneFloor: 0
   _atTwoFloor: 0

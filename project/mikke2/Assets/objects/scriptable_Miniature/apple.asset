@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Name: apple
   m_EditorClassIdentifier: 
   _itemName: "\u308A\u3093\u3054"
-  _itemPoint: 10
-  _itemHint: "\u8D64\u3044\u679C\u7269"
+  _itemPoint: 100
+  _itemHint: "\u8D64\u304F\u3066\u4E38\u3044\u679C\u7269"
   _itemObject: {fileID: 1238172953047844, guid: 119c1065c71ff3246b30c0a0f3cf2226,
     type: 2}
   _atOneFloor: 0

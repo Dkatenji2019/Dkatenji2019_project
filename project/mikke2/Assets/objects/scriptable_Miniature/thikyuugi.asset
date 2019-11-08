@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: thikyuugi
   m_EditorClassIdentifier: 
   _itemName: "\u5730\u7403\u5100 "
-  _itemPoint: 10
+  _itemPoint: 100
   _itemHint: "\u4E38\u3044\u5730\u7403\u306E\u6A21\u578B"
   _itemObject: {fileID: 1986166655950166, guid: 2cc33629487b5ad4ebc78c6fb6d06107,
     type: 2}

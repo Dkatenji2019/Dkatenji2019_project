@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Name: hasami
   m_EditorClassIdentifier: 
   _itemName: "\u306F\u3055\u307F"
-  _itemPoint: 10
+  _itemPoint: 100
   _itemHint: "\u9752\u3044\u53D6\u3063\u624B"
-  _itemObject: {fileID: 1055828819347222, guid: 9c6a8ba96f4860647aa133e725ab1ffd,
+  _itemObject: {fileID: 1437112254730792, guid: 5620e81a4ac6b7c4a97caabcc42102a0,
     type: 2}
   _atOneFloor: 0
   _atTwoFloor: 0
-  positionEnumerate: 0
+  positionEnumerate: 2

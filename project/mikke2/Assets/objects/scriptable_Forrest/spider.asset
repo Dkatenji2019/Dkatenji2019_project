@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: spider
   m_EditorClassIdentifier: 
   _itemName: "\u30AF\u30E2"
-  _itemPoint: 1000
+  _itemPoint: 100
   _itemHint: "\u9ED2\u3063\u307D\u3044\u866B"
   _itemObject: {fileID: 1393270894310178, guid: 69a462de4201b72489f78a50012ec7a2,
     type: 2}

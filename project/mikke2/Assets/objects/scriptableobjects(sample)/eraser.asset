@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: eraser
   m_EditorClassIdentifier: 
   _itemName: erse
-  _itemPoint: 20
+  _itemPoint: 100
   _itemHint: eraser
   _itemObject: {fileID: 1371912617108268, guid: ca9d52d9608ffed49b2308f21515b0ec,
     type: 2}

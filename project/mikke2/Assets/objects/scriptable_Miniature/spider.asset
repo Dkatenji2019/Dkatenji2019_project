@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Name: spider
   m_EditorClassIdentifier: 
   _itemName: "\u30AF\u30E2"
-  _itemPoint: 10
-  _itemHint: "\u9ED2\u3044\u30E4\u30C4"
+  _itemPoint: 100
+  _itemHint: "\u9ED2\u3044\u30E4\u30C4...\uFF7D\uFF8A\uFF9F\uFF72\uFF80\uFF9E\uFF70\uFF8F!!"
   _itemObject: {fileID: 1393270894310178, guid: 69a462de4201b72489f78a50012ec7a2,
     type: 2}
   _atOneFloor: 0

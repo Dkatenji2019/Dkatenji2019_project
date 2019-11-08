@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: pencilsharpner
   m_EditorClassIdentifier: 
   _itemName: "\u8D64\u306E\u925B\u7B46\u524A\u308A"
-  _itemPoint: 20
+  _itemPoint: 100
   _itemHint: a
   _itemObject: {fileID: 1335658142207962, guid: 829dfd7e97c0dea43901294f33acb833,
     type: 2}

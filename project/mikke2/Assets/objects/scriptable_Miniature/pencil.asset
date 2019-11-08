@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Name: pencil
   m_EditorClassIdentifier: 
   _itemName: "\u925B\u7B46"
-  _itemPoint: 10
+  _itemPoint: 100
   _itemHint: "\u9EC4\u8272\u306E\u925B\u7B46"
-  _itemObject: {fileID: 1870085903422362, guid: e4520d1d415d3074da2f773d89b2c157,
+  _itemObject: {fileID: 1507028701682650, guid: e9fb371af87bf66459db220040bd9beb,
     type: 2}
   _atOneFloor: 0
   _atTwoFloor: 0

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _itemName: d
   _itemPoint: 20
-  _itemHint: s
+  _itemHint: 
   _itemObject: {fileID: 1240317908736668, guid: c9a20175fd39e144283d1e17802c1418,
     type: 2}
   _atOneFloor: 0

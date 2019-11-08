@@ -14,7 +14,7 @@ MonoBehaviour:
   _itemName: "\u4E09\u89D2\u30D5\u30E9\u30B9\u30B3"
   _itemPoint: 100
   _itemHint: "\u4E09\u89D2\u306E\u5F62\u3092\u3057\u305F\u30D5\u30E9\u30B9\u30B3"
-  _itemObject: {fileID: 1144786966978350, guid: ec1351801e468b8498175e44273c7729,
+  _itemObject: {fileID: 1113184711007376, guid: 3581800ed129cb546ab8f53a82412b04,
     type: 2}
   _atOneFloor: 0
   _atTwoFloor: 0

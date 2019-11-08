@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _itemName: "\u3075\u3046\u305B\u3093"
   _itemPoint: 100
-  _itemHint: "\u8D64\u304F\u3066\u4E38\u3044\u3088"
+  _itemHint: "\u8D64\u304F\u3066\u3068\u3066\u3082\u5927\u304D\u3044"
   _itemObject: {fileID: 1215321067739822, guid: 010c4324fddb2584f99bc20ae7233672,
     type: 2}
   _atOneFloor: 0

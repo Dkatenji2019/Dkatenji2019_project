@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Name: teddybear
   m_EditorClassIdentifier: 
   _itemName: "\u30C6\u30C7\u30A3\u30D9\u30A2"
-  _itemPoint: 10
-  _itemHint: "\u306C\u3044\u3050\u308B\u307F\u306E\u30AF\u30DE"
+  _itemPoint: 100
+  _itemHint: "\u5927\u304D\u3081\u306E\u30AF\u30DE"
   _itemObject: {fileID: 1882174550043200, guid: 9ff7ae8b2f156434d8dfa1e11bb99958,
     type: 2}
   _atOneFloor: 0

@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Name: smart_phone
   m_EditorClassIdentifier: 
   _itemName: "\u30B9\u30DE\u30FC\u30C8\u30D5\u30A9\u30F3"
-  _itemPoint: 10
+  _itemPoint: 100
   _itemHint: "\u643A\u5E2F\u7AEF\u672B"
-  _itemObject: {fileID: 1579487854071178, guid: c1e7ff8aa3f769649be2f4adac7984f5,
+  _itemObject: {fileID: 1885307908235244, guid: dea25d0ab5a96c34b8160b04a2595a66,
     type: 2}
   _atOneFloor: 0
   _atTwoFloor: 0
-  positionEnumerate: 0
+  positionEnumerate: 2

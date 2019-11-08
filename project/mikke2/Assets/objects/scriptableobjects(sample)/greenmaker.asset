@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _itemName: idonma-ka
   _itemPoint: 20
-  _itemHint: a
+  _itemHint: 
   _itemObject: {fileID: 1582770782384520, guid: a6c4dc3757345d64a9b3be8fabb546da,
     type: 2}
   _atOneFloor: 0

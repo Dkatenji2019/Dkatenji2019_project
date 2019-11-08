@@ -16,6 +16,6 @@ MonoBehaviour:
   _itemHint: "\u5E95\u304C\u4E38\u3044\u30D5\u30E9\u30B9\u30B3"
   _itemObject: {fileID: 1871698568771582, guid: ca215461c1e78e14abafafb14701209c,
     type: 2}
-  _atOneFloor: 0
+  _atOneFloor: 1
   _atTwoFloor: 0
   positionEnumerate: 0

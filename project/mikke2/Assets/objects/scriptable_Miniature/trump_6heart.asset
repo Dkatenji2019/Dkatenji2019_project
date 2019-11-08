@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Name: trump_6heart
   m_EditorClassIdentifier: 
   _itemName: "\u30C8\u30E9\u30F3\u30D7"
-  _itemPoint: 10
-  _itemHint: "6\u306E\u30CF\u30FC\u30C8"
-  _itemObject: {fileID: 1048286674857986, guid: 4ecb20c37f00f0142ab537e700be348b,
+  _itemPoint: 100
+  _itemHint: "\u8D64\u306E6\u306E\u30CF\u30FC\u30C8"
+  _itemObject: {fileID: 1697832091682212, guid: a8b71dc9b0e49e34b87c2a46bba74113,
     type: 2}
   _atOneFloor: 0
   _atTwoFloor: 0

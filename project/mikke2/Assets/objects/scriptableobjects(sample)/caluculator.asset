@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: caluculator
   m_EditorClassIdentifier: 
   _itemName: "\u96FB\u5353"
-  _itemPoint: 20
+  _itemPoint: 100
   _itemHint: a
   _itemObject: {fileID: 1844182777080232, guid: 85f7914524b8c904b88031d674f2d64e,
     type: 2}

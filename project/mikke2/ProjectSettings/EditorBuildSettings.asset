@@ -13,4 +13,7 @@ EditorBuildSettings:
     guid: a6f11ef3eb6ea294b96ab1d6db8e09d3
   - enabled: 1
     path: Assets/Scenes/Lab_field/Lab.unity
+    guid: f17fd87757b22d5439cc6363c8543d6a
+  - enabled: 1
+    path: Assets/Scenes/Miiture_field/Miniture.unity
     guid: 00000000000000000000000000000000

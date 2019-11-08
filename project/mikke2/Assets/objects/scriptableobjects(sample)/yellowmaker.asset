@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: yellowmaker
   m_EditorClassIdentifier: 
   _itemName: "\u9EC4\u8272\u306E\u30DE\u30FC\u30AB\u30FC"
-  _itemPoint: 20
+  _itemPoint: 100
   _itemHint: f
   _itemObject: {fileID: 1745442421975282, guid: 73a2fa38fb109f0449648cff836e5d91,
     type: 2}

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: ministapler
   m_EditorClassIdentifier: 
   _itemName: "\u9752\u306E\u5C0F\u3055\u3044\u306F\u3055\u307F"
-  _itemPoint: 20
+  _itemPoint: 100
   _itemHint: a
   _itemObject: {fileID: 1621238176487146, guid: 82ce4778ec705224da63d62a7894f19f,
     type: 2}

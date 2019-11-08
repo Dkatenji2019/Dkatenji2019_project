@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Name: sand_clock
   m_EditorClassIdentifier: 
   _itemName: "\u7802\u6642\u8A08"
-  _itemPoint: 10
-  _itemHint: "\u6728\u88FD\u306E\u7802\u6642\u8A08"
+  _itemPoint: 100
+  _itemHint: "\u5C0F\u3055\u3081\u306E\u7802\u6642\u8A08"
   _itemObject: {fileID: 1923668503661936, guid: 016f160e2a9f3f3489d98a645be75ede,
     type: 2}
   _atOneFloor: 0
   _atTwoFloor: 0
-  positionEnumerate: 0
+  positionEnumerate: 2

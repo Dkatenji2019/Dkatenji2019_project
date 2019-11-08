@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: globe
   m_EditorClassIdentifier: 
   _itemName: "\u5730\u7403\u5100"
-  _itemPoint: 50
+  _itemPoint: 100
   _itemHint: a
   _itemObject: {fileID: 1343636230479548, guid: 9712d3a585743ee409135218c239b2b6,
     type: 2}

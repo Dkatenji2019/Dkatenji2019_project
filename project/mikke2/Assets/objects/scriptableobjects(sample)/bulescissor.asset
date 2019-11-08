@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: bulescissor
   m_EditorClassIdentifier: 
   _itemName: "\u9752\u306E\u306F\u3055\u307F"
-  _itemPoint: 20
+  _itemPoint: 100
   _itemHint: a
   _itemObject: {fileID: 1163010725835680, guid: da70aff30d3144e45a03995ca322e0ed,
     type: 2}

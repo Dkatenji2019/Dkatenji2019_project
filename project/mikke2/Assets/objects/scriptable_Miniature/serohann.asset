@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Name: serohann
   m_EditorClassIdentifier: 
   _itemName: "\u30BB\u30ED\u30CF\u30F3\u30C6\u30FC\u30D7 "
-  _itemPoint: 10
+  _itemPoint: 100
   _itemHint: "\u5C0F\u5B66\u6821\u3067\u3088\u304F\u4F7F\u3046\u3084\u3064"
-  _itemObject: {fileID: 1583867951233388, guid: 1614b7d52bf513244bc76cac976f0276,
+  _itemObject: {fileID: 1931310123259010, guid: f38dcbc3b28413d409b183198998dc07,
     type: 2}
   _atOneFloor: 0
   _atTwoFloor: 0

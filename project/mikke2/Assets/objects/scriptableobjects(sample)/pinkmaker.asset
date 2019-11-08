@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: pinkmaker
   m_EditorClassIdentifier: 
   _itemName: "\u30D4\u30F3\u30AF\u306E\u30DE\u30FC\u30AB\u30FC"
-  _itemPoint: 20
+  _itemPoint: 100
   _itemHint: d
   _itemObject: {fileID: 1774217012725284, guid: a6ac7356bb9b0eb42ba159bc1edf4909,
     type: 2}

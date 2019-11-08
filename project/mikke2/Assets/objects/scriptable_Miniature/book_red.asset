@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Name: book_red
   m_EditorClassIdentifier: 
   _itemName: "\u672C"
-  _itemPoint: 10
+  _itemPoint: 100
   _itemHint: "\u8D64\u3044\u672C\r"
   _itemObject: {fileID: 1461665162512510, guid: 7bb3110b8151de04a83682926a5c0b2a,
     type: 2}
   _atOneFloor: 0
   _atTwoFloor: 0
-  positionEnumerate: 0
+  positionEnumerate: 2

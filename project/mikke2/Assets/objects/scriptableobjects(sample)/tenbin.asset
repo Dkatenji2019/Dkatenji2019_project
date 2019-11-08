@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: tenbin
   m_EditorClassIdentifier: 
   _itemName: "\u5929\u79E4"
-  _itemPoint: 20
+  _itemPoint: 100
   _itemHint: d
   _itemObject: {fileID: 1235572073868744, guid: b340a4e1ce92a2a478e8dcc08b6db10e,
     type: 2}

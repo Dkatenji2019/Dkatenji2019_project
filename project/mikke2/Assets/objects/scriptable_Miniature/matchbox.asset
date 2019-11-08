@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Name: matchbox
   m_EditorClassIdentifier: 
   _itemName: "\u30DE\u30C3\u30C1\u7BB1"
-  _itemPoint: 10
-  _itemHint: "\u30DE\u30C3\u30C1\u58F2\u308A\u306E\u5C11\u5973\u304C\u6301\u3063\u3066\u308B\u30A2\u30EC"
+  _itemPoint: 100
+  _itemHint: "\u30DE\u30C3\u30C1\u58F2\u308A\u306E\u5C11\u5973\u304C\u6301\u3063\u3066\u308B\u7269"
   _itemObject: {fileID: 1229407224340062, guid: 1f7c00e2717aa324eafdbae71771c004,
     type: 2}
   _atOneFloor: 0
   _atTwoFloor: 0
-  positionEnumerate: 0
+  positionEnumerate: 2
