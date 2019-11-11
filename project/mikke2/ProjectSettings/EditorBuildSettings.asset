@@ -11,9 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Forrest_field/Forrest.unity
     guid: a6f11ef3eb6ea294b96ab1d6db8e09d3
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Lab_field/Lab.unity
     guid: f17fd87757b22d5439cc6363c8543d6a
   - enabled: 1
     path: Assets/Scenes/Miiture_field/Miniture.unity
+    guid: 2b29bfa79bd74f348be8df67c187a7dd
+  - enabled: 1
+    path: Assets/Scenes/Forrest_field/Forrest_Easy.unity
     guid: 00000000000000000000000000000000

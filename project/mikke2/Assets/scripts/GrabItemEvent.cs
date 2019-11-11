@@ -25,7 +25,7 @@ public class GrabItemEvent : MonoBehaviour {
         }
     }
     public float GripTime;// { get; set; }
-    readonly float DecideGripTime = 3.0f;
+    readonly float DecideGripTime = 1.0f;
 
 
     private void Start()
@@ -77,6 +77,8 @@ public class GrabItemEvent : MonoBehaviour {
 
             //任意の色に変更すること
             vrtk_InteractableObject.touchHighlightColor = Color.blue;
+
+            vrtk_InteractableObject.grabOverrideButton = VRTK.VRTK_ControllerEvents.ButtonAlias.Trigger_Press;
         }
     }
 

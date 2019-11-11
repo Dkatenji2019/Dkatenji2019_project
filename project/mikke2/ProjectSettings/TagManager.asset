@@ -9,6 +9,7 @@ TagManager:
   - UIManager
   - ItemRegistrator
   - Collider
+  - Controller
   layers:
   - Default
   - TransparentFX

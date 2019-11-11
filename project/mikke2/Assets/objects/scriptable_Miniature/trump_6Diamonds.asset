@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: trump_6Diamonds
   m_EditorClassIdentifier: 
   _itemName: "\u30C8\u30E9\u30F3\u30D7"
-  _itemPoint: 100
+  _itemPoint: 0
   _itemHint: "\u8D64\u306E6\u306E\u30C0\u30A4\u30E4"
   _itemObject: {fileID: 1347471334061322, guid: fb79d5630bf26504986b2feefd8e8788,
     type: 2}
