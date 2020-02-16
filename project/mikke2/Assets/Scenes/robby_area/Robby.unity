@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 8ec958251463ce04b84b4389d26f6938, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: a6628da14cc0b374f86c9e32c0fa32e9, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.47586888, g: 0.11509906, b: 0.10883178, a: 1}
+  m_IndirectSpecularColor: {r: 0.25329408, g: 0.2169948, b: 0.23320016, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1034,7 +1034,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &118719486
 GameObject:
@@ -1845,6 +1845,35 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 193089766}
+--- !u!1 &198041865
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 799094632}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 198041866}
+  m_Layer: 0
+  m_Name: Missing Prefab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &198041866
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 799094632}
+  m_GameObject: {fileID: 198041865}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2039410784}
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &198355589
 GameObject:
   m_ObjectHideFlags: 0
@@ -12332,7 +12361,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1338025376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13459,7 +13488,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4927468253989788, guid: 9ff7ae8b2f156434d8dfa1e11bb99958, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4927468253989788, guid: 9ff7ae8b2f156434d8dfa1e11bb99958, type: 2}
       propertyPath: m_LocalScale.x
@@ -17085,7 +17114,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1803839090
 Transform:
   m_ObjectHideFlags: 0
@@ -19399,11 +19428,25 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2036841713}
   m_Mesh: {fileID: 4300122, guid: 9eb4d689eea78e54da10689d7d578cef, type: 3}
---- !u!1 &2039410780 stripped
+--- !u!1 &2039410780
 GameObject:
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 1298879734104448, guid: 11e8af4ca2533bb44907d376908d661a,
     type: 2}
   m_PrefabInternal: {fileID: 799094632}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2039410784}
+  - component: {fileID: 2039410783}
+  - component: {fileID: 2039410781}
+  - component: {fileID: 2039410782}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
 --- !u!114 &2039410781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19457,6 +19500,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &2039410784
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 799094632}
+  m_GameObject: {fileID: 2039410780}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 198041866}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2040720813
 GameObject:
   m_ObjectHideFlags: 0
