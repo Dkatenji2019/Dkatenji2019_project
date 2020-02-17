@@ -4,6 +4,24 @@ using UnityEngine;
 using System.IO;
 using UnityEditor;
 
+/*
+ * <概要>
+ * サクラ（俗にいう張りぼて）のアイテムを生成するクラス。
+ * 今回、フィールドに並べるアイテム数が心苦しかったために即席で作りました。
+ * [FindScriptableObject]クラスと同じことをしています。
+ * 
+ * <関係>
+ * [ItemRegistrator]クラスへデータを送信
+ * 
+ * <public>
+ *      seiseiset : int
+ *      PathName : string
+ *      find_scriptableobjects_in_folda() : void
+ *      
+ * <property>
+ *      SakuraItemsList : List<GameObject> {get;set;}
+ * 
+ */
 public class FindSakuraObjects : MonoBehaviour {
 
     private List<GameObject> _sakuraitemsList = new List<GameObject>();
@@ -14,7 +32,8 @@ public class FindSakuraObjects : MonoBehaviour {
         set { _sakuraitemsList = value; }
     }
 
-    public int seiseisuu = 3;
+    //アイテム生成数
+    public int seiseiset = 3;
 
     //Directory名は任意で変更可
     [Tooltip("\nディレクトリのパスを記入\n")]
@@ -22,6 +41,7 @@ public class FindSakuraObjects : MonoBehaviour {
     [Multiline(3)]
     public string PathName;
 
+    //フォルダの内部からスクリプタブルオブジェクトを取得します
     public void find_scriptableobjects_in_folda()
     {
 

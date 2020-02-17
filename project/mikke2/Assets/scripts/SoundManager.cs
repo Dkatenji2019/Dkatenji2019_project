@@ -2,6 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * <概要>
+ * ゲーム音楽管理クラス
+ * ★フェードイン・フェードアウトを実装
+ * 
+ * <関係>
+ *  
+ * <public>
+ *  めんどくせー割愛じゃー
+ * 
+ */
+
 public class SoundManager : MonoBehaviour {
 
     static public AudioSource True;

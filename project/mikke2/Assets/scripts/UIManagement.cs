@@ -3,6 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+ * <概要>
+ * プレイヤーUIの情報を管理する
+ * 
+ * <関係>
+ * [ItemRegistrator][TimeCounter]クラスからデータを受信
+ * 
+ * <public>
+ *      OdaiName_EditOnUnity : Text
+ *      OdaiHint_EditOnUnity : Text
+ *      ItemLeftAmount : Text
+ *      GrabbedItemTime_EditOnUnity : Image
+ *      UITextUpdate() : void
+ *      
+ * <property>
+ *      IsMatchedWithOdai : bool {get;set;}
+ *      GrabbedItemTime : float {get;set;}
+ */
+
 public class UIManagement:MonoBehaviour{
 
     /// <summary>
@@ -60,6 +79,10 @@ public class UIManagement:MonoBehaviour{
 
     private void Update()
     {
+        if (timeCounter == null)
+        {
+            return;
+        }
         //GrabItemName_EditOnUnity.text = GrabItemName;
         GrabbedItemTime_EditOnUnity.fillAmount = GrabbedItemTime;
         GameTimeFromStart_EditOnUnity.text = ((int)(timeCounter.timeOutValue - timeCounter.GameTimeRangeZeroToOne * timeCounter.timeOutValue)/60).ToString()
@@ -69,6 +92,10 @@ public class UIManagement:MonoBehaviour{
 
     public void UITextUpdate()
     {
+        if(ItemRegistrator == null)
+        {
+            return;
+        }
         OdaiName_EditOnUnity.text = ItemRegistrator.OdaiName;
         OdaiHint_EditOnUnity.text = ItemRegistrator.OdaiHint;
         ItemLeftAmount.text = ItemRegistrator.OdaiLeftAmount.ToString();

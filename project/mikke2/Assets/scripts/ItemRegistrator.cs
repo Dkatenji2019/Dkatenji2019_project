@@ -2,6 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * <概要>
+ * スクリプタブルオブジェクトを一元管理するクラス
+ * 
+ * <関係>
+ * [FindScriptableobjects][FindSakuraObjects]クラスからデータを受信
+ * 
+ * <public>
+ *      seiseisuu : int
+ *      PathName : string
+ *      find_scriptableobjects_in_folda() : void
+ *      
+ * <property>
+ *      SakuraItemsList : List<GameObject> {get;set;}
+ * 
+ */
+
+
 public class ItemRegistrator : MonoBehaviour {
 
     ///<summary>
@@ -132,7 +150,7 @@ public class ItemRegistrator : MonoBehaviour {
 
         for (int i = 0; i < findSakuraObjects.SakuraItemsList.Count; i++)
         {
-            for (int j = 0; j < findSakuraObjects.seiseisuu; j++)
+            for (int j = 0; j < findSakuraObjects.seiseiset; j++)
             {
                 GameObject instancedGameObject = Instantiate(findSakuraObjects.SakuraItemsList[i]);
                 var iteminformation = instancedGameObject.AddComponent<ItemInformation>();

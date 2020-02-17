@@ -3,6 +3,28 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 
+/*
+ * <概要>
+ * 時間の経過を取得しています。
+ * 
+ * <関係>
+ * [TimeCounter]クラスへデータを送信
+ * 
+ * <property>
+ *      GameTimeRangeZeroToOne : float{get;set;}
+ *      GameStartTrigger : bool{get;set;}
+ *      GameEndTrigger : bool{get;set;}
+ * 
+ * <public>
+ *      timeOutValue : float
+ *      
+ * <private>
+ *      gameTime : float
+ *      timeOut : float
+ *      Timer() : void
+ *      Caluculate_GameTimeRangeZeroToOne() : void
+ */
+
 public class TimeCounter : MonoBehaviour {
 
     private float gameTime;
@@ -12,22 +34,19 @@ public class TimeCounter : MonoBehaviour {
     /// </summary>
     private  float timeOut;
 
- //   public float timeOutValue = 360.0f;
-
-
-    public float timeOutValue = 5.0f;
+    public float timeOutValue = 360.0f;
     /// <summary>
     /// ゲームがスタートしてから終わるまでの経過時間を0～１の範囲で返す
     /// </summary>
     public float GameTimeRangeZeroToOne { get { return _gameTimeRangeZeroToOne; } }
-    [SerializeField] private  float _gameTimeRangeZeroToOne;
+    private  float _gameTimeRangeZeroToOne;
 
 
     /// <summary>
     /// ゲーム開始時のフラグ
     /// </summary>
     public bool GameStartTrigger { set { _gameStartTrigger = value; } }
-    [SerializeField]private  bool _gameStartTrigger;
+    private  bool _gameStartTrigger;
 
 
     /// <summary>
@@ -38,28 +57,15 @@ public class TimeCounter : MonoBehaviour {
 
     // Use this for initialization
     private void Start() {
-
-        StartSetting();
-
-    }
-
-    // Update is called once per frame
-    private void Update () {
-
-        trrigerUpdate();
-
-    }
-
-    private void StartSetting()
-    {
         gameTime = 0.0f;
         timeOut = timeOutValue;
         _gameStartTrigger = true;
         _gameEndTrigger = false;
     }
 
-    private void trrigerUpdate()
-    {
+    // Update is called once per frame
+    private void Update () {
+
         if (_gameEndTrigger)
         {
             return;
@@ -74,7 +80,6 @@ public class TimeCounter : MonoBehaviour {
             Timer();
             Caluculate_GameTimeRangeZeroToOne();
         }
-
 
     }
 

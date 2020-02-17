@@ -3,6 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
+
+/*
+ * <概要>
+ * プレイヤーが動いているかどうかを過去の位置関係と比較する
+ * 
+ * <関係>
+ * [SoundManager]クラスへデータを送信
+ * 
+ * <public>
+ *      moveMargin : float
+ *      delayTime : int
+ *      
+ * <property>
+ *      currentFramePos : Vector3
+ *      latestFramePos : Queue<Vector3>
+ */
+
+
 public class TrackingMoving : MonoBehaviour {
 
     // Use this for initialization
@@ -17,7 +35,7 @@ public class TrackingMoving : MonoBehaviour {
     void Update () {
 
         //
-        float currentFramePossqrt = Mathf.Sqrt((float)Math.Pow(Mathf.Abs(currentFramePos.x - this.transform.position.x),2) 
+        float currentFramePosSqrt = Mathf.Sqrt((float)Math.Pow(Mathf.Abs(currentFramePos.x - this.transform.position.x),2) 
                                              + (float)Math.Pow(Mathf.Abs(currentFramePos.z - this.transform.position.z), 2));
 
         //
@@ -39,11 +57,11 @@ public class TrackingMoving : MonoBehaviour {
         avaragelatestFramePosSqrt /= delayTime;
 
         //
-        if(Mathf.Abs(currentFramePossqrt - avaragelatestFramePosSqrt) > moveMargin)
+        if(Mathf.Abs(currentFramePosSqrt - avaragelatestFramePosSqrt) > moveMargin)
         {
             SoundManager.PlayfootstepsSound();
         }
-        if(Mathf.Abs(currentFramePossqrt - avaragelatestFramePosSqrt)  <= moveMargin)
+        if(Mathf.Abs(currentFramePosSqrt - avaragelatestFramePosSqrt)  <= moveMargin)
         {
             SoundManager.StopfootstepsSound();
         }

@@ -1,4 +1,13 @@
-﻿public enum PositionEnumerate : int
+﻿
+
+/*
+ * 
+ *引き出しや机の上に配置する場合を想定したもの
+ * (今回は活用せず)
+ * 
+ */
+
+public enum PositionEnumerate : int
 {
     地面 = 0,
     テーブル = 1,

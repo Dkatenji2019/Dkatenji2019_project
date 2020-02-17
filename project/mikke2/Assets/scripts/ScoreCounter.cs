@@ -2,6 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/*
+ * <概要>
+ * プレイヤーがゲームでアイテムを一致させて得点にしたものを保管するクラス
+ * 
+ * <関係>
+ * 
+ * <static>
+ *      scoreValue : int
+ *      ScoreRanking : List<int> 
+ *      AddScoreValue(int) : void
+ *      SetScoreValueToZero() : void
+ *      SetScoreValueToRanking() : void
+ *      
+ */
+
+
 public class ScoreCounter : MonoBehaviour
 {
     public static int scoreValue = 0;

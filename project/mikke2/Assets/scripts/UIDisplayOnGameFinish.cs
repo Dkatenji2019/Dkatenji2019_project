@@ -4,6 +4,23 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
 
+/*
+ * <概要>
+ * ロビー画面でのランキングを表示するためのもの
+ * 
+ * <関係>
+ * [ScoreCounter]クラスからデータを受信
+ * 
+ * <public>
+ *      ScoreText : Text
+ *      RankingText : Text[]
+ *      
+ * <private>
+ *      ScoreDisplay() : void
+ *      RankingDisplay() : void
+ *      
+ */
+
 public class UIDisplayOnGameFinish : MonoBehaviour {
 
     public Text ScoreText;

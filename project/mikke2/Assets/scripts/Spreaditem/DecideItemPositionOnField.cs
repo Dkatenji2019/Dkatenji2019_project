@@ -2,6 +2,12 @@
 using System.Collections;
 using UnityEngine;
 
+
+/*
+ * アイテムを並べる場所を決定するためのクラス。
+ *  （この処理については未完成）
+ */
+
 public class DecideItemPositionOnField : MonoBehaviour
 {
 

@@ -4,6 +4,26 @@ using UnityEngine;
 using System.IO;
 using UnityEditor;
 
+
+/*
+ * <概要>
+ * スクリプタブルオブジェクトにまとめた、３Dオブジェクト名、名前、ポイントなどの情報を扱いやすいListの形に変換する。
+ * [ItemInformationCreate]クラスはスクリプタブルオブジェクトの内容を決定している
+ * 
+ * <関係>
+ * [ItemInformationCreate]クラスからデータを受信
+ * [ItemRegistrator]クラスへデータを送信
+ * 
+ * <public>
+ *      PathName : string
+ *      find_scriptableobjects_in_folda() : void
+ *      
+ * <property>
+ *      ItemsList : List<GameObject> {get;set;}
+ * 
+ */
+
+
 public class FindScriptableobjects : MonoBehaviour
 {
     [Tooltip("\n☆使い方☆\n" +

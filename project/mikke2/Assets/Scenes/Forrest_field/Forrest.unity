@@ -110,6 +110,35 @@ NavMeshSettings:
     tileSize: 256
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &57544723
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 1749509907}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 57544724}
+  m_Layer: 0
+  m_Name: Missing Prefab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &57544724
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 1749509907}
+  m_GameObject: {fileID: 57544723}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1622694679}
+  m_Father: {fileID: 1574347816}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &94782928
 GameObject:
   m_ObjectHideFlags: 0
@@ -193,69 +222,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4531ff2a79e8c8c4e9a70e7d5b874e01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toolModeInt: 3
-  erosionTypeInt: 1
-  generatorTypeInt: 4
-  isBrushOn: 0
-  isBrushHidden: 0
-  isBrushPainting: 0
-  brushPosition: {x: 0, y: 0, z: 0}
-  brushSize: 50
-  brushOpacity: 1
-  brushSoftness: 0.5
-  neighbourhoodInt: 0
-  useDifferenceMaps: 1
-  thermalIterations: 25
-  thermalMinSlope: 2.5
-  thermalFalloff: 0.1
-  hydraulicTypeInt: 1
-  hydraulicIterations: 12
-  hydraulicMaxSlope: 60
-  hydraulicFalloff: 0.5
-  hydraulicRainfall: 0.02
-  hydraulicEvaporation: 0.5
-  hydraulicSedimentSolubility: 0.06
-  hydraulicSedimentSaturation: 0.15
-  hydraulicVelocityRainfall: 0.01
-  hydraulicVelocityEvaporation: 0.5
-  hydraulicVelocitySedimentSolubility: 0.01
-  hydraulicVelocitySedimentSaturation: 0.1
-  hydraulicVelocity: 20
-  hydraulicMomentum: 1
-  hydraulicEntropy: 0
-  hydraulicDowncutting: 0.1
-  tidalIterations: 25
-  tidalSeaLevel: 50
-  tidalRangeAmount: 5
-  tidalCliffLimit: 60
-  windIterations: 12
-  windDirection: 0
-  windForce: 0.5
-  windLift: 0.01
-  windGravity: 0.5
-  windCapacity: 0.01
-  windEntropy: 0.1
-  windSmoothing: 0.25
-  slopeBlendMinAngle: 10
-  slopeBlendMaxAngle: 20
-  heightBlendPoints: []
-  gradientStyles: []
-  voronoiTypeInt: 1
-  voronoiCells: 9
-  voronoiFeatures: 1
-  voronoiScale: 0
-  voronoiBlend: 0.25
-  diamondSquareDelta: 0.2
-  diamondSquareBlend: 0.5
-  perlinFrequency: 2
-  perlinAmplitude: 0.5
-  perlinOctaves: 9
-  perlinBlend: 0.25
-  smoothBlend: 0.25
-  smoothIterations: 1
-  normaliseMin: 0
-  normaliseMax: 0.075
-  normaliseBlend: 1
 --- !u!1 &114526333
 GameObject:
   m_ObjectHideFlags: 0
@@ -1380,6 +1346,21 @@ Transform:
   m_Father: {fileID: 2142011508}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 90, y: 540, z: 270}
+--- !u!1 &630223317
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 1749509907}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1622694679}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &631302385
 GameObject:
   m_ObjectHideFlags: 0
@@ -1515,7 +1496,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 645898687}
-  m_LocalRotation: {x: -0.27059785, y: 0.65328157, z: -0.65328157, w: -0.27059785}
+  m_LocalRotation: {x: -0.27059788, y: 0.6532816, z: -0.6532816, w: -0.27059788}
   m_LocalPosition: {x: 62.06172, y: -16.616095, z: 52.528122}
   m_LocalScale: {x: 10.699999, y: 10, z: 5}
   m_Children: []
@@ -4143,9 +4124,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1574347816}
-  - component: {fileID: 1574347815}
   - component: {fileID: 1574347817}
   - component: {fileID: 1574347818}
+  - component: {fileID: 1574347815}
   m_Layer: 0
   m_Name: '[Forrest_World]'
   m_TagString: Untagged
@@ -4184,7 +4165,7 @@ Transform:
   - {fileID: 264820300}
   - {fileID: 719270448}
   - {fileID: 664077136}
-  - {fileID: 1622694679}
+  - {fileID: 57544724}
   - {fileID: 294779654}
   - {fileID: 1104915438}
   - {fileID: 2023219077}
@@ -4220,11 +4201,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeCounter: {fileID: 1574347815}
---- !u!4 &1622694679 stripped
+--- !u!4 &1622694679
 Transform:
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 4835406691876106, guid: 767fa3b79515555418c14d4709b208e0,
     type: 2}
   m_PrefabInternal: {fileID: 1749509907}
+  m_GameObject: {fileID: 630223317}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 57544724}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1657113410
 GameObject:
   m_ObjectHideFlags: 0
@@ -4302,7 +4292,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1657113410}
-  m_LocalRotation: {x: -0.27059785, y: 0.65328157, z: -0.65328157, w: -0.27059785}
+  m_LocalRotation: {x: -0.27059788, y: 0.6532816, z: -0.6532816, w: -0.27059788}
   m_LocalPosition: {x: 85.06172, y: -11.716095, z: 59.328125}
   m_LocalScale: {x: 10.70001, y: 10, z: 5}
   m_Children: []
@@ -4527,7 +4517,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: eec952edc36d9774ba8d5859f4f3e94f, type: 2}
   - {fileID: 11400000, guid: f93d64787039bed489a95a74fac035b4, type: 2}
   - {fileID: 11400000, guid: c1911031e8bda854ebfd4fe9f6232517, type: 2}
-  PathName: Assets/objects/scriptable_Forrest
+  PathName: Assets/items/scriptable_Forrest
 --- !u!4 &1733360533
 Transform:
   m_ObjectHideFlags: 0
@@ -4553,7 +4543,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   seiseisuu: 1
-  PathName: Assets/objects/prefab_sakura
+  PathName: Assets/items/prefab_sakura
 --- !u!1001 &1749509907
 Prefab:
   m_ObjectHideFlags: 0
@@ -5086,7 +5076,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2010970247}
-  m_LocalRotation: {x: -0.27059785, y: 0.65328157, z: -0.65328157, w: -0.27059785}
+  m_LocalRotation: {x: -0.27059788, y: 0.6532816, z: -0.6532816, w: -0.27059788}
   m_LocalPosition: {x: 108.461716, y: -3.3160934, z: 98.92812}
   m_LocalScale: {x: 10.70001, y: 10, z: 5}
   m_Children: []
@@ -5429,7 +5419,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2064431464
 Transform:
   m_ObjectHideFlags: 0

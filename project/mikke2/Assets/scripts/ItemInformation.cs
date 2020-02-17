@@ -2,11 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-////VRTKが配布している物体判定処理
+////VRTKが配布している物体を掴む処理↓
 //[RequireComponent(typeof(VRTK.VRTK_InteractableObject))]
+
 //VRTK_InteractableObjectを返すための処理
 [RequireComponent(typeof(GrabItemEvent))]
 [RequireComponent(typeof(Rigidbody))]
+
+
+/*
+ * <概要>
+ * ゲーム内のアイテム情報のパラメータ
+ * 構造体でも良かったかな
+ * 
+ * <関係>
+ * [ItemRegistrator]からデータを受信
+ * [ItemRegistrator]へデータを送信
+ * 
+ * <property>
+ *      ItemName : string {get;set;}
+ *      ItemObject : GameObject {get;set;}
+ *      ItemNumber : int {get;set;}
+ *      ItemHint : string {get;set;}
+ *      ItemPoint : int {get;set;}
+ *      ItemRespawnPosition : int{get;set;}
+ */
 
 public class ItemInformation : MonoBehaviour
 {
